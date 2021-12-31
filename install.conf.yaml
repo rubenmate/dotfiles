@@ -5,9 +5,10 @@
 - clean: ['~']
 
 - link:
+   ~/.zshrc: 
+   ~/.gitconfig:
 #  ~/.tmux.conf: tmux.conf
 #  ~/.vim: vim
-    ~/.zshrc: zshrc
 
 - create:
     - ~/Developerino

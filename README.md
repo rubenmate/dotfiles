@@ -13,3 +13,4 @@ Various dotfiles including my Neovim and Tmux configuration
 - Git (config and SSH)
 - Install Oh-my-ZSH
 - Install Tmux
+- Homebrew Install

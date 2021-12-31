@@ -4,15 +4,14 @@
 
 - clean: ['~']
 
-  #- link:
-  #  ~/.tmux.conf: tmux.conf
-  #  ~/.vim: vim
-  #  ~/.vimrc: vimrc
+- link:
+#  ~/.tmux.conf: tmux.conf
+#  ~/.vim: vim
+    ~/.zshrc: zshrc
 
 - create:
     - ~/Developerino
-    - ~/test/testnested
-      #- ~/.vim/undo-history
+   #- ~/.vim/undo-history
 
-      #- shell:
-      #- [git submodule update --init --recursive, Installing submodules]
+#- shell:
+   #- [git submodule update --init --recursive, Installing submodules]

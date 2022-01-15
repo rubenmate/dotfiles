@@ -1,4 +1,5 @@
 tap "dwarvesf/tap"
+tap "eth-p/software"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
@@ -17,6 +18,8 @@ brew "archey"
 brew "bat"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
+# Cross-platform make
+brew "cmake"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
 # Modern replacement for 'ls'
@@ -73,6 +76,8 @@ brew "tmux"
 brew "tmuxinator"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Bash scripts that integrate bat with various command-line tools
+brew "eth-p/software/bat-extras"
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd"
 # High-performance, schema-free, document-oriented database
@@ -86,8 +91,6 @@ cask "alt-tab"
 # Automatic tiling window manager similar to xmonad
 cask "amethyst"
 cask "background-music"
-# Audio utility
-cask "background-music-pre"
 # Open-source browser prompter
 cask "browserosaurus"
 # Voice and text chat software

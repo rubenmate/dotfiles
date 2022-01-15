@@ -5,10 +5,6 @@ alias vim='nvim'
 # An alias to copy the curren working directory to clipboard
 alias cpwd='pwd | pbcopy'
 
-# An alias to navigate to current (at the moment of writing this) college
-# semester
-infor="/Users/rubenmate/Ingenieria-Informatica/Años/Tercer año/Primer semestre"
-
 # brainstormr=~/Projects/development/planetargon/brainstormr
 # cd $brainstormr
 
@@ -24,6 +20,8 @@ alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + e
 # specialty views
 alias lS='exa -1'                                                              # one column, just names
 alias lt='exa --tree --level=2'                                         # tree
+
+alias man=batman
 
 # Functions
 #

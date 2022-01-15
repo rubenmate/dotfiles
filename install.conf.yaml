@@ -2,7 +2,13 @@
     link:
       relink: true
 
-- clean: ['~']
+- clean: ['~', '~/.oh-my-zsh/custom/', '~/.oh-my-zsh/custom/plugins/']
+
+- shell:
+  - [sh pre-install.sh, Running pre installation script]
+  - [mkdir -p ~/.oh-my-zsh/custom/, Creating oh-my-zsh custom folders]
+  - [mkdir -p ~/.oh-my-zsh/custom/plugins, Creating oh-my-zsh custom plugins folders]
+  - [mkdir -p ~/.oh-my-zsh/custom/themes, Creating oh-my-zsh custom themes folders]
 
 - link:
    ~/.zshrc: 
@@ -12,6 +18,11 @@
    ~/.config/skhd:
    ~/.config/yabai:
    ~/.tmux.conf: tmux.conf
+   ~/.oh-my-zsh/custom/aliases.zsh: oh-my-zsh/custom/aliases.zsh
+   ~/.oh-my-zsh/custom/themes/powerlevel10k: oh-my-zsh/custom/themes/powerlevel10k/
+   ~/.p10k.zsh: p10k.zsh
+   ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions: oh-my-zsh/custom/plugins/zsh-autosuggestions 
+   ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 - create:
     - ~/Developerino
@@ -21,4 +32,5 @@
    - command: ./setup_homebrew.zsh
      stdout: true
      stderr: true
+   - [printf "\n" | vim +PlugInstall +PlugUpdate +qall, Installing vim plugins]
    # - [git submodule update --init --recursive, Installing submodules]

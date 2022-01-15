@@ -7,6 +7,8 @@ fi
 
 # Syntax highlighting for man pages using bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# Remove the Homekeeper for Homebrew installs
+export HOMEBREW_CASK_OPTS="--no-quarantine"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/rubenmate/.oh-my-zsh"

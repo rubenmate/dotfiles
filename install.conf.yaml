@@ -7,8 +7,8 @@
 - link:
    ~/.zshrc: 
    ~/.gitconfig:
-#  ~/.tmux.conf: tmux.conf
-#  ~/.vim: vim
+   ~/.config/nvim/init.vim:
+   ~/.tmux.conf: tmux.conf
 
 - create:
     - ~/Developerino

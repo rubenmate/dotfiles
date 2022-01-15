@@ -6,23 +6,27 @@
 
 - shell:
   - [sh pre-install.sh, Running pre installation script]
-  - [mkdir -p ~/.oh-my-zsh/custom/, Creating oh-my-zsh custom folders]
-  - [mkdir -p ~/.oh-my-zsh/custom/plugins, Creating oh-my-zsh custom plugins folders]
-  - [mkdir -p ~/.oh-my-zsh/custom/themes, Creating oh-my-zsh custom themes folders]
 
 - link:
    ~/.zshrc: 
    ~/.gitconfig:
-   ~/.config/nvim:
+   ~/.config/bat:
+     create: true
+     path: bat
+   ~/.config/nvim: 
    ~/.config/kitty: 
    ~/.config/skhd:
    ~/.config/yabai:
    ~/.tmux.conf: tmux.conf
-   ~/.oh-my-zsh/custom/aliases.zsh: oh-my-zsh/custom/aliases.zsh
-   ~/.oh-my-zsh/custom/themes/powerlevel10k: oh-my-zsh/custom/themes/powerlevel10k/
-   ~/.p10k.zsh: p10k.zsh
-   ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions: oh-my-zsh/custom/plugins/zsh-autosuggestions 
+   ~/.oh-my-zsh/custom/themes/powerlevel10k:
+     create: true
+     path: oh-my-zsh/custom/themes/powerlevel10k/
+   ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions:    
+     create: true
+     path: oh-my-zsh/custom/plugins/zsh-autosuggestions 
    ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+   ~/.oh-my-zsh/custom/aliases.zsh: oh-my-zsh/custom/aliases.zsh
+   ~/.p10k.zsh: p10k.zsh
 
 - create:
     - ~/Developerino

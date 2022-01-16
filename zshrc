@@ -8,6 +8,8 @@ fi
 # Remove the Homekeeper for Homebrew installs
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 
+# Use bat instead of cat for the Nullcommand
+export NULLCMD=bat
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/rubenmate/.oh-my-zsh"
 

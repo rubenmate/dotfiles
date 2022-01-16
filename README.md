@@ -1,14 +1,17 @@
 # dotfiles
 Various dotfiles including my Neovim and Tmux configuration
 
+## Instructions
+1. Clone repository `$ code`
+2. Run install script `$ ./install`
 ## TODO
-- Terminal Preferences
-- Changed Shell to ZSH
 - Dock Preferences
 - Mission Control Preference (don't rearrange spaces)
 - Finder Show Path Bar
 - Trackpad (Three Finger Drag and Tap to Click) 
 - Git (config and SSH)
+- Flash keyboard layout using QMK Toolbox
+- Install digital certificate
 - Tmux Plugins:
     - tmux/
     - tmux-fzf-url/

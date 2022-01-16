@@ -9,3 +9,4 @@ Various dotfiles including my Neovim and Tmux configuration
 - Finder Show Path Bar
 - Trackpad (Three Finger Drag and Tap to Click) 
 - Git (config and SSH)
+- Install Things

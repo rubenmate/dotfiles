@@ -20,6 +20,8 @@ alias man=batman
 
 # Alias for brew bundle dump
 alias bbd='brew bundle dump --force --describe'
+# Alias for check Path in a better way
+alias trail='<<<${(F)path}'
 
 # brainstormr=~/Projects/development/planetargon/brainstormr
 # cd $brainstormr

@@ -5,7 +5,9 @@
 - clean: ['~', '~/.oh-my-zsh/custom/', '~/.oh-my-zsh/custom/plugins/']
 
 - shell:
-  - [sh pre-install.sh, Running pre installation script]
+   - command: ./pre-install.zsh
+     stdout: true
+     stderr: true
 
 - link:
    ~/.zshrc: 

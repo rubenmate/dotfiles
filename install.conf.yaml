@@ -21,6 +21,7 @@
    ~/.config/skhd:
    ~/.config/yabai:
    ~/.tmux.conf: tmux.conf
+   ~/.bin:
    ~/.oh-my-zsh/custom/themes/powerlevel10k:
      create: true
      path: oh-my-zsh/custom/themes/powerlevel10k/

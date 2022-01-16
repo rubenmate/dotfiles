@@ -2,6 +2,7 @@ tap "dwarvesf/tap"
 tap "eth-p/software"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-drivers"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
@@ -26,6 +27,8 @@ brew "cocoapods"
 brew "exa"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Fast and simple Node.js version manager
+brew "fnm"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Distributed revision control system
@@ -103,6 +106,8 @@ cask "enpass"
 cask "gitkraken"
 # GPU-based terminal emulator
 cask "kitty"
+# Open-source Markdown editor
+cask "macdown"
 # Easy to use text extraction tool for macOS
 cask "trex"
 cask "vimmotion"

@@ -12,6 +12,8 @@ Various dotfiles including my Neovim and Tmux configuration
 - Git (config and SSH)
 - Flash keyboard layout using QMK Toolbox
 - Install digital certificate
+- Missing casks:
+    - Spotify
 - Tmux Plugins:
     - tmux/
     - tmux-fzf-url/

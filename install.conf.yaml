@@ -39,5 +39,7 @@
    - command: ./setup_homebrew.zsh
      stdout: true
      stderr: true
-   - [printf "\n" | vim +PlugInstall +PlugUpdate +qall, Installing vim plugins]
+   - command: ./post-install.zsh
+     stdout: true
+     stderr: true
    # - [git submodule update --init --recursive, Installing submodules]

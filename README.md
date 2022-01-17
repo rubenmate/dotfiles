@@ -14,6 +14,7 @@ Various dotfiles including my Neovim and Tmux configuration
 - Install digital certificate
 - Missing casks:
     - Spotify
+- Include language server installs on corresponding scripts
 - Tmux Plugins:
     - tmux/
     - tmux-fzf-url/

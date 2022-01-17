@@ -7,13 +7,14 @@ fi
 
 # Remove the Homekeeper for Homebrew installs
 export HOMEBREW_CASK_OPTS="--no-quarantine"
-
+# Set neovim as the default editor
 export EDITOR='nvim'
 # Use bat instead of cat for the Nullcommand
 export NULLCMD=bat
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/rubenmate/.oh-my-zsh"
-
+# Evaluate the output of fnm env so you can use it to automatically run fnm use 
+eval "$(fnm env --use-on-cd)"
 # Theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
 

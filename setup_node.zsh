@@ -11,3 +11,14 @@ else
   fnm install --lts
 fi
 
+# Install global NPM packages
+echo "Installing global NPM packages"
+npm install -g \
+  trash-cli \
+  json-server \
+  typescript \
+  http-server \
+  eslint \
+
+echo "Global NPM packages installed"
+npm list --global --depth=0

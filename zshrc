@@ -5,8 +5,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Export dotfiles directory
+export DOTFILES="$HOME/.dotfiles"
 # Remove the Homekeeper for Homebrew installs
 export HOMEBREW_CASK_OPTS="--no-quarantine"
+# Export path to dotfiles brewfile so we can dump it everywhere
+export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
 # Set neovim as the default editor
 export EDITOR='nvim'
 # Use bat instead of cat for the Nullcommand

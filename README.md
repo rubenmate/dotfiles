@@ -15,6 +15,7 @@ Various dotfiles including my Neovim and Tmux configuration
 - Missing casks:
     - Spotify
 - Include language server installs on corresponding scripts
+- Configure tmuxinator
 - Tmux Plugins:
     - tmux/
     - tmux-fzf-url/

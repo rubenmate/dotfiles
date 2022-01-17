@@ -2,8 +2,13 @@
 Various dotfiles including my Neovim and Tmux configuration
 
 ## Instructions
-1. Clone repository `$ code`
-2. Run install script `$ ./install`
+1. `xcode-select --install` (Command Line Tools are required for Git and Homebrew)
+2. `git clone https://github.com/rubenmate/dotfiles.git ~/.dotfiles`
+3. `cd ~/.dotfiles`
+4. If necessary, `git checkout <another_branch>`.
+5. Do one last Software Audit by editing [Brewfile](Brewfile) directly.
+6. [`./install`](install)
+7. Restart computer.
 ## TODO
 - Dock Preferences
 - Mission Control Preference (don't rearrange spaces)

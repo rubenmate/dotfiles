@@ -40,6 +40,9 @@
    - command: ./setup_homebrew.zsh
      stdout: true
      stderr: true
+   - command: ./setup_node.zsh
+     stdout: true
+     stderr: true
    - command: ./post-install.zsh
      stdout: true
      stderr: true

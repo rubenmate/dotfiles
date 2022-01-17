@@ -22,6 +22,8 @@ alias man=batman
 alias bbd='brew bundle dump --force --describe'
 # Alias for check Path in a better way
 alias trail='<<<${(F)path}'
+# Alias to substitute rm for a more forgivable tool, trash-cli
+alias rm='trash'
 
 # brainstormr=~/Projects/development/planetargon/brainstormr
 # cd $brainstormr

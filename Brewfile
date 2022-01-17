@@ -49,8 +49,6 @@ brew "lazygit"
 brew "llvm"
 # Mac App Store command-line interface
 brew "mas"
-# Platform built on V8 to build network applications
-brew "node@14"
 # MongoDB Shell to connect, configure, query, and work with your MongoDB database
 brew "mongosh"
 # NCurses Disk Usage
@@ -59,8 +57,6 @@ brew "ncdu"
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Platform built on V8 to build network applications
-brew "node"
 # General-purpose scripting language
 brew "php", restart_service: true
 # Execute binaries from Python packages in isolated environments

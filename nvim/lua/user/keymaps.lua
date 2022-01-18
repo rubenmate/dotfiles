@@ -59,7 +59,7 @@ keymap("n", "<leader>l", ":nohlsearch<CR>", opts)
 -- Chmod +x
 keymap("n", "<leader>x", ":!chmod +x %<CR>", opts)
 -- Open $MYVIMRC and source it
-keymap("n", "<leader>ev", ":vsplit $MYVIMRC<CR>", opts)
+keymap("n", "<leader>ov", ":vsplit $MYVIMRC<CR>", opts)
 keymap("n", "<leader>sv", ":source $MYVIMRC<CR>", opts)
 
 -- Insert

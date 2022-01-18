@@ -136,12 +136,12 @@ cmp.setup {
     end,
   },
   sources = {
+    { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "nvim_lua" },
     { name = "npm" },
     { name = "tmux" },
     { name = "cmp_tabnine" },
-    -- { name = "nvim_lsp" },
     { name = "buffer" },
     { name = "path" },
   },

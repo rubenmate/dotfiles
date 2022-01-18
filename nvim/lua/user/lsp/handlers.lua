@@ -39,7 +39,7 @@ M.setup = function()
     border = "rounded",
   })
 
-  vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vimlsp.handlers.signature_help, {
+  vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
     border = "rounded",
   })
 end

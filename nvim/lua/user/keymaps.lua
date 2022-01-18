@@ -69,3 +69,30 @@ keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+
+--TODO:
+--Normal mode
+--1. LazyGit Leader gg
+--2. Delete buffer Leader db
+--3. BufferLinePick NO IDEA
+--4. Blamer Toggle NO IDEA
+--5. LSP normal
+--6. LSP Telescope Code Actions 
+--7. Trouble Toggle LSP
+--8. Harpoon ThePrimeagen
+--9. Telescope
+--10. Dashboard Remaps
+--11. Nvim Tree
+--12. Vim commentary
+--13. Source init.lua
+--14. Toggle word wrap
+--15. Clear highlight
+--16. Insert date
+--17. Chmod +x
+--18. Sidebar Nvim Toggle
+--Visual mode
+--1. Commentary
+--2. +y
+--Insert mode
+--1.Terminal mode
+--2.Escape terminal mode

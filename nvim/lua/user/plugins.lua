@@ -63,6 +63,7 @@ return packer.startup(function(use)
   use "christoomey/vim-tmux-navigator"
   use "preservim/vimux"
   use "tpope/vim-commentary"
+  use "hoob3rt/lualine.nvim"
   -- Dashboard
   use "glepnir/dashboard-nvim"
   -- Tree File Explorer
@@ -73,10 +74,39 @@ return packer.startup(function(use)
     },
     config = function() require'nvim-tree'.setup {} end
   }
+
   -- Completion
-  -- LSP
-  -- Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+  use "hrsh7th/nvim-cmp" -- The completion plugin
+  use "hrsh7th/cmp-buffer" -- buffer completions
+  use "hrsh7th/cmp-path" -- path completions
+  use "hrsh7th/cmp-cmdline" -- cmdline completions
+  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  use "hrsh7th/cmp-nvim-lua" -- neovim Lua API
+  use "andersevenrud/cmp-tmux" -- tmux completion
+  use "David-Kunz/cmp-npm" -- npm packages completion
+  use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
   use "github/copilot.vim" -- GitHubCopilot
+
+  -- Snippets
+  use "L3MON4D3/LuaSnip" --snippet engine
+  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+
+  -- LSP
+
+  -- Lualine configuration
+  require('plenary.reload').reload_module('lualine', true)
+  require('lualine').setup({
+    options = {
+    theme = 'dracula',
+    disabled_types = { 'NvimTree' }
+  },
+  sections = {
+    lualine_x = {},
+    -- lualine_y = {},
+    -- lualine_z = {},
+    }
+  })
+  --
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

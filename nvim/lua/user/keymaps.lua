@@ -1,3 +1,4 @@
+--
 --  ██╗  ██╗███████╗██╗   ██╗███╗   ███╗ █████╗ ██████╗ ███████╗
 --  ██║ ██╔╝██╔════╝╚██╗ ██╔╝████╗ ████║██╔══██╗██╔══██╗██╔════╝
 --  █████╔╝ █████╗   ╚████╔╝ ██╔████╔██║███████║██████╔╝███████╗
@@ -38,9 +39,28 @@ keymap("n", "<C-Down>", ":resize -2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize  -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize  +2<CR>", opts)
 
+-- Zoom vim pane, <C-w>= to re-balance
+keymap("n", "<leader>-", ":wincmd _<cr>:wincmd |<cr>", opts)
+keymap("n", "<leader>=", ":wincmd =<CR>", opts)
+
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+
+-- BufferLine
+-- BufDel
+
+-- Toggle word wrap
+keymap("n", "<leader>tw", ":set wrap!<CR>", opts)
+
+-- Clear highlight search
+keymap("n", "<leader>l", ":nohlsearch<CR>", opts)
+
+-- Chmod +x
+keymap("n", "<leader>x", ":!chmod +x %<CR>", opts)
+-- Open $MYVIMRC and source it
+keymap("n", "<leader>ev", ":vsplit $MYVIMRC<CR>", opts)
+keymap("n", "<leader>sv", ":source $MYVIMRC<CR>", opts)
 
 -- Insert
 -- Press jk fast to exit
@@ -73,8 +93,8 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 --TODO:
 --Normal mode
 --1. LazyGit Leader gg
---2. Delete buffer Leader db
---3. BufferLinePick NO IDEA
+--2. BufDel Delete buffer <Leader><db> :BufDel<CR>
+--3. BufferLinePick Choose buffer to change <gb> :BufferLinePick<CR> 
 --4. Blamer Toggle NO IDEA
 --5. LSP normal
 --6. LSP Telescope Code Actions 
@@ -84,11 +104,7 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 --10. Dashboard Remaps
 --11. Nvim Tree
 --12. Vim commentary
---13. Source init.lua
---14. Toggle word wrap
---15. Clear highlight
 --16. Insert date
---17. Chmod +x
 --18. Sidebar Nvim Toggle
 --Visual mode
 --1. Commentary

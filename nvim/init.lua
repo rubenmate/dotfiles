@@ -1,11 +1,11 @@
---          
---   ██╗███╗   ██╗██╗████████╗██╗     ██╗   ██╗ █████╗ 
+--
+--   ██╗███╗   ██╗██╗████████╗██╗     ██╗   ██╗ █████╗
 --   ██║████╗  ██║██║╚══██╔══╝██║     ██║   ██║██╔══██╗
 --   ██║██╔██╗ ██║██║   ██║   ██║     ██║   ██║███████║
 --   ██║██║╚██╗██║██║   ██║   ██║     ██║   ██║██╔══██║
 --   ██║██║ ╚████║██║   ██║██╗███████╗╚██████╔╝██║  ██║
 --   ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝
---                    @rubenmate                  
+--                    @rubenmate
 
 require "user.options"
 require "user.keymaps"
@@ -14,4 +14,4 @@ require "user.colorscheme"
 require "user.cmp"
 require "user.lsp"
 require "user.telescope"
-require "user.nvimtree"
+require "user.nvim-tree"

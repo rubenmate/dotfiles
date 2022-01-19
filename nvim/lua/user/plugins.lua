@@ -65,13 +65,6 @@ return packer.startup(function(use)
   use "hoob3rt/lualine.nvim"
   -- Dashboard
   use "glepnir/dashboard-nvim"
-  -- Tree File Explorer
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icons
-    },
-  }
 
   -- Completion
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -96,6 +89,23 @@ return packer.startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
+
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+
+  -- Nvim-Tree File Explorer
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icons
+    },
+  }
+  -- treesitter modules, treesitter required
+  use "p00f/nvim-ts-rainbow" -- Rainbow parentheses for neovim
+  use "nvim-treesitter/playground" -- Treesitter information directly in Neovim
 
   -- Lualine configuration
   require('plenary.reload').reload_module('lualine', true)

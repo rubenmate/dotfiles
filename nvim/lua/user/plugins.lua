@@ -114,6 +114,10 @@ return packer.startup(function(use)
   -- Gitsigns
   use "lewis6991/gitsigns.nvim"
 
+  -- Bufferline
+  use "akinsho/bufferline.nvim"
+  use "moll/vim-bbye"
+
   -- Commentary
   use "numToStr/Comment.nvim" -- Simple comments
   use "JoosepAlviste/nvim-ts-context-commentstring" -- Comments with context, requires treesitter

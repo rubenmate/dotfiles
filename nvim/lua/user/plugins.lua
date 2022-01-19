@@ -107,21 +107,6 @@ return packer.startup(function(use)
   use "p00f/nvim-ts-rainbow" -- Rainbow parentheses for neovim
   use "nvim-treesitter/playground" -- Treesitter information directly in Neovim
 
-  -- Lualine configuration
-  require('plenary.reload').reload_module('lualine', true)
-  require('lualine').setup({
-    options = {
-    theme = 'dracula',
-    disabled_types = { 'NvimTree' }
-  },
-  sections = {
-    lualine_x = {},
-    -- lualine_y = {},
-    -- lualine_z = {},
-    }
-  })
-  --
-
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

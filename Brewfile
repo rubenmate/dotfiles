@@ -75,6 +75,8 @@ brew "rust"
 brew "smartmontools"
 # Terminal-based client for Spotify
 brew "spotify-tui"
+# Opinionated Lua code formatter
+brew "stylua"
 # Terminal multiplexer
 brew "tmux"
 # Manage complex tmux sessions easily

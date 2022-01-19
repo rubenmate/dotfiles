@@ -57,13 +57,13 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+
   -- Migrated
   use "ThePrimeagen/harpoon" -- ThePrime Harpoon
   use "kdheepak/lazygit.nvim"
   use "christoomey/vim-tmux-navigator"
   use "preservim/vimux"
   use "tpope/vim-commentary"
-  use "hoob3rt/lualine.nvim"
   -- Dashboard
   use "glepnir/dashboard-nvim"
 
@@ -90,6 +90,9 @@ return packer.startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
+
+  -- Lualine
+  use "hoob3rt/lualine.nvim"
 
   -- Treesitter
   use {

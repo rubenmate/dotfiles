@@ -1,11 +1,6 @@
-local status_ok, nvim_tree = pcall(require, "nvim-tree")
-if not status_ok then
-  return
-end
-
-
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
+-- TODO: Review these options
 vim.g.nvim_tree_icons = {
   default = "",
   symlink = "",
@@ -32,6 +27,18 @@ vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_highlight_opened_files = 1
 vim.g.nvim_tree_group_empty = 1
 vim.g.lsp_diagnostics = 1
+
+local status_ok, nvim_tree = pcall(require, "nvim-tree")
+if not status_ok then
+  return
+end
+
+local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
+if not config_status_ok then
+  return
+end
+
+local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup {
   disable_netrw       = true,
@@ -81,7 +88,10 @@ nvim_tree.setup {
     auto_resize = false,
     mappings = {
       custom_only = false,
-      list = {}
+      list = {
+        { key = "<S-v>", cb = tree_cb "vsplit" },
+        { key = "<S-x>", cb = tree_cb "split" },
+      },
     },
     number = false,
     relativenumber = false,

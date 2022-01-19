@@ -17,6 +17,8 @@ tap "xorpse/formulae"
 brew "archey"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Python code formatter
+brew "black"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
 # Cross-platform make
@@ -27,6 +29,8 @@ brew "cocoapods"
 brew "exa"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Lint your Python code for style and logical errors
+brew "flake8"
 # Fast and simple Node.js version manager
 brew "fnm"
 # Command-line fuzzy finder written in Go
@@ -61,6 +65,8 @@ brew "neovim"
 brew "php", restart_service: true
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Safe, concurrent, practical language

@@ -8,7 +8,10 @@ if exists node; then
   echo "Node $(node --version) & NPM $(npm --version) already installed"
 else
   echo "Installing Node & NPM"
+  # Install node lts version with Fast Node Manager
   fnm install --lts
+  # Activate yarn
+  corepack enable
 fi
 
 # Install global NPM packages
@@ -19,6 +22,7 @@ npm install -g \
   typescript \
   http-server \
   eslint \
+  # prettier \
 
 echo "Global NPM packages installed"
 npm list --global --depth=0

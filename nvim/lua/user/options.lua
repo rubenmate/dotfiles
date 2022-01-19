@@ -52,6 +52,7 @@ for k, v in pairs(options) do
 end
 
 -- vim.cmd "highlight Cursor guifg=#f00 guibg=#657b83"
+vim.cmd "au TextYankPost * silent! lua vim.highlight.on_yank()" -- Highlight yanked text
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work

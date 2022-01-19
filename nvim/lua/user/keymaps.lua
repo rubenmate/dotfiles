@@ -103,9 +103,6 @@ keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
 keymap("n", "<leader>n", ":NvimTreeFindFile<CR>", opts)
 
--- Vim-commentary
-keymap("n", "<leader>/", ":Commentary<CR>", opts)
-keymap("v", "<leader>/", ":Commentary<CR>", opts)
 --TODO:
 --Normal mode
 --1. LazyGit Leader gg

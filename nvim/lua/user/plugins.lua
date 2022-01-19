@@ -63,7 +63,7 @@ return packer.startup(function(use)
   use "kdheepak/lazygit.nvim"
   use "christoomey/vim-tmux-navigator"
   use "preservim/vimux"
-  use "tpope/vim-commentary"
+
   -- Dashboard
   use "glepnir/dashboard-nvim"
 
@@ -113,6 +113,10 @@ return packer.startup(function(use)
 
   -- Gitsigns
   use "lewis6991/gitsigns.nvim"
+
+  -- Commentary
+  use "numToStr/Comment.nvim" -- Simple comments
+  use "JoosepAlviste/nvim-ts-context-commentstring" -- Comments with context, requires treesitter
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

@@ -6,7 +6,6 @@
 -- ██║     ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║███████║
 -- ╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝
 --
-                                                       
 local fn = vim.fn
 
 -- Automatically install packer
@@ -95,6 +94,9 @@ return packer.startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple tool to install LSPs
+
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
 
   -- Lualine configuration
   require('plenary.reload').reload_module('lualine', true)

@@ -5,7 +5,6 @@
 --  ██╔═██╗ ██╔══╝    ╚██╔╝  ██║╚██╔╝██║██╔══██║██╔═══╝ ╚════██║
 --  ██║  ██╗███████╗   ██║   ██║ ╚═╝ ██║██║  ██║██║     ███████║
 --  ╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚══════╝
-                                                            
 local opts = { noremap = true, silent = true}
 
 local term_opts = { silent = true }
@@ -103,24 +102,26 @@ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
 keymap("n", "<leader>n", ":NvimTreeFindFile<CR>", opts)
+
+-- Vim-commentary
+keymap("n", "<leader>/", ":Commentary<CR>", opts)
+keymap("v", "<leader>/", ":Commentary<CR>", opts)
 --TODO:
 --Normal mode
 --1. LazyGit Leader gg
 --2. BufDel Delete buffer <Leader><db> :BufDel<CR>
---3. BufferLinePick Choose buffer to change <gb> :BufferLinePick<CR> 
+--3. BufferLinePick Choose buffer to change <gb> :BufferLinePick<CR>
 --4. Blamer Toggle NO IDEA
 --5. LSP normal
---6. LSP Telescope Code Actions 
+--6. LSP Telescope Code Actions
 --7. Trouble Toggle LSP
 --8. Harpoon ThePrimeagen
 --9. Telescope
 --10. Dashboard Remaps
 --11. Nvim Tree
---12. Vim commentary
 --16. Insert date
 --18. Sidebar Nvim Toggle
 --Visual mode
---1. Commentary
 --2. +y
 --Insert mode
 --1.Terminal mode

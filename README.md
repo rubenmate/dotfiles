@@ -25,3 +25,4 @@ Various dotfiles including my Neovim and Tmux configuration
 - Include language server installs on corresponding scripts
 - Configure tmuxinator
 - Fix icons, cloning them makes them a mess
+- I can probably remove the submodules and install them with an script

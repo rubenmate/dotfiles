@@ -28,7 +28,7 @@ create_if_needed_and_attach() {
     tmux selectp -t 1
 
     tmux new-window -t "$session_name:2" -n "server"
-    tmux send-keys -t "server" "btop" C-m
+    tmux send-keys -t "server" "htop" C-m
 
     tmux new-window -t "$session_name:3" -n "git"
     tmux send-keys -t "git" "lazygit" C-m

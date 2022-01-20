@@ -3,12 +3,13 @@ Various dotfiles including my Neovim and Tmux configuration
 
 ## Instructions
 1. `xcode-select --install` (Command Line Tools are required for Git and Homebrew)
-2. `git clone https://github.com/rubenmate/dotfiles.git ~/.dotfiles`
-3. `cd ~/.dotfiles`
-4. If necessary, `git checkout <another_branch>`.
-5. Do one last Software Audit by editing [Brewfile](Brewfile) directly.
-6. [`./install`](install)
-7. Restart computer.
+2. `sudo softwareupdate --install-rosetta` Necessary for some apps that are not apple silicon supported
+3. `git clone https://github.com/rubenmate/dotfiles.git ~/.dotfiles`
+4. `cd ~/.dotfiles`
+5. If necessary, `git checkout <another_branch>`.
+6. Do one last Software Audit by editing [Brewfile](Brewfile) directly.
+7. [`./install`](install)
+8. Restart computer.
 ## TODO
 - Dock Preferences
 - Mission Control Preference (don't rearrange spaces)

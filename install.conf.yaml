@@ -4,13 +4,10 @@
 
 - clean: ['~', '~/.oh-my-zsh/custom/', '~/.oh-my-zsh/custom/plugins/']
 
-- shell:
-   - command: ./pre-install.zsh
-     stdout: true
-     stderr: true
-
 - link:
-   ~/.zshrc: 
+   ~/.zshrc:
+     force: true
+     path: zshrc
    ~/.zshenv:
    ~/.gitconfig:
    ~/.config/bat:
@@ -40,6 +37,9 @@
    #- ~/.vim/undo-history
 
 - shell:
+   - command: ./pre-install.zsh
+     stdout: true
+     stderr: true
    - command: ./setup_homebrew.zsh
      stdout: true
      stderr: true

@@ -10,6 +10,7 @@ Various dotfiles including my Neovim and Tmux configuration
 6. Do one last Software Audit by editing [Brewfile](Brewfile) directly.
 7. [`./install`](install)
 8. Restart computer.
+
 ## TODO
 - Dock Preferences
 - Mission Control Preference (don't rearrange spaces)
@@ -18,11 +19,12 @@ Various dotfiles including my Neovim and Tmux configuration
 - Disable C-space on keyboard settings
 - Git (config and [SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)) 
 - Change dotfiles git repo with the ssh connection after configuring SSH
+- Condfigure enpass, dropbox and alfred
+- Install [JetBrains Mono Font](https://www.jetbrains.com/lp/mono/)
+- Install XCode, install yabai and start yabai and skhd as services
 - Flash keyboard layout using QMK Toolbox
 - Install digital certificate
-- Missing casks:
-    - Spotify
 - Include language server installs on corresponding scripts
-- Configure tmuxinator
+- Configure tmuxinator, tmux resurrect
 - Fix icons, cloning them makes them a mess
 - I can probably remove the submodules and install them with an script

@@ -23,6 +23,9 @@
    ~/.config/skhd:
    ~/.config/yabai:
    ~/.tmux.conf: tmux.conf
+   ~/Library/Application Support/lazygit/config.yml:
+     create: true
+     path: lazygit/config.yml
    ~/.bin:
    ~/.oh-my-zsh/custom/themes/powerlevel10k:
      create: true

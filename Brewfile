@@ -67,15 +67,22 @@ brew "eth-p/software/bat-extras"
 brew "koekeishiya/formulae/skhd"
 # A tiling window manager for macOS based on binary space partitioning.
 brew "koekeishiya/formulae/yabai"
+# Application launcher and productivity software
 cask "alfred"
 # Enable Windows-like alt-tab
 cask "alt-tab"
+# Web browser focusing on privacy
+cask "brave-browser"
 # Open-source browser prompter
 cask "browserosaurus"
 # Voice and text chat software
 cask "discord"
 # Client for the Dropbox cloud storage service
 cask "dropbox"
+# Web browser
+cask "firefox"
+# Keyboard customizer
+cask "karabiner-elements"
 # GPU-based terminal emulator
 cask "kitty"
 # Open-source Markdown editor
@@ -103,3 +110,4 @@ mas "TestFlight", id: 899247664
 mas "Things", id: 904280696
 mas "Toggl Track", id: 957734279
 mas "Trello", id: 1278508951
+mas "Xcode", id: 497799835

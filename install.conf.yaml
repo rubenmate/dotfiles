@@ -49,4 +49,4 @@
    - command: ./post-install.zsh
      stdout: true
      stderr: true
-   # - [git submodule update --init --recursive, Installing submodules]
+   - [git submodule update --init --recursive, Installing submodules]

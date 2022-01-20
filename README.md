@@ -15,6 +15,7 @@ Various dotfiles including my Neovim and Tmux configuration
 - Mission Control Preference (don't rearrange spaces)
 - Finder Show Path Bar
 - Trackpad (Three Finger Drag and Tap to Click) 
+- Disable C-space on keyboard settings
 - Git (config and [SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)) 
 - Change dotfiles git repo with the ssh connection after configuring SSH
 - Flash keyboard layout using QMK Toolbox
@@ -23,11 +24,4 @@ Various dotfiles including my Neovim and Tmux configuration
     - Spotify
 - Include language server installs on corresponding scripts
 - Configure tmuxinator
-- Tmux Plugins:
-    - tmux/
-    - tmux-fzf-url/
-    - tmux-sensible/
-    - tmux-vi-navigation/
-    - tpm/
-    - vim-tmux-navigator/
-- Install Things
+- Fix icons, cloning them makes them a mess

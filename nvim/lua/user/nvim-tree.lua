@@ -1,6 +1,7 @@
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
 -- TODO: Review these options
+-- TODO: Cloning the dotfiles messs with the icons
 vim.g.nvim_tree_icons = {
   default = "",
   symlink = "",

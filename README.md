@@ -16,6 +16,7 @@ Various dotfiles including my Neovim and Tmux configuration
 - Finder Show Path Bar
 - Trackpad (Three Finger Drag and Tap to Click) 
 - Git (config and [SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)) 
+- Change dotfiles git repo with the ssh connection after configuring SSH
 - Flash keyboard layout using QMK Toolbox
 - Install digital certificate
 - Missing casks:

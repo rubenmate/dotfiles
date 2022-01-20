@@ -4,6 +4,11 @@
 
 - clean: ['~', '~/.oh-my-zsh/custom/', '~/.oh-my-zsh/custom/plugins/']
 
+- shell:
+   - command: ./pre-install.zsh
+     stdout: true
+     stderr: true
+
 - link:
    ~/.zshrc:
      force: true
@@ -31,12 +36,8 @@
 
 - create:
     - ~/Developerino
-   #- ~/.vim/undo-history
 
 - shell:
-   - command: ./pre-install.zsh
-     stdout: true
-     stderr: true
    - command: ./setup_homebrew.zsh
      stdout: true
      stderr: true

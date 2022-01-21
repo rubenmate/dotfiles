@@ -3,6 +3,7 @@ tap "eth-p/software"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
+tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
@@ -65,8 +66,8 @@ brew "zsh"
 brew "eth-p/software/bat-extras"
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd"
-# A tiling window manager for macOS based on binary space partitioning.
-brew "koekeishiya/formulae/yabai"
+# Menu bar tool to limit maximum charging percentage
+cask "aldente"
 # Application launcher and productivity software
 cask "alfred"
 # Enable Windows-like alt-tab
@@ -81,6 +82,7 @@ cask "discord"
 cask "dropbox"
 # Web browser
 cask "firefox"
+cask "font-hack-nerd-font"
 # Keyboard customizer
 cask "karabiner-elements"
 # GPU-based terminal emulator
@@ -107,7 +109,9 @@ mas "Spark", id: 1176895641
 mas "Streaks", id: 1493327990
 mas "Telegram", id: 747648890
 mas "TestFlight", id: 899247664
+mas "The Unarchiver", id: 425424353
 mas "Things", id: 904280696
 mas "Toggl Track", id: 957734279
+mas "Tomito", id: 1526042938
 mas "Trello", id: 1278508951
 mas "Xcode", id: 497799835

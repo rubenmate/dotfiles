@@ -21,6 +21,8 @@ Various dotfiles including my Neovim and Tmux configuration
 - Change dotfiles git repo with the ssh connection after configuring SSH
 - Condfigure enpass, dropbox and alfred
 - Install [JetBrains Mono Font](https://www.jetbrains.com/lp/mono/)
+- Install some NF also, like Cascadia Code
+- `brew install --cask font-jetbrains-mono` && `brew install --cask font-jetbrains-mono-nerd-font`
 - Install XCode, install yabai and start yabai and skhd as services
 - Flash keyboard layout using QMK Toolbox
 - Install digital certificate
@@ -28,3 +30,6 @@ Various dotfiles including my Neovim and Tmux configuration
 - Configure tmuxinator, tmux resurrect
 - Fix icons, cloning them makes them a mess
 - I can probably remove the submodules and install them with an script
+- Apps outside brew and the mac app store:
+  - Itsycal
+  - AppCleaner

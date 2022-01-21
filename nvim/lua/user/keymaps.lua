@@ -24,6 +24,7 @@ vim.g.maplocalleader = " "
 --   visual_block_mode = "x",
 --   term_mode = "t",
 --   command_mode = "c"
+--   TODO: Write cheatsheet with keymaps outside this file
 
 -- Normal --
 -- Better window navigation
@@ -52,6 +53,7 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- BufferLine
 -- BufDel
+keymap("n", "<leader>db", ":Bdelete<CR>", opts)
 
 -- Toggle word wrap
 keymap("n", "<leader>tw", ":set wrap!<CR>", opts)
@@ -104,25 +106,18 @@ keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
 keymap("n", "<leader>n", ":NvimTreeFindFile<CR>", opts)
 
 -- Formating NullLs
-keymap("n", "<leader>s", ":Format<CR>", opts)
+-- FIXME: Currently not working
+-- keymap("n", "<leader>s", ":Format<CR>", opts)
+keymap("n", "<leader>s", ":lua vim.lsp.buf.formatting()<CR>", opts)
 
 --TODO:
 --Normal mode
---1. LazyGit Leader gg
---2. BufDel Delete buffer <Leader><db> :BufDel<CR>
---3. BufferLinePick Choose buffer to change <gb> :BufferLinePick<CR>
 --4. Blamer Toggle NO IDEA
---5. LSP normal
 --6. LSP Telescope Code Actions
 --7. Trouble Toggle LSP
 --8. Harpoon ThePrimeagen
 --9. Telescope
 --10. Dashboard Remaps
---11. Nvim Tree
---16. Insert date
 --18. Sidebar Nvim Toggle
 --Visual mode
 --2. +y
---Insert mode
---1.Terminal mode
---2.Escape terminal mode

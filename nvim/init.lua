@@ -9,7 +9,6 @@
 -- TODO: Add protected calls to plugins
 -- TODO: Add preview hunks keybinding to gitsigns
 -- TODO: Missing plugins: Neoscroll, nvim-colorizer
--- TODO: Maybe plugins trouble nvim, diagnosticls-configs
 -- TODO: Add harpoon settings
 require "user.options"
 require "user.keymaps"
@@ -32,7 +31,6 @@ require "user.toggleterm"
 -- nnoremap <C-e> :lua require("harpoon.ui").toggle_quick_menu()<CR>
 --
 --
--- nnoremap <Leader>fs :lua require'telescope.builtin'.file_browser{ cwd = vim.fn.expand('%:p:h') }<cr>
 -- nnoremap <leader>fw <cmd>Telescope tmux windows<cr>
 -- nnoremap <leader>fm :lua require('telescope').extensions.harpoon.marks{}<cr>
 --

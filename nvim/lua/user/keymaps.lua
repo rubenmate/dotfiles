@@ -106,9 +106,9 @@ keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
 keymap("n", "<leader>n", ":NvimTreeFindFile<CR>", opts)
 
 -- Formating NullLs
--- FIXME: Currently not working
--- keymap("n", "<leader>s", ":Format<CR>", opts)
-keymap("n", "<leader>s", ":lua vim.lsp.buf.formatting()<CR>", opts)
+keymap("n", "<leader>s", ":Format<CR>", opts)
+-- Keeping this because stylua formatting may break Format on handlers.lua
+-- keymap("n", "<leader>s", ":lua vim.lsp.buf.formatting()<CR>", opts)
 
 --TODO:
 --Normal mode

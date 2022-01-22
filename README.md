@@ -18,6 +18,7 @@ Various dotfiles including my Neovim and Tmux configuration
 - Trackpad (Three Finger Drag and Tap to Click) 
 - Disable C-space on keyboard settings
 - Git (config and [SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh)) 
+- Optional: Add GPG key
 - Change dotfiles git repo with the ssh connection after configuring SSH
 - Condfigure enpass, dropbox and alfred
 - Install [JetBrains Mono Font](https://www.jetbrains.com/lp/mono/)

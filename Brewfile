@@ -43,7 +43,7 @@ brew "ncdu"
 # Fast, highly customisable system info script
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
+brew "neovim", args: ["HEAD"]
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
 # Search tool like grep and The Silver Searcher
@@ -102,7 +102,6 @@ mas "Hidden Bar", id: 1452453066
 mas "Magnet", id: 441258766
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "Pi-hole Remote", id: 1515445551
-mas "Session", id: 1521432881
 mas "Shareful", id: 1522267256
 mas "Shazam", id: 897118787
 mas "Spark", id: 1176895641

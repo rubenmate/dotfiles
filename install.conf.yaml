@@ -23,6 +23,7 @@
    ~/.config/skhd:
    ~/.config/yabai:
    ~/.tmux.conf: tmux.conf
+   ~/.config/stylua.toml: stylua/stylua.toml
    ~/Library/Application Support/lazygit/config.yml:
      create: true
      path: lazygit/config.yml

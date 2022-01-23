@@ -66,10 +66,9 @@ return packer.startup(function(use)
 	use "folke/which-key.nvim" -- Keymaps helper
 
 	-- Migrated
+	use "alexghergh/nvim-tmux-navigation"
 	use "ThePrimeagen/harpoon" -- ThePrime Harpoon
 	-- TODO: Check this
-	-- use "kdheepak/lazygit.nvim"
-	-- use "christoomey/vim-tmux-navigator"
 	-- use "preservim/vimux"
 
 	-- -- Dashboard

@@ -29,6 +29,7 @@ require "user.alpha"
 require "user.impatient"
 require "user.indentline"
 -- require "user.whichkey"
+require "user.nvim-tmux-navigation"
 
 -- TODO: Missing keybindings
 -- nnoremap <Leader>ha :lua require("harpoon.mark").add_file()<CR>

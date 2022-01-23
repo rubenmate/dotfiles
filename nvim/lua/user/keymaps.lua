@@ -5,9 +5,9 @@
 --  ██╔═██╗ ██╔══╝    ╚██╔╝  ██║╚██╔╝██║██╔══██║██╔═══╝ ╚════██║
 --  ██║  ██╗███████╗   ██║   ██║ ╚═╝ ██║██║  ██║██║     ███████║
 --  ╚═╝  ╚═╝╚══════╝   ╚═╝   ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚══════╝
-local opts = { noremap = true, silent = true}
+local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
+-- local term_opts = { silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
@@ -97,7 +97,12 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Telescope
 -- keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+keymap(
+	"n",
+	"<leader>ff",
+	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
+	opts
+)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Nvim-Tree
@@ -112,12 +117,5 @@ keymap("n", "<leader>s", ":Format<CR>", opts)
 
 --TODO:
 --Normal mode
---4. Blamer Toggle NO IDEA
---6. LSP Telescope Code Actions
---7. Trouble Toggle LSP
 --8. Harpoon ThePrimeagen
---9. Telescope
---10. Dashboard Remaps
 --18. Sidebar Nvim Toggle
---Visual mode
---2. +y

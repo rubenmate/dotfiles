@@ -17,6 +17,7 @@ fi
 # Install global NPM packages
 echo "Installing global NPM packages"
 npm install -g \
+  neovim \
   trash-cli \
   json-server \
   typescript \

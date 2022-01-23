@@ -52,8 +52,17 @@ keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- BufferLine
--- BufDel
 keymap("n", "<leader>db", ":Bdelete<CR>", opts)
+
+-- Gitsigns
+keymap("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", opts)
+
+-- Harpoon
+keymap("n", "<leader>hh", ':lua require("harpoon.ui").toggle_quick_menu()<CR>', opts)
+keymap("n", "<leader>ha", ':lua require("harpoon.mark").add_file()<CR>', opts)
+keymap("n", "<leader>hn", ':lua require("harpoon.ui").nav_next()<CR>', opts)
+keymap("n", "<leader>hp", ':lua require("harpoon.ui").nav_prev()<CR>', opts)
+keymap("n", "<leader>fh", ':lua require("telescope").extensions.harpoon.marks{}<CR>', opts)
 
 -- Toggle word wrap
 keymap("n", "<leader>tw", ":set wrap!<CR>", opts)
@@ -116,6 +125,4 @@ keymap("n", "<leader>s", ":Format<CR>", opts)
 -- keymap("n", "<leader>s", ":lua vim.lsp.buf.formatting()<CR>", opts)
 
 --TODO:
---Normal mode
---8. Harpoon ThePrimeagen
 --18. Sidebar Nvim Toggle

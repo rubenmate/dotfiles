@@ -45,7 +45,6 @@ packer.init {
 		end,
 	},
 }
-
 -- Install your plugins here
 return packer.startup(function(use)
 	-- Color schemes
@@ -64,15 +63,10 @@ return packer.startup(function(use)
 	use "lewis6991/impatient.nvim" -- Speed up Lua modules to improve startup time
 	use "lukas-reineke/indent-blankline.nvim" -- Show indent lines
 	use "folke/which-key.nvim" -- Keymaps helper
+	use "alexghergh/nvim-tmux-navigation"
 
 	-- Migrated
-	use "alexghergh/nvim-tmux-navigation"
 	use "ThePrimeagen/harpoon" -- ThePrime Harpoon
-	-- TODO: Check this
-	-- use "preservim/vimux"
-
-	-- -- Dashboard
-	-- use "glepnir/dashboard-nvim"
 
 	-- Completion
 	use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -129,6 +123,12 @@ return packer.startup(function(use)
 	-- Commentary
 	use "numToStr/Comment.nvim" -- Simple comments
 	use "JoosepAlviste/nvim-ts-context-commentstring" -- Comments with context, requires treesitter
+
+	-- Tabout
+	use {
+		"abecodes/tabout.nvim",
+		wants = { "nvim-treesitter" },
+	}
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

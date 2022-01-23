@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 -- telescope.load_extension('media_files')
+telescope.load_extension "harpoon"
 
 local actions = require "telescope.actions"
 
@@ -88,6 +89,7 @@ telescope.setup {
 		-- builtin picker
 	},
 	extensions = {
+
 		-- media_files = {
 		--     -- filetypes whitelist
 		--     -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}

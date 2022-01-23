@@ -28,6 +28,7 @@ Various dotfiles including my Neovim and Tmux configuration
 - Install some NF also, like Cascadia Code
 - `brew install --cask font-jetbrains-mono` && `brew install --cask font-jetbrains-mono-nerd-font`
 - Install XCode, install yabai and start yabai and skhd as services
+- Install pip and neovim support
 - Change Kitty icon
 - Flash keyboard layout using QMK Toolbox
 - Install digital certificate

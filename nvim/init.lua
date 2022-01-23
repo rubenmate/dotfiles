@@ -25,6 +25,7 @@ require "user.gitsigns"
 require "user.bufferline"
 require "user.comment"
 require "user.toggleterm"
+require "user.neoscroll"
 
 -- TODO: Missing keybindings
 -- nnoremap <Leader>ha :lua require("harpoon.mark").add_file()<CR>

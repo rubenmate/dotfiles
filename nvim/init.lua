@@ -27,6 +27,7 @@ require "user.comment"
 require "user.toggleterm"
 require "user.neoscroll"
 require "user.nvim-colorizer"
+require "user.alpha"
 
 -- TODO: Missing keybindings
 -- nnoremap <Leader>ha :lua require("harpoon.mark").add_file()<CR>

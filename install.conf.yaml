@@ -5,50 +5,52 @@
 - clean: ['~', '~/.oh-my-zsh/custom/', '~/.oh-my-zsh/custom/plugins/']
 
 - shell:
-   - command: ./pre-install.zsh
-     stdout: true
-     stderr: true
+    - command: ./pre-install.zsh
+      stdout: true
+      stderr: true
 
 - link:
-   ~/.zshrc:
-     force: true
-     path: zshrc
-   ~/.zshenv:
-   ~/.gitconfig:
-   ~/.config/bat:
-     create: true
-     path: bat
-   ~/.config/nvim: 
-   ~/.config/kitty: 
-   ~/.config/skhd:
-   ~/.config/yabai:
-   ~/.tmux.conf: tmux.conf
-   ~/.config/stylua.toml: stylua/stylua.toml
-   ~/Library/Application Support/lazygit/config.yml:
-     create: true
-     path: lazygit/config.yml
-   ~/.bin:
-   ~/.oh-my-zsh/custom/themes/powerlevel10k:
-     create: true
-     path: oh-my-zsh/custom/themes/powerlevel10k/
-   ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions:    
-     create: true
-     path: oh-my-zsh/custom/plugins/zsh-autosuggestions 
-   ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-   ~/.oh-my-zsh/custom/aliases.zsh: oh-my-zsh/custom/aliases.zsh
-   ~/.p10k.zsh: p10k.zsh
+    ~/.zshrc:
+      force: true
+      path: zshrc
+    ~/.zshenv:
+    ~/.gitconfig:
+    ~/.config/bat:
+      create: true
+      path: bat
+      # TODO: Can I improve this?
+    ~/.config/nvim:
+    ~/.config/kitty:
+    ~/.config/skhd:
+    ~/.config/yabai:
+    ~/.config/karabiner:
+    ~/.tmux.conf: tmux.conf
+    ~/.config/stylua.toml: stylua/stylua.toml
+    ~/Library/Application Support/lazygit/config.yml:
+      create: true
+      path: lazygit/config.yml
+    ~/.bin:
+    ~/.oh-my-zsh/custom/themes/powerlevel10k:
+      create: true
+      path: oh-my-zsh/custom/themes/powerlevel10k/
+    ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions:
+      create: true
+      path: oh-my-zsh/custom/plugins/zsh-autosuggestions
+    ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+    ~/.oh-my-zsh/custom/aliases.zsh: oh-my-zsh/custom/aliases.zsh
+    ~/.p10k.zsh: p10k.zsh
 
 - create:
     - ~/Developerino
 
 - shell:
-   - command: ./setup_homebrew.zsh
-     stdout: true
-     stderr: true
-   - command: ./setup_node.zsh
-     stdout: true
-     stderr: true
-   - command: ./post-install.zsh
-     stdout: true
-     stderr: true
-   - [git submodule update --init --recursive, Installing submodules]
+    - command: ./setup_homebrew.zsh
+      stdout: true
+      stderr: true
+    - command: ./setup_node.zsh
+      stdout: true
+      stderr: true
+    - command: ./post-install.zsh
+      stdout: true
+      stderr: true
+    - [git submodule update --init --recursive, Installing submodules]

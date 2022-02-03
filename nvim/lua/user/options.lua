@@ -41,8 +41,6 @@ local options = {
 	scrolloff = 8, -- determines the number of context lines you see above and below of the cursor (when possible)
 	sidescrolloff = 8, -- determines the number of context lines you see at the right and left of the cursor (when possible)
 	guifont = "monospace:h17", -- the font used in graphical neovim applications
-	textwidth = 80,
-	colorcolumn = "80",
 }
 
 vim.opt.shortmess:append "c" -- TODO: Explore this
@@ -51,8 +49,8 @@ for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
--- vim.cmd "highlight Cursor guifg=#f00 guibg=#657b83"
 vim.cmd "au TextYankPost * silent! lua vim.highlight.on_yank()" -- Highlight yanked text
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+vim.cmd "au BufEnter * NeoRoot"

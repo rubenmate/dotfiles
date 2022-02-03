@@ -64,6 +64,7 @@ return packer.startup(function(use)
 	use "lukas-reineke/indent-blankline.nvim" -- Show indent lines
 	use "folke/which-key.nvim" -- Keymaps helper
 	use "alexghergh/nvim-tmux-navigation"
+	use "nyngwang/NeoRoot.lua" -- Change working directory like Monkey
 	use "ggandor/lightspeed.nvim" -- Motion plugin for on-screen movements
 
 	-- Migrated

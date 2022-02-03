@@ -126,10 +126,10 @@ return packer.startup(function(use)
 	use "JoosepAlviste/nvim-ts-context-commentstring" -- Comments with context, requires treesitter
 
 	-- Tabout
-	use {
-		"abecodes/tabout.nvim",
-		wants = { "nvim-treesitter" },
-	}
+	-- use {
+	-- 	"abecodes/tabout.nvim",
+	-- 	wants = { "nvim-treesitter" },
+	-- }
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

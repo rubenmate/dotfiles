@@ -12,7 +12,7 @@ ctrl + alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 hyper - backspace : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)
 
 ## open terminal
-# hyper - t : /Applications/iTerm.app/Contents/MacOS/iTerm2
+# hyper - 1 : open -na /Applications/kitty.app
 
 shift + alt - 1 : yabai -m window --space 1; yabai -m space --focus 1
 ## focus space NOT WORKING M1
@@ -58,9 +58,9 @@ hyper - r : yabai -m space --rotate 90
 ## flip the tree vertically
 hyper - 4 : yabai -m space --mirror y-axis
 # mirror tree y-axis
-#alt - y : yabai -m space --mirror y-axis
-## mirror tree x-axis
-#alt - x : yabai -m space --mirror x-axis
+alt - y : yabai -m space --mirror y-axis
+# mirror tree x-axis
+alt - x : yabai -m space --mirror x-axis
 
 #Move active window to next space on current display
 shift + lalt + lcmd + ctrl + ralt - 1 : yabai -m query --spaces --space | jq -re ".index" | xargs -I {} bash -c "if [[ '{}' = '1' ]]; then yabai -m window --space 2; elif [[ '{}' = '2' ]]; then yabai -m window --space 1; fi"
@@ -129,9 +129,9 @@ hyper + alt - d : yabai -m space --layout float
 # hyper - 0x21 : yabai -m window --warp east # "[" key
 
 ## focus monitor
-#ctrl + alt - x  : yabai -m display --focus last
-#ctrl + alt - z  : yabai -m display --focus prev || yabai -m display --focus last
-#ctrl + alt - c  : yabai -m display --focus next || yabai -m display --focus first
+ctrl + alt - x  : yabai -m display --focus last
+ctrl + alt - z  : yabai -m display --focus prev || yabai -m display --focus last
+ctrl + alt - c  : yabai -m display --focus next || yabai -m display --focus first
 #ctrl + alt - 1  : yabai -m display --focus 1
 #ctrl + alt - 2  : yabai -m display --focus 2
 #ctrl + alt - 3  : yabai -m display --focus 3

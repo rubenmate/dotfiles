@@ -33,6 +33,12 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- Tag stack jumping
+keymap("n", "<A-t>", "<cmd>pop<CR>", opts)
+
+-- Keymap to jump closing pairs
+keymap("i", "<A-a>", "<ESC>la", opts)
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)

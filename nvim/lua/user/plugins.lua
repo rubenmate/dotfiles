@@ -81,7 +81,7 @@ return packer.startup(function(use)
 	use "andersevenrud/cmp-tmux" -- tmux completion
 	use "David-Kunz/cmp-npm" -- npm packages completion
 	use { "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" }
-	use "github/copilot.vim" -- GitHubCopilot
+	-- use "github/copilot.vim" -- GitHubCopilot
 
 	-- Snippets
 	use "L3MON4D3/LuaSnip" --snippet engine

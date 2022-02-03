@@ -39,3 +39,10 @@ Various dotfiles including my Neovim and Tmux configuration
 - Apps outside brew and the mac app store:
   - Itsycal
   - AppCleaner
+  - Downie
+  - Permute
+  - Tweetbot
+  - iStat Menus
+  - Microsoft Teams
+- Add correct installation of Rust (with Rustup)
+- Possible problem with zshenv cargo folder not existing on initial setup

@@ -46,10 +46,10 @@ brew "neofetch"
 brew "neovim", args: ["HEAD"]
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Safe, concurrent, practical language
-brew "rust"
 # SMART hard drive monitoring
 brew "smartmontools"
 # Terminal-based client for Spotify
@@ -60,12 +60,16 @@ brew "stylua"
 brew "tmux"
 # Manage complex tmux sessions easily
 brew "tmuxinator"
+# Internet file retriever
+brew "wget"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Bash scripts that integrate bat with various command-line tools
 brew "eth-p/software/bat-extras"
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd"
+# A tiling window manager for macOS based on binary space partitioning.
+brew "koekeishiya/formulae/yabai", args: ["HEAD"]
 # Menu bar tool to limit maximum charging percentage
 cask "aldente"
 # Application launcher and productivity software
@@ -89,6 +93,8 @@ cask "karabiner-elements"
 cask "kitty"
 # Open-source Markdown editor
 cask "macdown"
+# Toolbox companion for QMK Firmware
+cask "qmk-toolbox"
 # Music streaming service
 cask "spotify"
 # Easy to use text extraction tool for macOS
@@ -113,4 +119,5 @@ mas "Things", id: 904280696
 mas "Toggl Track", id: 957734279
 mas "Tomito", id: 1526042938
 mas "Trello", id: 1278508951
+mas "WhatsApp", id: 1147396723
 mas "Xcode", id: 497799835

@@ -18,6 +18,10 @@ alias lt='exa --tree --level=2'                                         # tree
 # Uses batman instead of man for manpages syntax highlighting
 alias man=batman
 
+# Alias for using python3 instead of python
+# alias python='python3'
+# alias pip='pip3'
+
 # Alias for brew bundle dump
 alias bbd='brew bundle dump --force --describe'
 # Alias for check Path in a better way

@@ -50,34 +50,35 @@ keymap("n", "<leader>-", ":wincmd _<cr>:wincmd |<cr>", opts)
 keymap("n", "<leader>=", ":wincmd =<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<S-l>", "<cmd>bnext<CR>", opts)
+keymap("n", "<S-h>", "<cmd>bprevious<CR>", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- BufferLine
-keymap("n", "<leader>db", ":Bdelete<CR>", opts)
+keymap("n", "<leader>db", "<cmd>Bdelete<CR>", opts)
 
 -- Gitsigns
-keymap("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", opts)
+keymap("n", "<leader>gp", "<cmd>Gitsigns preview_hunk<CR>", opts)
 
 -- Harpoon
-keymap("n", "<leader>hh", ':lua require("harpoon.ui").toggle_quick_menu()<CR>', opts)
-keymap("n", "<leader>ha", ':lua require("harpoon.mark").add_file()<CR>', opts)
-keymap("n", "<leader>hn", ':lua require("harpoon.ui").nav_next()<CR>', opts)
-keymap("n", "<leader>hp", ':lua require("harpoon.ui").nav_prev()<CR>', opts)
-keymap("n", "<leader>fh", ':lua require("telescope").extensions.harpoon.marks{}<CR>', opts)
+keymap("n", "<leader>hh", '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>', opts)
+keymap("n", "<leader>ha", '<cmd>lua require("harpoon.mark").add_file()<CR>', opts)
+keymap("n", "<leader>hn", '<cmd>lua require("harpoon.ui").nav_next()<CR>', opts)
+keymap("n", "<leader>hp", '<cmd>lua require("harpoon.ui").nav_prev()<CR>', opts)
+keymap("n", "<leader>fh", '<cmd>lua require("telescope").extensions.harpoon.marks{}<CR>', opts)
+
 -- NeoRoot
 keymap("n", "<leader>p", "<cmd>NeoRootSwitchMode<CR>", opts)
 keymap("n", "<leader>cp", "<cmd>NeoRootChange<CR>", opts)
 
 -- Toggle word wrap
-keymap("n", "<leader>tw", ":set wrap!<CR>", opts)
+keymap("n", "<leader>tw", "<cmd>set wrap!<CR>", opts)
 
 -- Clear highlight search
-keymap("n", "<leader>l", ":nohlsearch<CR>", opts)
+keymap("n", "<leader>l", "<cmd>nohlsearch<CR>", opts)
 
 -- Chmod +x
 keymap("n", "<leader>x", ":!chmod +x %<CR>", opts)

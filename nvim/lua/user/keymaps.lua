@@ -69,6 +69,9 @@ keymap("n", "<leader>ha", ':lua require("harpoon.mark").add_file()<CR>', opts)
 keymap("n", "<leader>hn", ':lua require("harpoon.ui").nav_next()<CR>', opts)
 keymap("n", "<leader>hp", ':lua require("harpoon.ui").nav_prev()<CR>', opts)
 keymap("n", "<leader>fh", ':lua require("telescope").extensions.harpoon.marks{}<CR>', opts)
+-- NeoRoot
+keymap("n", "<leader>p", "<cmd>NeoRootSwitchMode<CR>", opts)
+keymap("n", "<leader>cp", "<cmd>NeoRootChange<CR>", opts)
 
 -- Toggle word wrap
 keymap("n", "<leader>tw", ":set wrap!<CR>", opts)

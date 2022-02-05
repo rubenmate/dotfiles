@@ -114,6 +114,15 @@ return packer.startup(function(use)
 	-- treesitter modules, treesitter required
 	use "p00f/nvim-ts-rainbow" -- Rainbow parentheses for neovim
 	use "nvim-treesitter/playground" -- Treesitter information directly in Neovim
+	-- use { -- Autoclosing and autorenaming HTML tags
+	-- 	"windwp/nvim-ts-autotag",
+	-- 	event = "InsertEnter",
+	-- 	config = function()
+	-- 		require("nvim-ts-autotag").setup()
+	-- 	end,
+	-- }
+	use "windwp/nvim-ts-autotag"
+	require("nvim-ts-autotag").setup()
 
 	-- Gitsigns
 	use "lewis6991/gitsigns.nvim"

@@ -41,6 +41,8 @@ local options = {
 	scrolloff = 8, -- determines the number of context lines you see above and below of the cursor (when possible)
 	sidescrolloff = 8, -- determines the number of context lines you see at the right and left of the cursor (when possible)
 	guifont = "monospace:h17", -- the font used in graphical neovim applications
+	textwidth = 80,
+	colorcolumn = "81", -- Highlight column after textwidth
 }
 
 vim.opt.shortmess:append "c" -- TODO: Explore this

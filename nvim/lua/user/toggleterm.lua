@@ -5,7 +5,7 @@ end
 
 toggleterm.setup {
 	size = 20,
-	open_mapping = [[<C-t>]],
+	open_mapping = [[<C-\>]],
 	hide_numbers = true,
 	shade_filetypes = {},
 	shade_terminals = true,
@@ -44,18 +44,21 @@ local lazygit = Terminal:new { cmd = "lazygit", hidden = true }
 function _LAZYGIT_TOGGLE()
 	lazygit:toggle()
 end
+vim.api.nvim_set_keymap("n", "<leader>tgg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", { noremap = true, silent = true })
 
 local node = Terminal:new { cmd = "node", hidden = true }
 
 function _NODE_TOGGLE()
 	node:toggle()
 end
+vim.api.nvim_set_keymap("n", "<leader>tno", "<cmd>lua _NODE_TOGGLE()<CR>", { noremap = true, silent = true })
 
 local ncdu = Terminal:new { cmd = "ncdu", hidden = true }
 
 function _NCDU_TOGGLE()
 	ncdu:toggle()
 end
+vim.api.nvim_set_keymap("n", "<leader>tnc", "<cmd>lua _NCDU_TOGGLE()<CR>", { noremap = true, silent = true })
 
 local htop = Terminal:new { cmd = "htop", hidden = true }
 

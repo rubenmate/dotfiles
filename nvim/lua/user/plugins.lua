@@ -66,6 +66,20 @@ return packer.startup(function(use)
 	use "alexghergh/nvim-tmux-navigation"
 	use "nyngwang/NeoRoot.lua" -- Change working directory like Monkey
 	use "ggandor/lightspeed.nvim" -- Motion plugin for on-screen movements
+	use "stevearc/dressing.nvim" -- Better UI
+	use { -- LSP progress report
+		"j-hui/fidget.nvim",
+		config = function()
+			require("fidget").setup {}
+		end,
+	}
+	use {
+		"danymat/neogen",
+		config = function()
+			require("neogen").setup {}
+		end,
+		requires = "nvim-treesitter/nvim-treesitter",
+	}
 
 	-- Migrated
 	use "ThePrimeagen/harpoon" -- ThePrime Harpoon

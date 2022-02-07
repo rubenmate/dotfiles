@@ -105,8 +105,8 @@ yabai -m config window_gap                   15
 # # yabai -m signal --add event=application_terminated action="terminal-notifier -message 'application_terminated'"
 #
 ## If I close the active window, focus on any other visible window.
-yabai -m signal --add event=window_destroyed action="bash /Users/jesseskelton/CustomScripts/SwitchSpaces/window-focus-on-destroy.sh"
-yabai -m signal --add event=space_changed action="export CUR_ACTIVE_APP=\"iTerm2\""
+# yabai -m signal --add event=window_destroyed action="bash /Users/jesseskelton/CustomScripts/SwitchSpaces/window-focus-on-destroy.sh"
+# yabai -m signal --add event=space_changed action="export CUR_ACTIVE_APP=\"iTerm2\""
 
 echo "yabai configuration loaded.."
 

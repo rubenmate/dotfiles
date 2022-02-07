@@ -26,6 +26,10 @@ brew "fd"
 brew "flake8"
 # Fast and simple Node.js version manager
 brew "fnm"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
+# Generate pixel-perfect macOS folder icons in the native style
+brew "folderify"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Distributed revision control system
@@ -46,8 +50,6 @@ brew "neofetch"
 brew "neovim", args: ["HEAD"]
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # SMART hard drive monitoring

@@ -74,6 +74,9 @@ keymap("n", "<leader>fh", '<cmd>lua require("telescope").extensions.harpoon.mark
 keymap("n", "<leader>p", "<cmd>NeoRootSwitchMode<CR>", opts)
 keymap("n", "<leader>cp", "<cmd>NeoRootChange<CR>", opts)
 
+-- Neogen
+keymap("n", "gcd", "<cmd>Neogen<CR>", opts)
+
 -- Toggle word wrap
 keymap("n", "<leader>tw", "<cmd>set wrap!<CR>", opts)
 

@@ -80,6 +80,7 @@ return packer.startup(function(use)
 		end,
 		requires = "nvim-treesitter/nvim-treesitter",
 	}
+	use "rcarriga/nvim-notify" -- Better Notification UI
 
 	-- Migrated
 	use "ThePrimeagen/harpoon" -- ThePrime Harpoon

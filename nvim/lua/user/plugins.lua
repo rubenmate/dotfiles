@@ -81,6 +81,7 @@ return packer.startup(function(use)
 		requires = "nvim-treesitter/nvim-treesitter",
 	}
 	use "rcarriga/nvim-notify" -- Better Notification UI
+	use { "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" }
 
 	-- Migrated
 	use "ThePrimeagen/harpoon" -- ThePrime Harpoon

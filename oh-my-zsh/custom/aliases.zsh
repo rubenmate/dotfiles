@@ -6,7 +6,7 @@ alias vim='nvim'
 alias cpwd='pwd | pbcopy'
 
 # Substitute ls with exa
-alias ls='exa -laFh --git'                                                          # ls
+alias ls='exa -lha'                                                          # ls
 alias l='exa'                                                # list, size, type, git
 alias ll='exa -lbGF --git'                                             # long list
 alias llm='exa -lbGd --git --sort=modified'                            # long list, modified date sort

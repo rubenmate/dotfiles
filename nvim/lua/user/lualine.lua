@@ -77,7 +77,17 @@ lualine.setup {
 	sections = {
 		lualine_a = { branch, diagnostics },
 		lualine_b = { mode },
-		lualine_c = {},
+		lualine_c = {
+			"%=", -- Used to center this sections
+			{
+				"filename",
+				file_status = true, -- Displays file status (readonly status, modified status)
+				-- 0: Just the filename
+				-- 1: Relative path
+				-- 2: Absolute path
+				path = 1,
+			},
+		},
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
 		lualine_x = { diff, spaces, "encoding", filetype },
 		lualine_y = { progress },
@@ -86,7 +96,8 @@ lualine.setup {
 	inactive_sections = {
 		lualine_a = {},
 		lualine_b = {},
-		lualine_c = { "filename" },
+		lualine_c = { --[[ "filename" ]]
+		},
 		lualine_x = { "location" },
 		lualine_y = {},
 		lualine_z = {},

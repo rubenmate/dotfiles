@@ -1,4 +1,7 @@
-local neogit = require "neogit"
+local status_ok, neogit = pcall(require, "neogit")
+if not status_ok then
+	return
+end
 
 neogit.setup {
 	disable_signs = false,
@@ -68,7 +71,7 @@ neogit.setup {
 			-- Adds a mapping with "B" as key that does the "BranchPopup" command
 			["B"] = "BranchPopup",
 			-- Removes the default mapping of "s"
-			["s"] = "",
+			-- ["s"] = "",
 		},
 	},
 }

@@ -29,9 +29,9 @@ local options = {
 	undofile = true, -- enable persistent undo
 	updatetime = 300, -- faster completion (4000 ms default)
 	writebackup = false, -- if a file is being edited by another program (or written with another program) it is not allowed to be edited
-	expandtab = true, -- convert tabss to spaces
-	shiftwidth = 2, -- the number of spaces for each indentation
-	tabstop = 2, -- insert 2 spaces for a tab
+	expandtab = true, -- convert tabs to spaces
+	shiftwidth = 4, -- the number of spaces for each indentation
+	tabstop = 4, -- insert 2 spaces for a tab
 	cursorline = false, -- highlight current line
 	number = true, -- set numbered lines
 	relativenumber = true, -- set relative numbered lines
@@ -43,6 +43,17 @@ local options = {
 	guifont = "monospace:h17", -- the font used in graphical neovim applications
 	textwidth = 80,
 	colorcolumn = "81", -- Highlight column after textwidth
+	list = true, -- Show hidden chracters, config below
+	listchars = { -- Chracters to show
+		eol = "↲",
+		tab = "  ",
+		trail = "␣",
+		-- tab = "» ",
+		extends = "<",
+		precedes = ">",
+		conceal = "┊",
+		nbsp = "_",
+	},
 }
 
 vim.opt.shortmess:append "c" -- TODO: Explore this

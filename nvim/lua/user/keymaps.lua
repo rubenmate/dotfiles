@@ -10,7 +10,7 @@ local opts = { noremap = true, silent = true }
 -- local term_opts = { silent = true }
 
 -- Shorten function name
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 
 -- Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
@@ -44,6 +44,9 @@ keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize  -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize  +2<CR>", opts)
+
+-- Go full screen
+keymap("n", "<C-w>z", "<C-w>|<C-w>_", opts)
 
 -- Zoom vim pane, <C-w>= to re-balance
 keymap("n", "<leader>-", ":wincmd _<cr>:wincmd |<cr>", opts)

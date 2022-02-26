@@ -40,8 +40,8 @@ keymap("n", "<A-t>", "<cmd>pop<CR>", opts)
 keymap("i", "<A-a>", "<ESC>la", opts)
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize -2<CR>", opts)
-keymap("n", "<C-Down>", ":resize +2<CR>", opts)
+keymap("n", "<C-Up>", ":resize +2<CR>", opts)
+keymap("n", "<C-Down>", ":resize -2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize  -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize  +2<CR>", opts)
 

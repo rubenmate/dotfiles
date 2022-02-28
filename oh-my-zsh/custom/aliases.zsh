@@ -5,6 +5,9 @@ alias vim='nvim'
 # An alias to copy the curren working directory to clipboard
 alias cpwd='pwd | pbcopy'
 
+# An alias to use bat instead of cat
+alias cat='bat'
+
 # Substitute ls with exa
 alias ls='exa -lha'                                                          # ls
 alias l='exa'                                                # list, size, type, git

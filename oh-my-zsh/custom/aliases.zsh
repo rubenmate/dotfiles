@@ -16,7 +16,7 @@ alias llm='exa -lbGd --git --sort=modified'                            # long li
 alias la='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
 alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
 alias lS='exa -1'                                                              # one column, just names
-alias lt='exa --tree --level=2'                                         # tree
+alias tree='exa --tree --level=2'                                         # tree
 
 # Uses batman instead of man for manpages syntax highlighting
 alias man=batman

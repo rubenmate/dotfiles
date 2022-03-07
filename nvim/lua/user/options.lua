@@ -43,16 +43,11 @@ local options = {
 	guifont = "monospace:h17", -- the font used in graphical neovim applications
 	textwidth = 100,
 	colorcolumn = "101", -- Highlight column after textwidth
-	-- list = true, -- Show hidden chracters, config below
+	list = true, -- Show hidden chracters, config below
 	listchars = { -- Chracters to show
 		eol = "↲",
 		tab = "  ",
-		trail = "␣",
-		-- tab = "» ",
-		extends = "<",
-		precedes = ">",
-		conceal = "┊",
-		nbsp = "_",
+		trail = ".",
 	},
 }
 

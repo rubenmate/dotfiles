@@ -26,8 +26,6 @@ require "user.nvim-colorizer"
 require "user.alpha"
 require "user.impatient"
 require "user.indentline"
--- FIXME: Enable when sure of keymaps
--- require "user.whichkey"
 require "user.nvim-tmux-navigation"
 require "user.harpoon"
 require "user.lightspeed"

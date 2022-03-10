@@ -82,6 +82,10 @@ return packer.startup(function(use)
 	use "rcarriga/nvim-notify" -- Better Notification UI
 	use { "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" }
 
+	-- My plugins
+	-- use "/Users/rubenmate/Developerino/nvim-plugins/restarter.nvim/"
+	use "/Users/rubenmate/Developerino/nvim-plugins/stackmap.nvim/"
+
 	-- Migrated
 	use "ThePrimeagen/harpoon" -- ThePrime Harpoon
 
@@ -143,7 +147,7 @@ return packer.startup(function(use)
 	use "lewis6991/gitsigns.nvim"
 
 	-- Bufferline
-	use "akinsho/bufferline.nvim"
+	use { "akinsho/bufferline.nvim", branch = "dev" }
 	use "moll/vim-bbye"
 
 	-- Commentary
@@ -155,6 +159,14 @@ return packer.startup(function(use)
 	-- 	"abecodes/tabout.nvim",
 	-- 	wants = { "nvim-treesitter" },
 	-- }
+
+	-- Debugging
+	use "mfussenegger/nvim-dap"
+	use "rcarriga/nvim-dap-ui"
+	use "theHamsta/nvim-dap-virtual-text"
+	use "nvim-telescope/telescope-dap.nvim"
+	-- extensions
+	use "mfussenegger/nvim-dap-python"
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

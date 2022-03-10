@@ -5,6 +5,7 @@ end
 
 bufferline.setup {
 	options = {
+		mode = "buffers", -- set to "tabs" to only show tabpages instead
 		numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
 		close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
 		right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
@@ -40,6 +41,17 @@ bufferline.setup {
 		--   return "("..count..")"
 		-- end,
 		-- NOTE: this will be called a lot so don't do any heavy processing here
+		custom_filter = function()
+			local tab_num = 0
+			for _ in pairs(vim.api.nvim_list_tabpages()) do
+				tab_num = tab_num + 1
+			end
+			if tab_num > 1 then
+				return false
+			else
+				return true
+			end
+		end,
 		-- custom_filter = function(buf_number)
 		--   -- filter out filetypes you don't want to see
 		--   if vim.bo[buf_number].filetype ~= "<i-dont-want-to-see-this>" then

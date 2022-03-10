@@ -46,3 +46,4 @@ Various dotfiles including my Neovim and Tmux configuration
   - Microsoft Teams
 - Add correct installation of Rust (with Rustup)
 - Possible problem with zshenv cargo folder not existing on initial setup
+- Add telescope find files to search in my dotfiles

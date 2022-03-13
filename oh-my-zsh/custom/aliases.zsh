@@ -22,8 +22,8 @@ alias tree='exa --tree --level=2'                                         # tree
 alias man=batman
 
 # Alias for using python3 instead of python
-# alias python='python3'
-# alias pip='pip3'
+alias python='python3'
+alias pip='pip3'
 
 # Alias for brew bundle dump
 alias bbd='brew bundle dump --force --describe'

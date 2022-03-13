@@ -4,3 +4,5 @@
 	signingkey = 6030953057520D49
 [core]
     editor = nvim
+[init]
+	defaultBranch = main

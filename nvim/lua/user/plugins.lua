@@ -111,6 +111,12 @@ return packer.startup(function(use)
 	use "williamboman/nvim-lsp-installer" -- simple tool to install LSPs
 	use "jose-elias-alvarez/null-ls.nvim" -- tool to hook into linters and formatters
 
+	-- Trouble
+	use {
+		"folke/trouble.nvim",
+		requires = "kyazdani42/nvim-web-devicons",
+	}
+
 	-- Telescope
 	use "nvim-telescope/telescope.nvim"
 

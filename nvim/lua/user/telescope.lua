@@ -8,6 +8,49 @@ telescope.load_extension "harpoon"
 
 local actions = require "telescope.actions"
 
+function Edit_neovim()
+	require("telescope.builtin").find_files {
+		prompt_title = "~ dotfiles ~",
+		shorten_path = false,
+		cwd = "~/.config/nvim",
+		width = 0.25,
+
+		layout_strategy = "horizontal",
+		layout_config = {
+			preview_width = 0.65,
+		},
+	}
+end
+
+function Edit_dotfiles()
+	require("telescope.builtin").find_files {
+		prompt_title = "~ dotfiles ~",
+		shorten_path = false,
+		cwd = "~/.dotfiles/",
+		width = 0.25,
+
+		layout_strategy = "horizontal",
+		layout_config = {
+			preview_width = 0.65,
+		},
+	}
+end
+
+-- Telescope
+local opts = { noremap = true, silent = true }
+vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
+vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
+vim.keymap.set(
+	"n",
+	"<leader>th",
+	"<cmd>lua require'telescope.builtin'.help_tags(require('telescope.themes').get_dropdown({ previewer = false}))<CR>",
+	opts
+)
+-- TODO: Check TJ way of doing this: https://github.com/tjdevries/config_manager/search?q=edit_neovim
+vim.keymap.set("n", "<leader>fn", "<cmd>lua Edit_neovim()<CR>", opts)
+vim.keymap.set("n", "<leader>fd", "<cmd>lua Edit_dotfiles()<CR>", opts)
+
+-- Configuration
 telescope.setup {
 	defaults = {
 		prompt_prefix = " ",

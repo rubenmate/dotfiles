@@ -17,34 +17,6 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-function edit_neovim()
-	require("telescope.builtin").find_files {
-		prompt_title = "~ dotfiles ~",
-		shorten_path = false,
-		cwd = "~/.config/nvim",
-		width = 0.25,
-
-		layout_strategy = "horizontal",
-		layout_config = {
-			preview_width = 0.65,
-		},
-	}
-end
-
-function edit_dotfiles()
-	require("telescope.builtin").find_files {
-		prompt_title = "~ dotfiles ~",
-		shorten_path = false,
-		cwd = "~/.dotfiles/",
-		width = 0.25,
-
-		layout_strategy = "horizontal",
-		layout_config = {
-			preview_width = 0.65,
-		},
-	}
-end
-
 -- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",
@@ -149,19 +121,6 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 keymap("n", "<leader><leader>x", "<cmd>source %<CR>", opts)
-
--- Telescope
-keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
-keymap(
-	"n",
-	"<leader>th",
-	"<cmd>lua require'telescope.builtin'.help_tags(require('telescope.themes').get_dropdown({ previewer = false}))<CR>",
-	opts
-)
--- TODO: Check TJ way of doing this: https://github.com/tjdevries/config_manager/search?q=edit_neovim
-keymap("n", "<leader>en", "<cmd>lua edit_neovim()<CR>", opts)
-keymap("n", "<leader>ed", "<cmd>lua edit_dotfiles()<CR>", opts)
 
 -- Nvim-Tree
 keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)

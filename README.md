@@ -1,5 +1,6 @@
 # dotfiles
 
+NOTE: This requires the neovim nightly with [global status line](https://github.com/neovim/neovim/commit/3c7e937a892308498ba23ce5c0959e51fbf28911)
 Various dotfiles including my Neovim and Tmux configuration
 
 ## Instructions
@@ -47,3 +48,4 @@ Various dotfiles including my Neovim and Tmux configuration
 - Add correct installation of Rust (with Rustup)
 - Possible problem with zshenv cargo folder not existing on initial setup
 - Add telescope find files to search in my dotfiles
+- IMPORTANT: Fix Tmux folder and symlinks for tmux-cht.sh

@@ -8,6 +8,7 @@ telescope.load_extension "harpoon"
 
 local actions = require "telescope.actions"
 
+-- Custom pickers
 function Edit_neovim()
 	require("telescope.builtin").find_files {
 		prompt_title = "~ dotfiles ~",

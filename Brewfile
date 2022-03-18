@@ -83,6 +83,8 @@ brew "tmux"
 brew "tmuxinator"
 # Internet file retriever
 brew "wget"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Bash scripts that integrate bat with various command-line tools

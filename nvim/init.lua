@@ -6,6 +6,7 @@
 --   ██║██║ ╚████║██║   ██║██╗███████╗╚██████╔╝██║  ██║
 --   ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 --                    @rubenmate
+-- Core functionality
 require "user.globals"
 require "user.options"
 require "user.keymaps"
@@ -19,11 +20,12 @@ require "user.nvim-tree"
 require "user.comment"
 require "user.trouble"
 require "user.lualine"
+
+-- Plugins
 require "user.autopairs"
 require "user.gitsigns"
 require "user.bufferline"
 require "user.toggleterm"
-require "user.neoscroll"
 require "user.nvim-colorizer"
 require "user.alpha"
 require "user.impatient"

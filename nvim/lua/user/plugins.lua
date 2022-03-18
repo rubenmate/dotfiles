@@ -56,7 +56,6 @@ return packer.startup(function(use)
 	use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
 	use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
 	use "akinsho/toggleterm.nvim" -- Open  terminal programs in neovim
-	use "karb94/neoscroll.nvim" -- Smooth scrolling with C-u/C-d
 	use "norcalli/nvim-colorizer.lua" -- Color highlighter
 	use "goolord/alpha-nvim" -- Dashboard for neovim
 	use "lewis6991/impatient.nvim" -- Speed up Lua modules to improve startup time

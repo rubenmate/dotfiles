@@ -57,10 +57,8 @@ return packer.startup(function(use)
 	use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
 	use "akinsho/toggleterm.nvim" -- Open  terminal programs in neovim
 	use "norcalli/nvim-colorizer.lua" -- Color highlighter
-	use "goolord/alpha-nvim" -- Dashboard for neovim
 	use "lewis6991/impatient.nvim" -- Speed up Lua modules to improve startup time
 	use "lukas-reineke/indent-blankline.nvim" -- Show indent lines
-	use "folke/which-key.nvim" -- Keymaps helper
 	use "alexghergh/nvim-tmux-navigation"
 	use "nyngwang/NeoRoot.lua" -- Change working directory like Monkey
 	use "ggandor/lightspeed.nvim" -- Motion plugin for on-screen movements

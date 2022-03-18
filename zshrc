@@ -122,3 +122,7 @@ unset __conda_setup
 
 # Created by `pipx` on 2021-10-26 21:34:39
 export PATH="$PATH:/Users/rubenmate/.local/bin"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(zoxide init zsh)"

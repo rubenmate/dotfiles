@@ -63,6 +63,12 @@ return packer.startup(function(use)
 	use "nyngwang/NeoRoot.lua" -- Change working directory like Monkey
 	use "ggandor/lightspeed.nvim" -- Motion plugin for on-screen movements
 	use "stevearc/dressing.nvim" -- Better UI
+	use {
+		"nacro90/numb.nvim",
+		config = function()
+			require("numb").setup {}
+		end,
+	}
 	use { -- LSP progress report
 		"j-hui/fidget.nvim",
 		config = function()

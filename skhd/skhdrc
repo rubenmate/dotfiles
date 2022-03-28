@@ -19,6 +19,7 @@ shift + alt - 1 : yabai -m window --space 1; yabai -m space --focus 1
 hyper - 1 : yabai -m space --focus 1
 hyper - 2 : yabai -m space --focus 2
 hyper - 3 : yabai -m space --focus 3
+hyper - 4 : yabai -m space --focus 4
 
 ## focus window
 hyper - h : yabai -m window --focus west
@@ -36,6 +37,17 @@ hyper - o : yabai -m window --swap east
 ctrl + cmd - 1 : yabai -m window --display 1 yabai -m display --focus 1
 ctrl + cmd - 2 : yabai -m window --display 2 yabai -m display --focus 2
 ctrl + cmd - 3 : yabai -m window --display 3 yabai -m display --focus 3
+
+# Focus window up/down in stack
+hyper - n : yabai -m window --focus stack.next
+hyper - p : yabai -m window --focus stack.prev
+
+# Add the active window  to the window or stack to the {direction}
+# Note that this only works when the active window does *not* already belong to a stack
+cmd + ctrl - left  : yabai -m window west --stack $(yabai -m query --windows --window | jq -r '.id')
+cmd + ctrl - down  : yabai -m window south --stack $(yabai -m query --windows --window | jq -r '.id')
+cmd + ctrl - up    : yabai -m window north --stack $(yabai -m query --windows --window | jq -r '.id')
+cmd + ctrl - right : yabai -m window east --stack $(yabai -m query --windows --window | jq -r '.id')
 
 ## send window to monitor and follow focus
 #hyper - u : /Users/jesseskelton/CustomScripts/SwitchSpaces/moveWindowLeftAndFollowFocus.sh
@@ -58,7 +70,7 @@ shift + alt - d : yabai -m window --resize right:20:0
 hyper - r : yabai -m space --rotate 90
 
 ## flip the tree vertically
-hyper - 4 : yabai -m space --mirror y-axis
+## hyper - 4 : yabai -m space --mirror y-axis
 # mirror tree y-axis
 alt - y : yabai -m space --mirror y-axis
 # mirror tree x-axis

@@ -11,7 +11,7 @@ local actions = require "telescope.actions"
 -- Custom pickers
 function Edit_neovim()
 	require("telescope.builtin").find_files {
-		prompt_title = "~ dotfiles ~",
+		prompt_title = "~ neovim ~",
 		shorten_path = false,
 		cwd = "~/.config/nvim",
 		width = 0.25,

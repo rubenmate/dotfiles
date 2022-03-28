@@ -53,6 +53,8 @@ brew "glow"
 brew "htop"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Simple terminal UI for git commands
 brew "lazygit"
 # Powerful, lightweight programming language
@@ -92,7 +94,7 @@ brew "eth-p/software/bat-extras"
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd"
 # A tiling window manager for macOS based on binary space partitioning.
-brew "koekeishiya/formulae/yabai", args: ["HEAD"]
+brew "koekeishiya/formulae/yabai"
 # Menu bar tool to limit maximum charging percentage
 cask "aldente"
 # Application launcher and productivity software
@@ -110,6 +112,8 @@ cask "dropbox"
 # Web browser
 cask "firefox"
 cask "font-hack-nerd-font"
+# Desktop automation application
+cask "hammerspoon"
 # Keyboard customizer
 cask "karabiner-elements"
 # GPU-based terminal emulator

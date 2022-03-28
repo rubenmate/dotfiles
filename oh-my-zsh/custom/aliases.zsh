@@ -1,4 +1,5 @@
 # An alias to open Neovim with vi or vim
+alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
 

@@ -89,6 +89,19 @@ return packer.startup(function(use)
 	use "rcarriga/nvim-notify" -- Better Notification UI
 	use { "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" }
 	use "max397574/better-escape.nvim"
+	use {
+		"zbirenbaum/copilot.lua",
+		event = { "VimEnter" },
+		config = function()
+			vim.defer_fn(function()
+				require("copilot").setup()
+			end, 100)
+		end,
+	}
+	use {
+		"zbirenbaum/copilot-cmp",
+		after = { "copilot.lua", "nvim-cmp" },
+	}
 
 	-- My plugins
 	-- use "/Users/rubenmate/Developerino/nvim-plugins/restarter.nvim/"
@@ -108,7 +121,6 @@ return packer.startup(function(use)
 	use "andersevenrud/cmp-tmux" -- tmux completion
 	use "David-Kunz/cmp-npm" -- npm packages completion
 	use { "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" }
-	-- use "github/copilot.vim" -- GitHubCopilot
 
 	-- Snippets
 	use "L3MON4D3/LuaSnip" --snippet engine

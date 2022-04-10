@@ -84,6 +84,7 @@ return packer.startup(function(use)
 	}
 	use "rcarriga/nvim-notify" -- Better Notification UI
 	use { "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" }
+	use "max397574/better-escape.nvim"
 
 	-- My plugins
 	-- use "/Users/rubenmate/Developerino/nvim-plugins/restarter.nvim/"

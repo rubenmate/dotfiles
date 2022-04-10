@@ -48,6 +48,10 @@ packer.init {
 return packer.startup(function(use)
 	-- Color schemes
 	use { "dracula/vim", as = "dracula" }
+	use {
+		"catppuccin/nvim",
+		as = "catppuccin",
+	}
 	use "npxbr/gruvbox.nvim"
 
 	-- My plugins here

@@ -24,6 +24,7 @@
     ~/.config/skhd:
     ~/.config/yabai:
     ~/.config/karabiner:
+    ~/.config/starship.toml: starship.toml
     ~/.tmux.conf: tmux.conf
     ~/.config/stylua.toml: stylua/stylua.toml
     ~/Library/Application Support/lazygit/config.yml:

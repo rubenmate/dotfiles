@@ -77,6 +77,8 @@ brew "ripgrep"
 brew "smartmontools"
 # Terminal-based client for Spotify
 brew "spotify-tui"
+# Cross-shell prompt for astronauts
+brew "starship"
 # Opinionated Lua code formatter
 brew "stylua"
 # Terminal multiplexer

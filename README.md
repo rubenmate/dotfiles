@@ -51,3 +51,4 @@ Various dotfiles including my Neovim and Tmux configuration
 - Add telescope find files to search in my dotfiles
 - IMPORTANT: Fix Tmux folder and symlinks for tmux-cht.sh
 - IMPORTANT: Manage zsh plugins better
+- Remove: Powerlevel10k

@@ -19,6 +19,9 @@ export NULLCMD=bat
 export ZSH="/Users/rubenmate/.oh-my-zsh"
 # Evaluate the output of fnm env so you can use it to automatically run fnm use 
 eval "$(fnm env --use-on-cd)"
+# Export path to go binaries
+export GOBIN="/Users/rubenmate/go/bin"
+export PATH="/Users/rubenmate/go/bin:$PATH"
 # Theme
 # ZSH_THEME="powerlevel10k/powerlevel10k"
 

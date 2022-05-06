@@ -4,13 +4,13 @@ if not status_ok then
 end
 
 -- telescope.load_extension('media_files')
-telescope.load_extension "harpoon"
+telescope.load_extension("harpoon")
 
-local actions = require "telescope.actions"
+local actions = require("telescope.actions")
 
 -- Custom pickers
 function Edit_neovim()
-	require("telescope.builtin").find_files {
+	require("telescope.builtin").find_files({
 		prompt_title = "~ neovim ~",
 		shorten_path = false,
 		cwd = "~/.config/nvim",
@@ -20,11 +20,11 @@ function Edit_neovim()
 		layout_config = {
 			preview_width = 0.65,
 		},
-	}
+	})
 end
 
 function Edit_dotfiles()
-	require("telescope.builtin").find_files {
+	require("telescope.builtin").find_files({
 		prompt_title = "~ dotfiles ~",
 		shorten_path = false,
 		cwd = "~/.dotfiles/",
@@ -34,7 +34,7 @@ function Edit_dotfiles()
 		layout_config = {
 			preview_width = 0.65,
 		},
-	}
+	})
 end
 
 -- Telescope
@@ -145,4 +145,4 @@ telescope.setup {
 		--   extension_config_key = value,
 		-- }
 	},
-}
+})

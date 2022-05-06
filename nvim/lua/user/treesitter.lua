@@ -1,6 +1,6 @@
-local configs = require "nvim-treesitter.configs"
-configs.setup {
-	ensure_installed = "maintained",
+local configs = require("nvim-treesitter.configs")
+configs.setup({
+	ensure_installed = { "lua", "rust", "javascript", "html" },
 	sync_install = false,
 	ignore_install = { "" }, -- List of parsers to ignore installing
 	-- autotag = {
@@ -48,4 +48,4 @@ configs.setup {
 			show_help = "?",
 		},
 	},
-}
+})

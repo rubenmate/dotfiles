@@ -12,13 +12,14 @@
 --███████║╚██████╗██║  ██║███████╗██║ ╚═╝ ██║███████╗
 --╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚══════╝
 --
+require("colorbuddy").colorscheme "gruvbuddy"
 
 -- Set your prefered colorscheme
-vim.cmd [[
-try
-  colorscheme dracula
-catch /^Vim\%((\a\+)\)\=:E185/
-  colorscheme default
-  set background=dark
-endtry
-]]
+-- vim.cmd([[
+-- try
+--   colorscheme dracula
+-- catch /^Vim\%((\a\+)\)\=:E185/
+--   colorscheme default
+--   set background=dark
+-- endtry
+-- ]])

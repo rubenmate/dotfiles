@@ -53,9 +53,19 @@ local location = {
 
 -- cool function for progress
 local progress = function()
-	local current_line = vim.fn.line(".")
-	local total_lines = vim.fn.line("$")
-	local chars = { "__", "▁▁", "▂▂", "▃▃", "▄▄", "▅▅", "▆▆", "▇▇", "██" }
+	local current_line = vim.fn.line "."
+	local total_lines = vim.fn.line "$"
+	local chars = {
+		"__",
+		"▁▁",
+		"▂▂",
+		"▃▃",
+		"▄▄",
+		"▅▅",
+		"▆▆",
+		"▇▇",
+		"██",
+	}
 	local line_ratio = current_line / total_lines
 	local index = math.ceil(line_ratio * #chars)
 	return chars[index]
@@ -65,11 +75,21 @@ local spaces = function()
 	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
 
-lualine.setup({
+local gruvbuddy = require "lualine.themes.auto"
+
+gruvbuddy.normal.a.bg = "#f8fe7a"
+gruvbuddy.normal.b.fg = "#f8fe7a"
+gruvbuddy.command.a.bg = "#cc6666"
+gruvbuddy.command.b.fg = "#cc6666"
+gruvbuddy.normal.c.fg = "#282c34"
+gruvbuddy.command.c.fg = "#282c34"
+gruvbuddy.visual.c.fg = "#282c34"
+
+lualine.setup {
 	options = {
 		globalstatus = true,
 		icons_enabled = true,
-		theme = "auto",
+		theme = gruvbuddy,
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
@@ -112,4 +132,4 @@ lualine.setup({
 	},
 	tabline = {},
 	extensions = {},
-})
+}

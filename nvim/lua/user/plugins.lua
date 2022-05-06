@@ -192,6 +192,7 @@ return packer.startup(function(use)
 	use "theHamsta/nvim-dap-virtual-text"
 	use "nvim-telescope/telescope-dap.nvim"
 	-- extensions
+	use "leoluz/nvim-dap-go"
 	use "mfussenegger/nvim-dap-python"
 
 	-- Automatically set up your configuration after cloning packer.nvim

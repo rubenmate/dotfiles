@@ -33,19 +33,20 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
--- Tag stack jumping
-keymap("n", "<A-t>", "<cmd>pop<CR>", opts)
-
+-- -- Tag stack jumping
+-- keymap("n", "<A-t>", "<cmd>pop<CR>", opts)
+--
 -- Keymap to jump closing pairs
 keymap("i", "<A-a>", "<ESC>la", opts)
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize +2<CR>", opts)
-keymap("n", "<C-Down>", ":resize -2<CR>", opts)
+keymap("n", "<C-Up>", ":resize -2<CR>", opts)
+keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize  -2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize  +2<CR>", opts)
 
 -- Go full screen
+-- TODO: Add toggle to switch between full mode and not full mode
 keymap("n", "<C-w>z", "<C-w>|<C-w>_", opts)
 
 -- Zoom vim pane, <C-w>= to re-balance

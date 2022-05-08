@@ -105,6 +105,10 @@ else
     tmux new-window -t "$session_name:3" -c $path_name -n "srv"
     tmux send-keys -t "srv" "htop" C-m
 
+    if [[ "$session_name" == "dotfiles" ]]; then
+        tmux new-window -t "$session_name:4" -c "/Users/rubenmate/sources" -n "srcs"
+        tmux send-keys -t "srcs" "ls" C-m
+    fi
     )
 fi
  }

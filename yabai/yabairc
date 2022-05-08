@@ -27,23 +27,13 @@ yabai -m rule --add app="System Preferences" sticky=on layer=above manage=off
 yabai -m rule --add app="^Karabiner-Elements$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Karabiner-EventViewer$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Browserosaurus$" manage=off
-yabai -m rule --add app="^Finder$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Alfred Preferences$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Disk Utility$" sticky=on layer=above manage=off
-yabai -m rule --add app="^System Information$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Activity Monitor$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Path Finder$" manage=off
 yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="Pocket Casts" manage=off
-yabai -m rule --add app="Telegram" manage=off
-yabai -m rule --add app="^console$" manage=off
 yabai -m rule --add app="^Private Internet Access$" manage=off
-yabai -m rule --add app="CleanMyMac X" manage=off
-yabai -m rule --add app="WhatsApp" manage=off
-yabai -m rule --add app="Pi-hole Remote" manage=off
 yabai -m rule --add app="Enpass" manage=off
 yabai -m rule --add app="Spark" manage=off
-yabai -m rule --add app="App Store" manage=off
+yabai -m rule --add app="Finder" manage=off
 
 # general space settings
 yabai -m config layout                       bsp

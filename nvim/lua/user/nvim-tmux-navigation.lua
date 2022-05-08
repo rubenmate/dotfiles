@@ -3,7 +3,7 @@ if not status_ok then
 	return
 end
 
-nvim_tmux_navigation.setup({
+nvim_tmux_navigation.setup {
 	keybindings = {
 		left = "<C-h>",
 		down = "<C-j>",
@@ -12,4 +12,4 @@ nvim_tmux_navigation.setup({
 		-- last_active = "<C-\\>",
 		-- next = "<C-Space>",
 	},
-})
+}

@@ -3,7 +3,7 @@ if not status_ok then
 	return
 end
 
-notify.setup({
+notify.setup {
 	-- Animation style (see below for details)
 	stages = "fade_in_slide_out",
 
@@ -39,6 +39,6 @@ notify.setup({
 		DEBUG = "",
 		TRACE = "✎",
 	},
-})
+}
 
 vim.notify = notify

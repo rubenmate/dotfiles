@@ -3,7 +3,7 @@ if not status_ok then
 	return
 end
 
-toggleterm.setup({
+toggleterm.setup {
 	size = 20,
 	open_mapping = [[<C-\>]],
 	hide_numbers = true,
@@ -24,7 +24,7 @@ toggleterm.setup({
 			background = "Normal",
 		},
 	},
-})
+}
 
 function _G.set_terminal_keymaps()
 	local opts = { noremap = true }
@@ -35,30 +35,40 @@ function _G.set_terminal_keymaps()
 	vim.api.nvim_buf_set_keymap(0, "t", "<C-l>", [[<C-\><C-n><C-W>l]], opts)
 end
 
-vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
+vim.cmd "autocmd! TermOpen term://* lua set_terminal_keymaps()"
 
 local Terminal = require("toggleterm.terminal").Terminal
-local node = Terminal:new({ cmd = "node", hidden = true })
+local node = Terminal:new { cmd = "node", hidden = true }
 
 function _NODE_TOGGLE()
 	node:toggle()
 end
-vim.api.nvim_set_keymap("n", "<leader>tno", "<cmd>lua _NODE_TOGGLE()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>tno",
+	"<cmd>lua _NODE_TOGGLE()<CR>",
+	{ noremap = true, silent = true }
+)
 
-local ncdu = Terminal:new({ cmd = "ncdu", hidden = true })
+local ncdu = Terminal:new { cmd = "ncdu", hidden = true }
 
 function _NCDU_TOGGLE()
 	ncdu:toggle()
 end
-vim.api.nvim_set_keymap("n", "<leader>tnc", "<cmd>lua _NCDU_TOGGLE()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>tnc",
+	"<cmd>lua _NCDU_TOGGLE()<CR>",
+	{ noremap = true, silent = true }
+)
 
-local htop = Terminal:new({ cmd = "htop", hidden = true })
+local htop = Terminal:new { cmd = "htop", hidden = true }
 
 function _HTOP_TOGGLE()
 	htop:toggle()
 end
 
-local python = Terminal:new({ cmd = "python", hidden = true })
+local python = Terminal:new { cmd = "python", hidden = true }
 
 function _PYTHON_TOGGLE()
 	python:toggle()

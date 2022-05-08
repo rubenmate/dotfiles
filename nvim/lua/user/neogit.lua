@@ -3,7 +3,7 @@ if not status_ok then
 	return
 end
 
-neogit.setup({
+neogit.setup {
 	disable_signs = false,
 	disable_hint = false,
 	disable_context_highlighting = false,
@@ -74,4 +74,4 @@ neogit.setup({
 			-- ["s"] = "",
 		},
 	},
-})
+}

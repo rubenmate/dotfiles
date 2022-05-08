@@ -49,11 +49,9 @@ packer.init {
 return packer.startup(function(use)
 	-- Color schemes
 	use { "dracula/vim", as = "dracula" }
-	use {
-		"catppuccin/nvim",
-		as = "catppuccin",
-	}
-	use "npxbr/gruvbox.nvim"
+	use { "ellisonleao/gruvbox.nvim" }
+	use "tjdevries/colorbuddy.vim"
+	use "tjdevries/gruvbuddy.nvim"
 
 	-- My plugins here
 	use "wbthomason/packer.nvim" -- Have packer manage itself
@@ -77,15 +75,10 @@ return packer.startup(function(use)
 	use { -- LSP progress report
 		"j-hui/fidget.nvim",
 		config = function()
-			require("fidget").setup {}
+			require("fidget").setup {
+				vim.cmd [[highlight FidgetTitle guifg=#81a2be]],
+			}
 		end,
-	}
-	use {
-		"danymat/neogen",
-		config = function()
-			require("neogen").setup {}
-		end,
-		requires = "nvim-treesitter/nvim-treesitter",
 	}
 	use "rcarriga/nvim-notify" -- Better Notification UI
 	use { "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" }

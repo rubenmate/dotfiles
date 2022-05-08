@@ -31,6 +31,7 @@ local mode = {
 	"mode",
 	fmt = function(str)
 		return "-- " .. str .. " --"
+		-- return str
 	end,
 }
 
@@ -48,7 +49,7 @@ local branch = {
 
 local location = {
 	"location",
-	padding = 0,
+	padding = 1,
 }
 
 -- cool function for progress
@@ -77,11 +78,21 @@ end
 
 local gruvbuddy = require "lualine.themes.auto"
 
-gruvbuddy.normal.a.bg = "#f8fe7a"
-gruvbuddy.normal.b.fg = "#f8fe7a"
-gruvbuddy.command.a.bg = "#cc6666"
-gruvbuddy.command.b.fg = "#cc6666"
+gruvbuddy.normal.a.bg = "#414754"
+gruvbuddy.normal.a.fg = "#f8fe7a"
+
+gruvbuddy.command.b.bg = "#81a2be"
+gruvbuddy.normal.b.bg = "#81a2be"
+gruvbuddy.insert.b.bg = "#81a2be"
+gruvbuddy.visual.b.bg = "#81a2be"
+
+gruvbuddy.normal.b.fg = "#282c34"
+gruvbuddy.insert.b.fg = "#282c34"
+gruvbuddy.command.b.fg = "#282c34"
+gruvbuddy.visual.b.fg = "#282c34"
+
 gruvbuddy.normal.c.fg = "#282c34"
+gruvbuddy.insert.c.fg = "#282c34"
 gruvbuddy.command.c.fg = "#282c34"
 gruvbuddy.visual.c.fg = "#282c34"
 
@@ -99,12 +110,13 @@ lualine.setup {
 			"Outline",
 			"NeogitStatus",
 			"toggleterm",
+			"TelescopePrompt",
 		},
 		always_divide_middle = true,
 	},
 	sections = {
-		lualine_a = { branch, diagnostics },
-		lualine_b = { mode },
+		lualine_a = { mode },
+		lualine_b = { branch, diagnostics },
 		lualine_c = {
 			"%=", -- Used to center this sections
 			{
@@ -114,6 +126,15 @@ lualine.setup {
 				-- 1: Relative path
 				-- 2: Absolute path
 				path = 1,
+			},
+			{
+				"filetype",
+				colored = false,
+				icon_only = true,
+				padding = {
+					left = -1,--[[ , right = right_padding  ]]
+				},
+				icon = { align = "right" }, -- Display filetype icon on the right hand side
 			},
 		},
 		-- lualine_x = { "encoding", "fileformat", "filetype" },

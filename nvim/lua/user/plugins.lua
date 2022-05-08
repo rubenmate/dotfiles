@@ -100,6 +100,18 @@ return packer.startup(function(use)
 	-- My plugins
 	-- use "/Users/rubenmate/Developerino/nvim-plugins/restarter.nvim/"
 	use "/Users/rubenmate/Developerino/nvim-plugins/stackmap.nvim/"
+	use {
+		"b0o/incline.nvim",
+		config = function()
+			require("incline").setup {
+				hide = { only_win = true },
+				window = {
+					width = "fit",
+					placement = { horizontal = "left", vertical = "bottom" },
+				},
+			}
+		end,
+	}
 
 	-- Migrated
 	use "ThePrimeagen/harpoon" -- ThePrime Harpoon
@@ -167,7 +179,7 @@ return packer.startup(function(use)
 	use "lewis6991/gitsigns.nvim"
 
 	-- Bufferline
-	use { "akinsho/bufferline.nvim", branch = "dev" }
+	use "akinsho/bufferline.nvim"
 	use "moll/vim-bbye"
 
 	-- Commentary

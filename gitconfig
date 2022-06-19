@@ -1,10 +1,13 @@
 [user]
 	name = Ruben Mate
 	email = 79601967+rubenmate@users.noreply.github.com
-	signingkey = 6030953057520D49
+	signingkey = 5DEC399B
 [core]
     editor = nvim
+	excludesfile = /Users/rubenmate/.gitignore_global
 [init]
 	defaultBranch = main
 [alias]
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+[commit]
+	gpgsign = true

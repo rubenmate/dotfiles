@@ -31,6 +31,8 @@ brew "pkg-config"
 brew "cmake"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
+# More intuitive version of du in rust
+brew "dust"
 # Modern replacement for 'ls'
 brew "exa"
 # Simple, fast and user-friendly alternative to find
@@ -53,6 +55,8 @@ brew "glow"
 brew "htop"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# Command-line benchmarking tool
+brew "hyperfine"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Simple terminal UI for git commands
@@ -67,8 +71,6 @@ brew "ncdu"
 brew "neofetch"
 # Small build system for use with gyp or CMake
 brew "ninja"
-# Development kit for the Java programming language
-brew "openjdk@11"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
 # Search tool like grep and The Silver Searcher
@@ -81,12 +83,18 @@ brew "spotify-tui"
 brew "starship"
 # Opinionated Lua code formatter
 brew "stylua"
+# Very fast implementation of tldr in Rust
+brew "tealdeer"
 # Terminal multiplexer
 brew "tmux"
 # Manage complex tmux sessions easily
 brew "tmuxinator"
+# Program that allows you to count code, quickly
+brew "tokei"
 # Internet file retriever
 brew "wget"
+# Generate your Xcode project from a spec file and your folder structure
+brew "xcodegen"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # UNIX shell (command interpreter)
@@ -107,10 +115,14 @@ cask "alt-tab"
 cask "brave-browser"
 # Open-source browser prompter
 cask "browserosaurus"
+# Utilities designed to make common development tasks easier
+cask "devtoys"
 # Voice and text chat software
 cask "discord"
 # Client for the Dropbox cloud storage service
 cask "dropbox"
+# Collaborative team software
+cask "figma"
 # Web browser
 cask "firefox"
 cask "font-hack-nerd-font"
@@ -131,15 +143,19 @@ cask "trex"
 cask "vimmotion"
 mas "Amphetamine", id: 937984704
 mas "Anybuffer", id: 1330815414
+mas "Color Picker", id: 1545870783
 mas "Enpass", id: 732710998
 mas "Focus To-Do", id: 1258530160
 mas "Hidden Bar", id: 1452453066
 mas "Magnet", id: 441258766
+mas "Mela", id: 1568924476
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "Pi-hole Remote", id: 1515445551
+mas "Reeder", id: 1529448980
 mas "Shareful", id: 1522267256
 mas "Spark", id: 1176895641
 mas "Streaks", id: 1493327990
+mas "Tailscale", id: 1475387142
 mas "Telegram", id: 747648890
 mas "TestFlight", id: 899247664
 mas "The Unarchiver", id: 425424353

@@ -121,6 +121,14 @@ export PATH="$PATH:/Users/rubenmate/.local/bin"
 # Dracula color theme for FZF
 export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#282c34,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
 
+# Zoxide
 eval "$(zoxide init zsh)"
 
+# Starship prompt
 eval "$(starship init zsh)"
+
+# Git ignore generator
+function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
+
+# GPG signing
+export GPG_TTY=$(tty)

@@ -47,10 +47,16 @@ brew "libtool"
 brew "folderify"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# GitHub command-line tool
+brew "gh"
 # Distributed revision control system
 brew "git"
 # Render markdown on the CLI
 brew "glow"
+# Passphrase entry dialog utilizing the Assuan protocol
+brew "pinentry"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
 # Improved top (interactive process viewer)
 brew "htop"
 # User-friendly cURL replacement (command-line HTTP client)
@@ -91,6 +97,8 @@ brew "tmux"
 brew "tmuxinator"
 # Program that allows you to count code, quickly
 brew "tokei"
+# Undo git commands. Your damage control git buddy
+brew "ugit"
 # Internet file retriever
 brew "wget"
 # Generate your Xcode project from a spec file and your folder structure
@@ -138,9 +146,11 @@ cask "macdown"
 cask "qmk-toolbox"
 # Music streaming service
 cask "spotify"
-# Easy to use text extraction tool for macOS
+# Easy to use text extraction tool
 cask "trex"
 cask "vimmotion"
+# Open-source code editor
+cask "visual-studio-code"
 mas "Amphetamine", id: 937984704
 mas "Anybuffer", id: 1330815414
 mas "Color Picker", id: 1545870783

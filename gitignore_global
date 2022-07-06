@@ -1,0 +1,9 @@
+# Archivos y directorios de sistema
+.DS_Store
+Destkop.ini
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# Variables de entorno
+.env

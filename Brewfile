@@ -69,6 +69,8 @@ brew "jq"
 brew "lazygit"
 # Powerful, lightweight programming language
 brew "lua"
+# Swiss Army Knife for macOS
+brew "m-cli"
 # Mac App Store command-line interface
 brew "mas"
 # NCurses Disk Usage
@@ -134,8 +136,6 @@ cask "figma"
 # Web browser
 cask "firefox"
 cask "font-hack-nerd-font"
-# Desktop automation application
-cask "hammerspoon"
 # Keyboard customizer
 cask "karabiner-elements"
 # GPU-based terminal emulator

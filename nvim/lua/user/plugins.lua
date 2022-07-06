@@ -48,17 +48,7 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
     -- Color schemes
-    use { "dracula/vim", as = "dracula" }
-    use { "ellisonleao/gruvbox.nvim" }
-    use { "akai54/2077.nvim", as = "vice" }
-    use {
-        "catppuccin/nvim",
-        as = "catppuccin",
-    }
-    use "tjdevries/colorbuddy.vim"
-    use "tjdevries/gruvbuddy.nvim"
-    use "EdenEast/nightfox.nvim"
-    use "rmehri01/onenord.nvim"
+    use "Mofiqul/dracula.nvim"
 
     -- My plugins here
     use "rktjmp/lush.nvim"

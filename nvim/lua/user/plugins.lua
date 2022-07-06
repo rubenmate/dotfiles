@@ -48,7 +48,7 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
     -- Color schemes
-    use "Mofiqul/dracula.nvim"
+    use { "dracula/vim", as = "dracula" }
 
     -- My plugins here
     use "rktjmp/lush.nvim"
@@ -61,7 +61,6 @@ return packer.startup(function(use)
     -- use "lewis6991/impatient.nvim" -- Speed up Lua modules to improve startup time
     use "lukas-reineke/indent-blankline.nvim" -- Show indent lines
     use "alexghergh/nvim-tmux-navigation"
-    use "nyngwang/NeoRoot.lua" -- Change working directory like Monkey
     use "ggandor/lightspeed.nvim" -- Motion plugin for on-screen movements
     use {
         "nacro90/numb.nvim",
@@ -77,8 +76,19 @@ return packer.startup(function(use)
             }
         end,
     }
+    use { "stevearc/dressing.nvim" }
+    use {
+        "ziontee113/icon-picker.nvim",
+        config = function()
+            require "icon-picker"
+        end,
+    }
     use { "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" }
     use "max397574/better-escape.nvim"
+    use "mbbill/undotree" -- undotree
+    use "jghauser/mkdir.nvim" -- automatically creates parent folders if necessary
+    use "kylechui/nvim-surround" -- vim surround but in lua
+
     -- XCode
     use {
         "tami5/xbase",
@@ -89,20 +99,7 @@ return packer.startup(function(use)
         },
     }
     -- My plugins
-    -- use "/Users/rubenmate/Developerino/nvim-plugins/restarter.nvim/"
     use "/Users/rubenmate/Developerino/nvim-plugins/stackmap.nvim/"
-    -- use {
-    -- 	"b0o/incline.nvim",
-    -- 	config = function()
-    -- 		require("incline").setup {
-    -- 			hide = { only_win = true },
-    -- 			window = {
-    -- 				width = "fit",
-    -- 				placement = { horizontal = "left", vertical = "bottom" },
-    -- 			},
-    -- 		}
-    -- 	end,
-    -- }
 
     -- Migrated
     use "ThePrimeagen/harpoon" -- ThePrime Harpoon
@@ -156,13 +153,6 @@ return packer.startup(function(use)
     -- treesitter modules, treesitter required
     use "p00f/nvim-ts-rainbow" -- Rainbow parentheses for neovim
     use "nvim-treesitter/playground" -- Treesitter information directly in Neovim
-    -- use { -- Autoclosing and autorenaming HTML tags
-    -- 	"windwp/nvim-ts-autotag",
-    -- 	event = "InsertEnter",
-    -- 	config = function()
-    -- 		require("nvim-ts-autotag").setup()
-    -- 	end,
-    -- }
     use {
         "windwp/nvim-ts-autotag",
         config = function()
@@ -176,7 +166,7 @@ return packer.startup(function(use)
     -- Bufferline
     use "akinsho/bufferline.nvim"
     use {
-        "tiagovla/scope.nvim",
+        "tiagovla/scope.nvim", -- Changes how tabs work, only showing buffers active in the tab itself
         config = function()
             require("scope").setup()
         end,
@@ -187,13 +177,15 @@ return packer.startup(function(use)
     use "numToStr/Comment.nvim" -- Simple comments
     use "JoosepAlviste/nvim-ts-context-commentstring" -- Comments with context, requires treesitter
 
-    -- Tabout
-    -- use {
-    -- 	"abecodes/tabout.nvim",
-    -- 	wants = { "nvim-treesitter" },
-    -- }
+    -- Refactoring
+    use {
+        "ThePrimeagen/refactoring.nvim",
+        requires = {
+            { "nvim-lua/plenary.nvim" },
+            { "nvim-treesitter/nvim-treesitter" },
+        },
+    }
 
-    use { "stevearc/dressing.nvim" }
     -- Debugging
     use "mfussenegger/nvim-dap"
     use "rcarriga/nvim-dap-ui"

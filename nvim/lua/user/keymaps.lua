@@ -74,13 +74,11 @@ keymap("n", "<leader>hn", '<cmd>lua require("harpoon.ui").nav_next()<CR>', opts)
 keymap("n", "<leader>hp", '<cmd>lua require("harpoon.ui").nav_prev()<CR>', opts)
 keymap("n", "<leader>fh", '<cmd>lua require("telescope").extensions.harpoon.marks{}<CR>', opts)
 
--- NeoRoot
-keymap("n", "<leader>p", "<cmd>NeoRootSwitchMode<CR>", opts)
-keymap("n", "<leader>cp", "<cmd>NeoRootChange<CR>", opts)
-
 -- Neogen
 keymap("n", "gcd", "<cmd>Neogen<CR>", opts)
 
+-- Icon-Picker
+keymap("i", "<C-i>", "<cmd>PickEverythingInsert<cr>", opts)
 -- Toggle word wrap
 keymap("n", "<leader>tw", "<cmd>set wrap!<CR>", opts)
 
@@ -125,7 +123,7 @@ keymap("n", "<leader><leader>x", "<cmd>source %<CR>", opts)
 
 -- Nvim-Tree
 keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
-keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
+-- keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
 keymap("n", "<leader>n", ":NvimTreeFindFile<CR>", opts)
 
 -- Formating NullLs

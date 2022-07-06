@@ -3,154 +3,132 @@
 -- require("plenary.reload").reload_module("lualine", true)
 local status_ok, lualine = pcall(require, "lualine")
 if not status_ok then
-	return
+    return
 end
 
 local hide_in_width = function()
-	return vim.fn.winwidth(0) > 80
+    return vim.fn.winwidth(0) > 80
 end
 
+vim.opt.winbar = "%=%m %f"
+
 local diagnostics = {
-	"diagnostics",
-	sources = { "nvim_diagnostic" },
-	sections = { "error", "warn" },
-	symbols = { error = " ", warn = " " },
-	colored = false,
-	update_in_insert = false,
-	always_visible = true,
+    "diagnostics",
+    sources = { "nvim_diagnostic" },
+    sections = { "error", "warn" },
+    symbols = { error = " ", warn = " " },
+    colored = false,
+    update_in_insert = false,
+    always_visible = true,
 }
 
 local diff = {
-	"diff",
-	colored = false,
-	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
-	cond = hide_in_width,
+    "diff",
+    colored = false,
+    symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
+    cond = hide_in_width,
 }
 
 local mode = {
-	"mode",
-	fmt = function(str)
-		return "-- " .. str .. " --"
-		-- return str
-	end,
+    "mode",
+    fmt = function(str)
+        return "-- " .. str .. " --"
+        -- return str
+    end,
 }
 
 local filetype = {
-	"filetype",
-	icons_enabled = false,
-	icon = nil,
+    "filetype",
+    icons_enabled = false,
+    icon = nil,
 }
 
 local branch = {
-	"branch",
-	icons_enabled = true,
-	icon = "",
+    "branch",
+    icons_enabled = true,
+    icon = "",
 }
 
 local location = {
-	"location",
-	padding = 1,
+    "location",
+    padding = 1,
 }
 
 -- cool function for progress
 local progress = function()
-	local current_line = vim.fn.line "."
-	local total_lines = vim.fn.line "$"
-	local chars = {
-		"__",
-		"▁▁",
-		"▂▂",
-		"▃▃",
-		"▄▄",
-		"▅▅",
-		"▆▆",
-		"▇▇",
-		"██",
-	}
-	local line_ratio = current_line / total_lines
-	local index = math.ceil(line_ratio * #chars)
-	return chars[index]
+    local current_line = vim.fn.line "."
+    local total_lines = vim.fn.line "$"
+    local chars = {
+        "__",
+        "▁▁",
+        "▂▂",
+        "▃▃",
+        "▄▄",
+        "▅▅",
+        "▆▆",
+        "▇▇",
+        "██",
+    }
+    local line_ratio = current_line / total_lines
+    local index = math.ceil(line_ratio * #chars)
+    return chars[index]
 end
-
-local spaces = function()
-	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
-end
-
-local gruvbuddy = require "lualine.themes.auto"
-
-gruvbuddy.normal.a.bg = "#414754"
-gruvbuddy.normal.a.fg = "#f8fe7a"
-
-gruvbuddy.command.b.bg = "#81a2be"
-gruvbuddy.normal.b.bg = "#81a2be"
-gruvbuddy.insert.b.bg = "#81a2be"
-gruvbuddy.visual.b.bg = "#81a2be"
-
-gruvbuddy.normal.b.fg = "#282c34"
-gruvbuddy.insert.b.fg = "#282c34"
-gruvbuddy.command.b.fg = "#282c34"
-gruvbuddy.visual.b.fg = "#282c34"
-
-gruvbuddy.normal.c.fg = "#282c34"
-gruvbuddy.insert.c.fg = "#282c34"
-gruvbuddy.command.c.fg = "#282c34"
-gruvbuddy.visual.c.fg = "#282c34"
 
 lualine.setup {
-	options = {
-		globalstatus = true,
-		icons_enabled = true,
-		theme = gruvbuddy,
-		component_separators = { left = "", right = "" },
-		section_separators = { left = "", right = "" },
-		disabled_filetypes = {
-			"alpha",
-			"dashboard",
-			"NvimTree",
-			"Outline",
-			"NeogitStatus",
-			"toggleterm",
-			"TelescopePrompt",
-		},
-		always_divide_middle = true,
-	},
-	sections = {
-		lualine_a = { mode },
-		lualine_b = { branch, diagnostics },
-		lualine_c = {
-			"%=", -- Used to center this sections
-			{
-				"filename",
-				file_status = true, -- Displays file status (readonly status, modified status)
-				-- 0: Just the filename
-				-- 1: Relative path
-				-- 2: Absolute path
-				path = 1,
-			},
-			{
-				"filetype",
-				colored = false,
-				icon_only = true,
-				padding = {
-					left = -1,--[[ , right = right_padding  ]]
-				},
-				icon = { align = "right" }, -- Display filetype icon on the right hand side
-			},
-		},
-		-- lualine_x = { "encoding", "fileformat", "filetype" },
-		lualine_x = { diff, spaces, "encoding", filetype },
-		lualine_y = { progress },
-		lualine_z = { location },
-	},
-	inactive_sections = {
-		lualine_a = {},
-		lualine_b = {},
-		lualine_c = { --[[ "filename" ]]
-		},
-		lualine_x = { "location" },
-		lualine_y = {},
-		lualine_z = {},
-	},
-	tabline = {},
-	extensions = {},
+    options = {
+        globalstatus = true,
+        icons_enabled = true,
+        theme = "dracula",
+        component_separators = { left = "", right = "" },
+        section_separators = { left = "", right = "" },
+        disabled_filetypes = {
+            "alpha",
+            "dashboard",
+            "NvimTree",
+            "Outline",
+            "NeogitStatus",
+            "toggleterm",
+            "TelescopePrompt",
+        },
+        always_divide_middle = true,
+    },
+    sections = {
+        lualine_a = { mode },
+        lualine_b = { branch, diagnostics },
+        lualine_c = {
+            "%=%m", -- Used to center this sections
+            {
+                file_status = false, -- Displays file status (readonly status, modified status)
+                "filename",
+                -- 0: Just the filename
+                -- 1: Relative path
+                -- 2: Absolute path
+                path = 1,
+            },
+            {
+                "filetype",
+                colored = false,
+                icon_only = true,
+                padding = {
+                    left = -1, --[[ , right = right_padding  ]]
+                },
+                icon = { align = "right" }, -- Display filetype icon on the right hand side
+            },
+        },
+        -- lualine_x = { "encoding", "fileformat", "filetype" },
+        lualine_x = { diff, filetype },
+        lualine_y = { progress },
+        lualine_z = { location },
+    },
+    inactive_sections = {
+        lualine_a = {},
+        lualine_b = {},
+        lualine_c = { --[[ "filename" ]]
+        },
+        lualine_x = { "location" },
+        lualine_y = {},
+        lualine_z = {},
+    },
+    tabline = {},
+    extensions = {},
 }

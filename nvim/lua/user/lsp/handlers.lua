@@ -81,7 +81,6 @@ local function lsp_keymaps(bufnr)
         "<cmd>lua vim.diagnostic.setloclist()<CR>",
         opts
     )
-    vim.cmd [[ command! Format execute 'lua vim.lsp.buf.format({ async = true })' ]]
 end
 
 ---@diagnostic disable-next-line: unused-local

@@ -11,7 +11,7 @@ local diagnostics = null_ls.builtins.diagnostics
 local lsp_formatting = function(bufnr)
     vim.lsp.buf.format {
         filter = function(client)
-            return client.name ~= "tsserver"
+            return client.name ~= "tsserver" or client.name ~= "sumneko_lua"
         end,
         -- filter out clients that you don't want to use
         -- return client.name ~= "tsserver"
@@ -32,7 +32,7 @@ null_ls.setup {
     -- TODO: Test if prefer local formats using the project settings and if not
     -- found uses the default settings https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
     sources = {
-        formatting.prettier.with { extra_args = { "--tab-width", 4 } },
+        formatting.prettier.with { extra_args = { "--tab-width", 4, "--print-width", 100 } },
         formatting.black.with { extra_args = { "--fast" } },
         formatting.stylua.with {
             extra_args = { "--config-path", vim.fn.expand "~/.config/stylua.toml" },

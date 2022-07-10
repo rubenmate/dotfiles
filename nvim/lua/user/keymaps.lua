@@ -125,11 +125,3 @@ keymap("n", "<leader><leader>x", "<cmd>source %<CR>", opts)
 keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 -- keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
 keymap("n", "<leader>n", ":NvimTreeFindFile<CR>", opts)
-
--- Formating NullLs
-keymap("n", "<leader>s", ":Format<CR>", opts)
--- Keeping this because stylua formatting may break Format on handlers.lua
--- keymap("n", "<leader>s", ":lua vim.lsp.buf.formatting()<CR>", opts)
-
---TODO:
---18. Sidebar Nvim Toggle

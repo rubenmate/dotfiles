@@ -1,6 +1,6 @@
 local cmp_status_ok, colorizer = pcall(require, "colorizer")
 if not cmp_status_ok then
-	return
+    return
 end
 
 -- TODO: Expand setup

@@ -7,13 +7,15 @@ gitsigns.setup {
     signs = {
         add = {
             hl = "GitSignsAdd",
-            text = "|",
+            -- text = "▎",
+            text = "│",
             numhl = "GitSignsAddNr",
             linehl = "GitSignsAddLn",
         },
         change = {
             hl = "GitSignsChange",
-            text = "|",
+            -- text = "▎",
+            text = "│",
             numhl = "GitSignsChangeNr",
             linehl = "GitSignsChangeLn",
         },

@@ -24,6 +24,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
+-- TODO: Instead of just running PackerSync ask if you want to run it
 vim.api.nvim_create_augroup("packer_user_config", { clear = true })
 vim.api.nvim_create_autocmd("BufWritePost", {
     pattern = "plugins.lua",
@@ -142,6 +143,7 @@ return packer.startup(function(use)
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate",
     }
+    use "nvim-treesitter/nvim-treesitter-context"
 
     -- Nvim-Tree File Explorer
     use {

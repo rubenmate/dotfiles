@@ -24,7 +24,6 @@ vim.g.maplocalleader = " "
 --   visual_block_mode = "x",
 --   term_mode = "t",
 --   command_mode = "c"
---   TODO: Write cheatsheet with keymaps outside this file
 
 -- Normal --
 -- Better window navigation

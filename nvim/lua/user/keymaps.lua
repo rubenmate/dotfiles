@@ -77,7 +77,7 @@ keymap("n", "<leader>fh", '<cmd>lua require("telescope").extensions.harpoon.mark
 keymap("n", "gcd", "<cmd>Neogen<CR>", opts)
 
 -- Icon-Picker
-keymap("i", "<C-i>", "<cmd>PickEverythingInsert<cr>", opts)
+keymap("i", "<A-i>", "<cmd>PickEverythingInsert<cr>", opts)
 -- Toggle word wrap
 keymap("n", "<leader>tw", "<cmd>set wrap!<CR>", opts)
 

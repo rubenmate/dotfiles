@@ -66,7 +66,3 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
-
--- Change to Lua filetype detection (nightly)
-vim.g.do_filetype_lua = 1
-vim.g.did_load_filetypes = 0

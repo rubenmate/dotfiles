@@ -11,6 +11,12 @@ lsp_installer.on_server_ready(function(server)
         capabilities = require("user.lsp.handlers").capabilities,
     }
 
+    -- Nvim-ufo config
+    opts.capabilities.textDocument.foldingRange = {
+        dynamicRegistration = false,
+        lineFoldingOnly = true,
+    }
+
     if server.name == "jsonls" then
         local jsonls_opts = require "user.lsp.settings.jsonls"
         opts = vim.tbl_deep_extend("force", jsonls_opts, opts)

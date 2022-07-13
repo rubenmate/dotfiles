@@ -99,6 +99,16 @@ return packer.startup(function(use)
     use "ellisonleao/glow.nvim"
     use "SmiteshP/nvim-navic"
     use { "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" } -- Folding
+    use {
+        "bennypowers/nvim-regexplainer",
+        config = function()
+            require("regexplainer").setup()
+        end,
+        requires = {
+            "nvim-treesitter/nvim-treesitter",
+            "MunifTanjim/nui.nvim",
+        },
+    }
 
     -- XCode
     use {
@@ -135,6 +145,7 @@ return packer.startup(function(use)
     use "neovim/nvim-lspconfig" -- enable LSP
     use "williamboman/nvim-lsp-installer" -- simple tool to install LSPs
     use "jose-elias-alvarez/null-ls.nvim" -- tool to hook into linters and formatters
+    use "Issafalcon/lsp-overloads.nvim"
 
     -- Trouble
     use {

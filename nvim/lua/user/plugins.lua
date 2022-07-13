@@ -52,6 +52,7 @@ return packer.startup(function(use)
     use { "dracula/vim", as = "dracula" }
 
     -- My plugins here
+    -- TODO: Organize this mess
     use "rktjmp/lush.nvim"
     use "wbthomason/packer.nvim" -- Have packer manage itself
     use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
@@ -84,11 +85,20 @@ return packer.startup(function(use)
             require "icon-picker"
         end,
     }
-    use { "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" }
+    use {
+        "TimUntersberger/neogit",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "sindrets/diffview.nvim",
+        },
+    }
     use "max397574/better-escape.nvim"
     use "mbbill/undotree" -- undotree
     use "jghauser/mkdir.nvim" -- automatically creates parent folders if necessary
     use "kylechui/nvim-surround" -- vim surround but in lua
+    use "ellisonleao/glow.nvim"
+    use "SmiteshP/nvim-navic"
+    use { "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" } -- Folding
 
     -- XCode
     use {

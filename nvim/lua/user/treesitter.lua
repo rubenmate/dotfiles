@@ -15,10 +15,10 @@ configs.setup {
         additional_vim_regex_highlighting = true,
     },
     indent = { enable = true, disable = { "yaml" } },
-    context_commentstring = {
-        enable = true,
-        enable_autocmd = false,
-    },
+    -- context_commentstring = {
+    --     enable = true,
+    --     enable_autocmd = false,
+    -- },
     -- nvim-ts-rainbow configuration (required)
     rainbow = {
         enable = true,

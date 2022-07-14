@@ -197,8 +197,8 @@ return packer.startup(function(use)
     use "moll/vim-bbye"
 
     -- Commentary
-    use "numToStr/Comment.nvim" -- Simple comments
-    use "JoosepAlviste/nvim-ts-context-commentstring" -- Comments with context, requires treesitter
+    use { "numToStr/Comment.nvim", branch = "jsx" } -- Simple comments
+    -- use "JoosepAlviste/nvim-ts-context-commentstring" -- Comments with context, requires treesitter
 
     -- Refactoring
     use {

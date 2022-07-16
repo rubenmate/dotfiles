@@ -41,3 +41,6 @@ require "user.nvim-dap"
 require "user.nvim-ufo"
 require "user.regexplainer"
 -- require "user.xbase"
+
+-- Scratch stuff
+require "user.scratch"

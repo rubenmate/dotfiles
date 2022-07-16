@@ -88,26 +88,27 @@ cmp.setup {
             vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
             -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
             vim_item.menu = ({
+                gh_issues = "[issues]",
                 luasnip = "[snip]",
+                nvim_lsp = "[LSP]",
                 cmp_tabnine = "[TN]",
-                buffer = "[Buffer]",
-                path = "[Path]",
-                nvim_lua = "[NVLua]",
-                npm = "[NPM]", -- Check if it works
-                tmux = "[Tmux]", -- Check if it works
+                buffer = "[buffer]",
+                path = "[path]",
+                nvim_lua = "[api]",
+                npm = "[npm]", -- TODO: Check if it works
             })[entry.source.name]
             return vim_item
         end,
     },
     sources = {
+        { name = "gh_issues" },
         { name = "nvim_lsp" },
         { name = "luasnip" },
         { name = "nvim_lua" },
         { name = "npm" },
-        { name = "tmux" },
         { name = "cmp_tabnine" },
-        { name = "buffer" },
         { name = "path" },
+        { name = "buffer", keyword_length = 5 },
     },
     confirm_opts = {
         behavior = cmp.ConfirmBehavior.Replace,

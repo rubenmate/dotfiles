@@ -1,3 +1,4 @@
+-- Adding this for reference but luasnip provides this globals when loading this files
 local luasnip = require "luasnip"
 
 -- Snippet creator
@@ -18,12 +19,6 @@ local i = luasnip.insert_node
 -- rep(<position>)
 local rep = require("luasnip.extras").rep
 
-luasnip.snippets {
-    all = {
-        luasnip.parser.parse_snippet("expand", "-- This is what is going to be expanded"),
-    },
-    lua = {
-        -- Lua specific snippets here
-        s("req", fmt("local {} = require('{}')", { i(1, "default"), rep(1) })),
-    },
+return {
+    parse("trig", "loaded!!"),
 }

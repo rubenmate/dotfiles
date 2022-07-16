@@ -15,7 +15,7 @@ luasnip.config.set_config {
     updateevents = "TextChanged, TextChangedI",
 
     -- Autosnippets:
-    enable_autosnippets = true,
+    enable_autosnippets = false,
 
     -- Crazy highlights
     -- ext_opts = nil,
@@ -52,3 +52,18 @@ end)
 
 -- Shortcut to source luansnip file again, reloading snippets
 vim.keymap.set("n", "<leader><leader>s", "<cmd>source ~/.config/nvim/lua/user/luasnip.lua<CR>")
+
+-- Load every snippet from "~/.config/nvim/lua/user/snippets"
+-- You can store snippets in the following structures <ft>.lua or <ft>/*.lua
+-- Files must return two lists, first one will be regular snippets and the second are autosnippets
+-- return {
+-- 	parse("ctrig", "also loaded!!")
+-- }, {
+-- 	parse("autotrig", "autotriggered, if enabled")
+-- }
+require("luasnip.loaders.from_lua").load { paths = "~/.config/nvim/lua/user/snippets" }
+
+-- This makes shared snippets between this filetypes
+luasnip.filetype_extend("javascript", { "typescript" })
+luasnip.filetype_extend("javascriptreact", { "typescript" })
+luasnip.filetype_extend("typescriptreact", { "typescript" })

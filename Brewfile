@@ -12,6 +12,7 @@ tap "koekeishiya/formulae"
 tap "melonamin/formulae"
 tap "osx-cross/arm"
 tap "osx-cross/avr"
+tap "planetscale/tap"
 tap "qmk/qmk"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
@@ -73,6 +74,8 @@ brew "lua"
 brew "m-cli"
 # Mac App Store command-line interface
 brew "mas"
+# Open source relational database management system
+brew "mysql-client"
 # NCurses Disk Usage
 brew "ncdu"
 # Fast, highly customisable system info script
@@ -115,6 +118,8 @@ brew "eth-p/software/bat-extras"
 brew "koekeishiya/formulae/skhd"
 # A tiling window manager for macOS based on binary space partitioning.
 brew "koekeishiya/formulae/yabai"
+# The PlanetScale CLI
+brew "planetscale/tap/pscale"
 # Menu bar tool to limit maximum charging percentage
 cask "aldente"
 # Application launcher and productivity software

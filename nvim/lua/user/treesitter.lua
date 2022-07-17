@@ -23,7 +23,7 @@ configs.setup {
     rainbow = {
         enable = true,
         -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
-        extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
+        extended_mode = false, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
         max_file_lines = nil, -- Do not enable for files with more than n lines, int
         -- rainbowcol1 { fg = "#ff5555" }, -- rainbowcol1    xxx ctermfg=9 guifg=#cc241d
         -- rainbowcol2 { fg = "#f1fa8c" }, -- rainbowcol2    xxx ctermfg=10 guifg=#a89984

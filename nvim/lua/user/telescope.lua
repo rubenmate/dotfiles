@@ -59,6 +59,7 @@ vim.keymap.set("n", "<leader>fc", "<cmd>Telescope current_buffer_fuzzy_find<CR>"
 -- )
 vim.keymap.set("n", "<leader>th", "<cmd>Telescope help_tags<CR>", opts)
 vim.keymap.set("n", "<leader>tk", "<cmd>Telescope keymaps<CR>", opts)
+vim.keymap.set("n", "<leader>fp", "<cmd>Telescope registers<CR>", opts)
 -- TODO: Check TJ way of doing this: https://github.com/tjdevries/config_manager/search?q=edit_neovim
 vim.keymap.set("n", "<leader>fn", "<cmd>lua Edit_neovim()<CR>", opts)
 vim.keymap.set("n", "<leader>fd", "<cmd>lua Edit_dotfiles()<CR>", opts)

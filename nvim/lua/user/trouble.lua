@@ -4,6 +4,14 @@ if not status_ok then
     return
 end
 
+local opts = { silent = true, noremap = true }
+
+vim.keymap.set("n", "<leader>xx", "<cmd>Trouble<CR>", opts)
+vim.keymap.set("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<CR>", opts)
+vim.keymap.set("n", "<leader>xd", "<cmd>Trouble document_diagnostics<CR>", opts)
+vim.keymap.set("n", "<leader>xl", "<cmd>Trouble loclist<CR>", opts)
+vim.keymap.set("n", "<leader>xq", "<cmd>Trouble quickfix<CR>", opts)
+
 trouble.setup {
     position = "bottom", -- position of the list can be: bottom, top, left, right
     height = 10, -- height of the trouble list when position is top or bottom

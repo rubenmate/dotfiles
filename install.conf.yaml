@@ -19,6 +19,7 @@
       ~/.config/bat:
           create: true
           path: ./config/bat
+      ~/.config/btop: ./config/btop
       ~/.config/nvim: ./config/nvim
       ~/.config/kitty: ./config/kitty
       ~/.config/skhd: ./config/skhd

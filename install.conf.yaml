@@ -28,6 +28,8 @@
       ~/.config/starship.toml: ./config/zsh/starship/starship.toml
       ~/.tmux.conf: ./config/tmux/tmux.conf
       ~/.config/stylua.toml: ./config/stylua/stylua.toml
+      ~/.huskyrc: ./config/husky/.huskyrc
+      ~/.gnupg/gpg-agent.conf: ./config/gnupg/gpg-agent.conf
       ~/.bin: ./config/zsh/bin
       ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions:
           create: true

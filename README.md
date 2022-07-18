@@ -45,13 +45,10 @@ Various dotfiles including my Neovim and Tmux configuration
     -   Permute
     -   Tweetbot
     -   iStat Menus
-    -   Microsoft Teams
 
 ## MISSING DOTFILES
 
 -   Add neovim installing from source
 -   Add correct installation of Rust (with Rustup)
 -   Possible problem with zshenv cargo folder not existing on initial setup
--   Add telescope find files to search in my dotfiles
 -   IMPORTANT: Manage zsh plugins better
--   Add husky dotfiles

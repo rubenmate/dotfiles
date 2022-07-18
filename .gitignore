@@ -1,8 +1,10 @@
+mini.lua
 Brewfile.lock.json
-nvim/plugin/packer_compiled.lua
+packer_compiled.lua
+current-theme.conf
+kitty.conf.bak
 .DS_Store
-karabiner/automatic_backups/
-oh-my-zsh/custom/themes/powerlevel10k
-oh-my-zsh/custom/plugins/zsh-autosuggestions
-oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+automatic_backups/
+zsh-autosuggestions/
+zsh-syntax-highlighting/
 dotbot

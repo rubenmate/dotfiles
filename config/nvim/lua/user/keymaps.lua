@@ -80,8 +80,6 @@ keymap("n", "<leader>tw", "<cmd>set wrap!<CR>", opts)
 -- Clear highlight search
 keymap("n", "<leader>l", "<cmd>nohlsearch<CR>", opts)
 
--- Chmod +x
-keymap("n", "<leader>x", ":!chmod +x %<CR>", opts)
 -- Open $MYVIMRC and source it
 keymap("n", "<leader>ov", ":vsplit $MYVIMRC<CR>", opts)
 keymap("n", "<leader>sv", ":source $MYVIMRC<CR>", opts)

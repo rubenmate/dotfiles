@@ -12,29 +12,29 @@
 - link:
       ~/.zshrc:
           force: true
-          path: zshrc
-      ~/.zshenv:
-      ~/.gitconfig:
-      ~/.gitignore_global:
+          path: ./config/zsh/zshrc
+      ~/.zshenv: ./config/zsh/zshenv
+      ~/.gitconfig: ./config/git/gitconfig
+      ~/.gitignore_global: ./config/git/gitignore_global
       ~/.config/bat:
           create: true
-          path: bat
-          # TODO: Can I improve this?
-      ~/.config/nvim:
-      ~/.config/kitty:
-      ~/.config/skhd:
-      ~/.config/yabai:
-      ~/.config/karabiner:
-      ~/.config/starship.toml: starship.toml
-      ~/.tmux.conf: tmux.conf
-      ~/.config/stylua.toml: stylua/stylua.toml
-      ~/.bin:
+          path: ./config/bat
+      ~/.config/nvim: ./config/nvim
+      ~/.config/kitty: ./config/kitty
+      ~/.config/skhd: ./config/skhd
+      ~/.config/yabai: ./config/yabai
+      ~/.config/karabiner: ./config/miscellaneous/karabiner
+      ~/.config/starship.toml: ./config/zsh/starship/starship.toml
+      ~/.tmux.conf: ./config/tmux/tmux.conf
+      ~/.config/stylua.toml: ./config/stylua/stylua.toml
+      ~/.bin: ./config/zsh/bin
       ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions:
           create: true
-          path: oh-my-zsh/custom/plugins/zsh-autosuggestions
-      ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-      ~/.oh-my-zsh/custom/aliases.zsh: oh-my-zsh/custom/aliases.zsh
-
+          path: ./config/zsh/oh-my-zsh/custom/plugins/zsh-autosuggestions
+      ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting:
+          path: ./config/zsh/oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+      ~/.oh-my-zsh/custom/aliases.zsh:
+          path: ./config/zsh/oh-my-zsh/custom/aliases.zsh
 - create:
       - ~/Developerino
 

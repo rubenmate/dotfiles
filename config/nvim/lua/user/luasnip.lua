@@ -69,3 +69,6 @@ require("luasnip.loaders.from_lua").load { paths = "~/.config/nvim/lua/user/snip
 luasnip.filetype_extend("javascript", { "typescript" })
 luasnip.filetype_extend("javascriptreact", { "typescript" })
 luasnip.filetype_extend("typescriptreact", { "typescript" })
+
+-- Commit messages
+luasnip.filetype_extend("NeogitCommitMessage", { "gitcommit" })

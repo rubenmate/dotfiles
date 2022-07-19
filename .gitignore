@@ -3,6 +3,7 @@ Brewfile.lock.json
 packer_compiled.lua
 current-theme.conf
 kitty.conf.bak
+btop.log
 .DS_Store
 automatic_backups/
 zsh-autosuggestions/

@@ -19,6 +19,12 @@ local i = luasnip.insert_node
 -- rep(<position>)
 local rep = require("luasnip.extras").rep
 
-return {
-    parse("trig", "loaded!!"),
-}
+-- Text node
+-- t { "text" }
+local t = luasnip.text_node
+
+-- Choice node
+-- c(<position>, {...nodes})
+local c = luasnip.choice_node
+
+return {}

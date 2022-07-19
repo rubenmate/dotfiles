@@ -44,7 +44,7 @@ vim.keymap.set({ "i", "s" }, "<c-j>", function()
 end, { silent = true })
 
 -- <C-l> selection between options
-vim.keymap.set("i", "<c-l>", function()
+vim.keymap.set({ "i", "s" }, "<c-l>", function()
     if luasnip.choice_active() then
         luasnip.change_choice(1)
     end
@@ -64,6 +64,8 @@ vim.keymap.set("n", "<leader><leader>s", "<cmd>source ~/.config/nvim/lua/user/lu
 require("luasnip.loaders.from_lua").load { paths = "~/.config/nvim/lua/user/snippets" }
 
 -- This makes shared snippets between this filetypes
+
+-- Typescript, javascript, tsx, jsx
 luasnip.filetype_extend("javascript", { "typescript" })
 luasnip.filetype_extend("javascriptreact", { "typescript" })
 luasnip.filetype_extend("typescriptreact", { "typescript" })

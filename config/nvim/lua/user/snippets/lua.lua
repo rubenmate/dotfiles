@@ -3,7 +3,7 @@ return {
     parse("lf", "local $1 = function($2)\n\t$0\nend"),
 
     -- Luasnip style of snippets
-    s("req", fmt("pollal {} = require('{}')", { i(1, "default"), rep(1) })),
+    s("req", fmt("local {} = require('{}')", { i(1, "default"), rep(1) })),
     s(
         "pcal",
         fmt(

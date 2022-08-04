@@ -29,8 +29,6 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup {
     debug = false,
-    -- TODO: Test if prefer local formats using the project settings and if not
-    -- found uses the default settings https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
     sources = {
         formatting.prettier.with { extra_args = { "--tab-width", 4, "--print-width", 100 } },
         formatting.black.with { extra_args = { "--fast" } },

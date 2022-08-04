@@ -24,14 +24,16 @@ brew "black"
 brew "btop"
 # GNU internationalization (i18n) and localization (l10n) library
 brew "gettext"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
 # Manage compile and link flags for libraries
 brew "pkg-config"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
 # Cross-platform make
 brew "cmake"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
+# Debugger for the Go programming language
+brew "delve"
 # More intuitive version of du in rust
 brew "dust"
 # Modern replacement for 'ls'
@@ -58,6 +60,8 @@ brew "glow"
 brew "pinentry"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
 # Improved top (interactive process viewer)
 brew "htop"
 # User-friendly cURL replacement (command-line HTTP client)
@@ -76,6 +80,8 @@ brew "m-cli"
 brew "mas"
 # Open source relational database management system
 brew "mysql-client"
+# Interactive cheatsheet tool for the command-line
+brew "navi"
 # NCurses Disk Usage
 brew "ncdu"
 # Fast, highly customisable system info script

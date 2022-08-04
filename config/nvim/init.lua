@@ -40,6 +40,8 @@ require "user.better-escape"
 require "user.nvim-dap"
 require "user.nvim-ufo"
 require "user.regexplainer"
+require "user.catpuccin"
+require "user.rust-tools"
 -- require "user.xbase"
 
 -- Scratch stuff

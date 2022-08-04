@@ -213,6 +213,9 @@ return packer.startup(function(use)
         },
     }
 
+    -- Rust
+    use { "simrat39/rust-tools.nvim", requires = "kyazdani42/nvim-web-devicons" }
+
     -- Debugging
     use "mfussenegger/nvim-dap"
     use "rcarriga/nvim-dap-ui"

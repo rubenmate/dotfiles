@@ -9,6 +9,8 @@ alias cpwd='pwd | pbcopy'
 # An alias to use bat instead of cat
 alias cat='bat'
 
+alias cs='/Users/rubenmate/Developerino/learning-rust/colorscheme-changer/target/release/colorscheme-changer'
+
 # Substitute ls with exa
 alias ls='exa -lha'                                                          # ls
 alias l='exa'                                                # list, size, type, git

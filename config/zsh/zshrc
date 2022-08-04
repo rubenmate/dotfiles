@@ -137,3 +137,6 @@ function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;
 
 # GPG signing
 export GPG_TTY=$(tty)
+
+# Navi
+eval "$(navi widget zsh)"

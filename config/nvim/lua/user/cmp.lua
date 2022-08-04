@@ -95,7 +95,7 @@ cmp.setup {
                 buffer = "[buffer]",
                 path = "[path]",
                 nvim_lua = "[api]",
-                npm = "[npm]", -- TODO: Check if it works
+                npm = "[npm]",
             })[entry.source.name]
             return vim_item
         end,

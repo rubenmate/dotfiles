@@ -45,7 +45,6 @@ local options = {
     colorcolumn = "101", -- Highlight column after textwidth
     list = true, -- Show hidden chracters, config below
     listchars = { -- Chracters to show
-        eol = "↲",
         tab = "  ",
         trail = ".",
     },

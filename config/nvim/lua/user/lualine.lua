@@ -1,6 +1,4 @@
 -- Lualine configuration
--- Required to fix lualine going blank when reloading init.lua
--- require("plenary.reload").reload_module("lualine", true)
 local status_ok, lualine = pcall(require, "lualine")
 if not status_ok then
     return

@@ -4,12 +4,12 @@ if not status_ok then
 end
 
 nvim_tmux_navigation.setup {
-    disable_when_zoomed = true,
+    keybindings = {
+        left = "<C-h>",
+        down = "<C-j>",
+        up = "<C-k>",
+        right = "<C-l>",
+        -- last_active = "<C-\\>",
+        -- next = "<C-Space>",
+    },
 }
-
-local opts = { silent = true, noremap = true }
-
-vim.keymap.set("n", "<A-k>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateUp()<CR>", opts)
-vim.keymap.set("n", "<A-j>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateDown()<CR>", opts)
-vim.keymap.set("n", "<A-h>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateLeft()<CR>", opts)
-vim.keymap.set("n", "<A-l>", ":lua require'nvim-tmux-navigation'.NvimTmuxNavigateRight()<CR>", opts)

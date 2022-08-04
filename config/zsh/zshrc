@@ -10,7 +10,7 @@ export DOTFILES="$HOME/.dotfiles"
 # Remove the Homekeeper for Homebrew installs
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 # Export path to dotfiles brewfile so we can dump it everywhere
-export HOMEBREW_BUNDLE_FILE="$DOTFILES/Brewfile"
+export HOMEBREW_BUNDLE_FILE="$DOTFILES/config/Brewfile"
 # Set neovim as the default editor
 export EDITOR='nvim'
 # Use bat instead of cat for the Nullcommand

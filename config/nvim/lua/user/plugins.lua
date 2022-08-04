@@ -147,7 +147,8 @@ return packer.startup(function(use)
 
     -- LSP
     use "neovim/nvim-lspconfig" -- enable LSP
-    use "williamboman/nvim-lsp-installer" -- simple tool to install LSPs
+    use "williamboman/mason.nvim" -- nvim lsp installer sucessor
+    use "williamboman/mason-lspconfig.nvim"
     use "jose-elias-alvarez/null-ls.nvim" -- tool to hook into linters and formatters
     use "Issafalcon/lsp-overloads.nvim"
 

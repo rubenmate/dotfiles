@@ -45,7 +45,6 @@ keymap("n", "<C-Right>", ":vertical resize  -2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize  +2<CR>", opts)
 
 -- Go full screen
--- TODO: Add toggle to switch between full mode and not full mode
 keymap("n", "<C-w>z", "<C-w>|<C-w>_", opts)
 
 -- Zoom vim pane, <C-w>= to re-balance

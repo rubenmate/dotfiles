@@ -67,8 +67,8 @@ cmp.setup {
     },
     mapping = {
         -- CMP mappings
-        ["<C-p>"] = cmp.mapping.select_prev_item(),
-        ["<C-n>"] = cmp.mapping.select_next_item(),
+        ["<C-p>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
+        ["<C-n>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
         ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
         ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
         ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
@@ -122,3 +122,16 @@ cmp.setup {
         native_menu = false,
     },
 }
+
+-- Completion for cmdline and search
+require("cmp").setup.cmdline(":", {
+    sources = {
+        { name = "cmdline" },
+    },
+})
+
+require("cmp").setup.cmdline("/", {
+    sources = {
+        { name = "buffer" },
+    },
+})

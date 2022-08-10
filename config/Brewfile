@@ -32,8 +32,6 @@ brew "python@3.9"
 brew "cmake"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
-# Debugger for the Go programming language
-brew "delve"
 # More intuitive version of du in rust
 brew "dust"
 # Modern replacement for 'ls'

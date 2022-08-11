@@ -1,5 +1,7 @@
 vim.filetype.add {
-    -- extension = {},
+    extension = {
+        astro = "astro",
+    },
     filename = {
         ["Brewfile"] = "conf",
     },

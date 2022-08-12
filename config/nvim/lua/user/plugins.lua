@@ -171,13 +171,6 @@ return packer.startup(function(use)
     }
     use "nvim-treesitter/nvim-treesitter-context"
 
-    -- Nvim-Tree File Explorer
-    use {
-        "kyazdani42/nvim-tree.lua",
-        requires = {
-            "kyazdani42/nvim-web-devicons", -- optional, for file icons
-        },
-    }
     -- treesitter modules, treesitter required
     use "p00f/nvim-ts-rainbow" -- Rainbow parentheses for neovim
     use "nvim-treesitter/playground" -- Treesitter information directly in Neovim

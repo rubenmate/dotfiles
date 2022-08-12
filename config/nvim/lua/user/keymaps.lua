@@ -108,8 +108,3 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 keymap("n", "<leader><leader>x", "<cmd>source %<CR>", opts)
-
--- Nvim-Tree
-keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
--- keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
-keymap("n", "<leader>n", ":NvimTreeFindFile<CR>", opts)

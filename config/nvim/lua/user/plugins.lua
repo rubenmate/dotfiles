@@ -150,6 +150,7 @@ return packer.startup(function(use)
     use "williamboman/mason.nvim" -- nvim lsp installer sucessor
     use "williamboman/mason-lspconfig.nvim"
     use "jose-elias-alvarez/null-ls.nvim" -- tool to hook into linters and formatters
+    use "glepnir/lspsaga.nvim" -- LSP UI
     use "Issafalcon/lsp-overloads.nvim"
 
     -- Trouble

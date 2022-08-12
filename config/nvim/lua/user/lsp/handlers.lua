@@ -45,25 +45,35 @@ M.setup = function()
     })
 end
 
+-- Lspsaga actions
+local action = require "lspsaga.action"
+
 local function lsp_keymaps(bufnr)
     local opts = { noremap = true, silent = true, buffer = bufnr }
-    -- TODO: Use telescope lua calls instead of vim commands
-    vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
     vim.keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
     vim.keymap.set("n", "K", function()
         local winid = require("ufo").peekFoldedLinesUnderCursor()
         if not winid then
-            vim.lsp.buf.hover()
+            vim.cmd "Lspsaga hover_doc"
         end
-    end)
-    vim.keymap.set("n", "gi", "<cmd>Telescope implementations<CR>", opts)
-    vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-    vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+    end, opts)
+    -- scroll down hover doc or scroll in definition preview
+    vim.keymap.set("n", "<C-f>", function()
+        action.smart_scroll_with_saga(1)
+    end, opts)
+    -- scroll up hover doc
+    vim.keymap.set("n", "<C-b>", function()
+        action.smart_scroll_with_saga(-1)
+    end, opts)
+    vim.keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts)
+    vim.keymap.set("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", opts)
+    vim.keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts)
     vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
-    vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-    vim.keymap.set("n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
-    vim.keymap.set("n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
-    vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+    vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
+    vim.keymap.set("v", "<leader>ca", "<cmd><C-U>Lspsaga range_code_action<CR>", { silent = true })
+    vim.keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
+    vim.keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
+    vim.keymap.set("n", "gl", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
 end
 
 M.on_attach = function(client, bufnr)

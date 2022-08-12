@@ -3,10 +3,12 @@ if not status_ok then
     return
 end
 
--- telescope.load_extension('media_files')
-telescope.load_extension "harpoon"
+local function telescope_buffer_dir()
+    return vim.fn.expand "%:p:h"
+end
 
 local actions = require "telescope.actions"
+local fb_actions = require("telescope").extensions.file_browser.actions
 
 -- Custom pickers
 function Edit_neovim()
@@ -51,18 +53,22 @@ vim.keymap.set("n", "<leader>fb", function()
     )
 end, opts)
 vim.keymap.set("n", "<leader>fc", "<cmd>Telescope current_buffer_fuzzy_find<CR>", opts)
--- vim.keymap.set(
--- 	"n",
--- 	"<leader>th",
--- 	"<cmd>lua require'telescope.builtin'.help_tags(require('telescope.themes').get_dropdown({ previewer = false}))<CR>",
--- 	opts
--- )
 vim.keymap.set("n", "<leader>th", "<cmd>Telescope help_tags<CR>", opts)
 vim.keymap.set("n", "<leader>tk", "<cmd>Telescope keymaps<CR>", opts)
 vim.keymap.set("n", "<leader>fp", "<cmd>Telescope registers<CR>", opts)
 -- TODO: Check TJ way of doing this: https://github.com/tjdevries/config_manager/search?q=edit_neovim
 vim.keymap.set("n", "<leader>fn", "<cmd>lua Edit_neovim()<CR>", opts)
 vim.keymap.set("n", "<leader>fd", "<cmd>lua Edit_dotfiles()<CR>", opts)
+vim.keymap.set("n", "<C-n>", function()
+    require("telescope").extensions.file_browser.file_browser {
+        path = "%:p:h",
+        cwd = telescope_buffer_dir(),
+        respect_git_ignore = false,
+        hidden = true,
+        grouped = true,
+        layout_config = { height = 40 },
+    }
+end, opts)
 
 -- Configuration
 telescope.setup {
@@ -147,7 +153,26 @@ telescope.setup {
         -- builtin picker
     },
     extensions = {
-
+        file_browser = {
+            theme = "dropdown",
+            -- Disables netrw and use telescope-actions in its place
+            hijack_netrw = true,
+            mappings = {
+                -- Your custom  insert mode mappings
+                ["i"] = {
+                    ["<C-w>"] = function()
+                        vim.cmd "normal vbd"
+                    end,
+                },
+                ["n"] = {
+                    ["N"] = fb_actions.create,
+                    ["h"] = fb_actions.goto_parent_dir,
+                    ["/"] = function()
+                        vim.cmd "startinsert"
+                    end,
+                },
+            },
+        },
         -- media_files = {
         --     -- filetypes whitelist
         --     -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
@@ -160,3 +185,7 @@ telescope.setup {
         -- }
     },
 }
+
+-- telescope.load_extension('media_files')
+telescope.load_extension "harpoon"
+telescope.load_extension "file_browser"

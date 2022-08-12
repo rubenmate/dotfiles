@@ -64,6 +64,7 @@ return packer.startup(function(use)
     use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
     use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+    use "windwp/nvim-ts-autotag" -- Auto html tags, integrates with treesitter
     use "akinsho/toggleterm.nvim" -- Open  terminal programs in neovim
     use "norcalli/nvim-colorizer.lua" -- Color highlighter
     -- use "lewis6991/impatient.nvim" -- Speed up Lua modules to improve startup time
@@ -175,12 +176,6 @@ return packer.startup(function(use)
     -- treesitter modules, treesitter required
     use "p00f/nvim-ts-rainbow" -- Rainbow parentheses for neovim
     use "nvim-treesitter/playground" -- Treesitter information directly in Neovim
-    use {
-        "windwp/nvim-ts-autotag",
-        config = function()
-            require("nvim-ts-autotag").setup()
-        end,
-    }
 
     -- Gitsigns
     use "lewis6991/gitsigns.nvim"

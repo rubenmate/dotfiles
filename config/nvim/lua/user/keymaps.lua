@@ -68,9 +68,6 @@ keymap("n", "<leader>hn", '<cmd>lua require("harpoon.ui").nav_next()<CR>', opts)
 keymap("n", "<leader>hp", '<cmd>lua require("harpoon.ui").nav_prev()<CR>', opts)
 keymap("n", "<leader>fh", '<cmd>lua require("telescope").extensions.harpoon.marks{}<CR>', opts)
 
--- Neogen
-keymap("n", "gcd", "<cmd>Neogen<CR>", opts)
-
 -- Icon-Picker
 keymap("i", "<A-i>", "<cmd>PickEverythingInsert<cr>", opts)
 -- Toggle word wrap

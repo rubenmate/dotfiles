@@ -49,7 +49,6 @@ comment.setup {
         below = "gco",
         ---Add comment at the end of line
         eol = "gcA",
-        ---Not here, but Neogen keymap for documenting somethins is gcd
     },
 
     ---Create basic (operator-pending) and extended mappings for NORMAL + VISUAL mode

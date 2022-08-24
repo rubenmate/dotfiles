@@ -59,6 +59,17 @@ return packer.startup(function(use)
     }
     -- My plugins here
     -- TODO: Organize this mess
+    use {
+        "phaazon/mind.nvim",
+        requires = { "s1n7ax/nvim-window-picker" },
+    }
+    use {
+        "s1n7ax/nvim-window-picker",
+        tag = "v1.*",
+        config = function()
+            require("window-picker").setup()
+        end,
+    }
     use "rktjmp/lush.nvim"
     use "wbthomason/packer.nvim" -- Have packer manage itself
     use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim

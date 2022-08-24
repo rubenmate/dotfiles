@@ -68,13 +68,22 @@ return packer.startup(function(use)
             require("window-picker").setup()
         end,
     }
+
+    use {
+        "mrshmllow/document-color.nvim",
+        config = function()
+            require("document-color").setup {
+                -- Default options
+                mode = "background", -- "background" | "foreground" | "single"
+            }
+        end,
+    }
     use "rktjmp/lush.nvim"
     use "wbthomason/packer.nvim" -- Have packer manage itself
     use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
     use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
     use "windwp/nvim-ts-autotag" -- Auto html tags, integrates with treesitter
-    use "akinsho/toggleterm.nvim" -- Open  terminal programs in neovim
     use "norcalli/nvim-colorizer.lua" -- Color highlighter
     -- use "lewis6991/impatient.nvim" -- Speed up Lua modules to improve startup time
     use "lukas-reineke/indent-blankline.nvim" -- Show indent lines

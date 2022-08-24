@@ -91,6 +91,9 @@ M.on_attach = function(client, bufnr)
             },
         })
     end
+    if client.server_capabilities.colorProvider then
+        require("document-color").buf_attach(bufnr)
+    end
     -- FIXME: Migrate this to null-ls
     -- if client.name == "tsserver" or client.name == "jsonls" or client.name == "html" then
     --     client.resolved_capabilities.documentFormattingProvider = false

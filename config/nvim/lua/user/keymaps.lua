@@ -52,8 +52,8 @@ keymap("n", "<leader>-", ":wincmd _<cr>:wincmd |<cr>", opts)
 keymap("n", "<leader>=", ":wincmd =<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<S-l>", "<cmd>bnext<CR>", opts)
-keymap("n", "<S-h>", "<cmd>bprevious<CR>", opts)
+keymap("n", "<S-l>", "<cmd>BufferLineCycleNext<CR>", opts)
+keymap("n", "<S-h>", "<cmd>BufferLineCyclePrev<CR>", opts)
 
 -- BufferLine
 keymap("n", "<leader>db", "<cmd>Bdelete<CR>", opts)

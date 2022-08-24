@@ -13,5 +13,5 @@
 --╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚══════╝
 --
 -- latte, frappe, macchiato, mocha
-vim.g.catppuccin_flavour = "latte"
-vim.cmd [[colorscheme catppuccin]]
+-- vim.g.catppuccin_flavour = "latte"
+vim.cmd [[colorscheme onedarkpro]]

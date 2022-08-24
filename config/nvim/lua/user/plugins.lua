@@ -49,14 +49,12 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
     -- Color schemes
-    use "Mofiqul/dracula.nvim" -- use { "dracula/vim", as = "dracula" }
-    use "rafamadriz/neon"
-    use "folke/tokyonight.nvim"
-    use "Yazeed1s/minimal.nvim" -- it's cool but it isn't ready yet
     use {
         "catppuccin/nvim",
         as = "catppuccin",
     }
+    use "olimorris/onedarkpro.nvim"
+
     -- My plugins here
     -- TODO: Organize this mess
     use {

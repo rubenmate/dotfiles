@@ -44,7 +44,7 @@ local filetype = {
 local branch = {
     "branch",
     icons_enabled = true,
-    icon = "",
+    icon = "",
 }
 
 local location = {
@@ -72,11 +72,15 @@ local progress = function()
     return chars[index]
 end
 
+local custom_onedark = require "lualine.themes.onedark"
+local colors = require("onedarkpro").get_colors()
+custom_onedark.normal.b.fg = colors.fg
+
 lualine.setup {
     options = {
+        theme = custom_onedark,
         globalstatus = true,
         icons_enabled = true,
-        theme = "catppuccin",
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
         disabled_filetypes = {
@@ -94,7 +98,7 @@ lualine.setup {
         lualine_a = { mode },
         lualine_b = { branch, diagnostics },
         lualine_c = {
-            "%=%m", -- Used to center this sections
+            -- "%=%m", -- Used to center this sections
             {
                 file_status = false, -- Displays file status (readonly status, modified status)
                 "filename",

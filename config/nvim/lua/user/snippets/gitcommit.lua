@@ -66,4 +66,9 @@ return {
         fmt("test{}: {}", { c(1, { t "", fmt("({})", i(1, "scope")) }), i(2) }),
         opts
     ),
+    s(
+        { trig = "chore", name = "chore", dscr = "add description for this" },
+        fmt("chore{}: {}", { c(1, { t "", fmt("({})", i(1, "scope")) }), i(2) }),
+        opts
+    ),
 }

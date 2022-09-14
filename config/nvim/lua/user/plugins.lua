@@ -89,6 +89,12 @@ return packer.startup(function(use)
     use "lukas-reineke/indent-blankline.nvim" -- Show indent lines
     use "alexghergh/nvim-tmux-navigation"
     use "ggandor/lightspeed.nvim" -- Motion plugin for on-screen movements
+    -- use {
+    --     "ggandor/leap.nvim",
+    --     config = function()
+    --         require("leap").set_default_keymaps()
+    --     end,
+    -- }
     use {
         "nacro90/numb.nvim",
         config = function()
@@ -122,7 +128,6 @@ return packer.startup(function(use)
     use "jghauser/mkdir.nvim" -- automatically creates parent folders if necessary
     use "kylechui/nvim-surround" -- vim surround but in lua
     use "ellisonleao/glow.nvim"
-    use "SmiteshP/nvim-navic"
     use { "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" } -- Folding
     use {
         "bennypowers/nvim-regexplainer",
@@ -145,7 +150,7 @@ return packer.startup(function(use)
         },
     }
     -- My plugins
-    use "/Users/rubenmate/Developerino/nvim-plugins/stackmap.nvim/"
+    -- use "/Users/rubenmate/Developerino/nvim-plugins/tailwind-colorizer.nvim"
 
     -- Migrated
     use "ThePrimeagen/harpoon" -- ThePrime Harpoon
@@ -190,7 +195,12 @@ return packer.startup(function(use)
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate",
     }
-    use "nvim-treesitter/nvim-treesitter-context"
+    use {
+        "nvim-treesitter/nvim-treesitter-context",
+        config = function()
+            require("treesitter-context").setup {}
+        end,
+    }
 
     -- treesitter modules, treesitter required
     use "p00f/nvim-ts-rainbow" -- Rainbow parentheses for neovim
@@ -223,7 +233,12 @@ return packer.startup(function(use)
     }
 
     -- Rust
-    use { "simrat39/rust-tools.nvim", requires = "kyazdani42/nvim-web-devicons" }
+    use {
+        -- TODO: Check for branch merge
+        "simrat39/rust-tools.nvim",
+        requires = "kyazdani42/nvim-web-devicons",
+        branch = "modularize_and_inlay_rewrite",
+    }
 
     -- Debugging
     use "mfussenegger/nvim-dap"

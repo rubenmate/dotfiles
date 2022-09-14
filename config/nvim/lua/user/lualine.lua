@@ -8,7 +8,7 @@ local hide_in_width = function()
     return vim.fn.winwidth(0) > 80
 end
 
-vim.o.winbar = " %=%m %f%{%v:lua.require'nvim-navic'.get_location()%}"
+vim.o.winbar = " %=%m %f"
 
 local diagnostics = {
     "diagnostics",

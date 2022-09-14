@@ -16,6 +16,7 @@ require("nvim-dap-virtual-text").setup()
 dapui.setup()
 -- Go: Configured via nvim-dap-go(https://github.com/leoluz/nvim-dap-go)
 -- FIXME: Config seems fine but debug server is not starting properly
+-- TODO: Some how dap-go is working, better customize with mason executable
 require("dap-go").setup()
 -- Python: Configured via dap-python
 require("dap-python").setup "~/.virtualenvs/debugpy/bin/python"

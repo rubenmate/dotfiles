@@ -66,7 +66,7 @@ vim.keymap.set("n", "<C-n>", function()
         respect_git_ignore = false,
         hidden = true,
         grouped = true,
-        layout_config = { height = 40 },
+        -- layout_config = { height = 40 },
     }
 end, opts)
 
@@ -154,9 +154,10 @@ telescope.setup {
     },
     extensions = {
         file_browser = {
-            theme = "dropdown",
+            theme = "ivy",
             -- Disables netrw and use telescope-actions in its place
             hijack_netrw = true,
+            initial_mode = "normal",
             mappings = {
                 -- Your custom  insert mode mappings
                 ["i"] = {

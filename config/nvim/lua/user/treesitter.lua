@@ -15,6 +15,7 @@ configs.setup {
         additional_vim_regex_highlighting = true,
     },
     indent = { enable = true, disable = { "yaml" } },
+    -- TODO: Delete this when Comment merges JSX branch
     -- context_commentstring = {
     --     enable = true,
     --     enable_autocmd = false,

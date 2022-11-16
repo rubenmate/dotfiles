@@ -21,7 +21,8 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^ ' autosuggest-accept
 bindkey -M vicmd ' ' edit-command-line
 
-export PATH="$HOME/.local/bin":$PATH
+# export PATH="$HOME/.local/bin":$PATH
+export PATH="$HOME/.bin":$PATH
 
 if command -v bat &> /dev/null; then
   alias cat="bat -pp"

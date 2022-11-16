@@ -2,7 +2,7 @@
       link:
           relink: true
 
-- clean: ["~", "~/.oh-my-zsh/custom/", "~/.oh-my-zsh/custom/plugins/"]
+- clean: ["~"]
 
 - shell:
       - command: ./pre-install.zsh
@@ -10,10 +10,9 @@
         stderr: true
 
 - link:
-      ~/.zshrc:
-          force: true
-          path: ./config/zsh/zshrc
       ~/.zshenv: ./config/zsh/zshenv
+      ~/.config/zsh: ./config/zsh/zsh
+      ~/.config/zsh/.zshrc: ./config/zsh/zsh/zshrc
       ~/.gitconfig: ./config/git/gitconfig
       ~/.gitignore_global: ./config/git/gitignore_global
       ~/.config/bat:
@@ -31,13 +30,6 @@
       ~/.huskyrc: ./config/husky/.huskyrc
       ~/.gnupg/gpg-agent.conf: ./config/gnupg/gpg-agent.conf
       ~/.bin: ./config/zsh/bin
-      ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions:
-          create: true
-          path: ./config/zsh/oh-my-zsh/custom/plugins/zsh-autosuggestions
-      ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting:
-          path: ./config/zsh/oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-      ~/.oh-my-zsh/custom/aliases.zsh:
-          path: ./config/zsh/oh-my-zsh/custom/aliases.zsh
 - create:
       - ~/Developerino
 

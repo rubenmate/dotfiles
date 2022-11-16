@@ -1,4 +1,12 @@
-export HOMEBREW_CASK_OPTS="--no-quarantine --no-binaries"
+# Export dotfiles directory
+export DOTFILES="$HOME/.dotfiles"
+# XDG PATHS
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+
+# ZSH config dir
+export ZDOTDIR=$HOME/.config/zsh
 
 function exists() {
   # `command -v` is similar to `which`

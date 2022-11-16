@@ -1,3 +1,4 @@
+tap "cirruslabs/cli"
 tap "dwarvesf/tap"
 tap "eth-p/software"
 tap "homebrew/bundle"
@@ -40,8 +41,6 @@ brew "dust"
 brew "exa"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# Lint your Python code for style and logical errors
-brew "flake8"
 # Fast and simple Node.js version manager
 brew "fnm"
 # Generic library support script
@@ -120,6 +119,8 @@ brew "xcodegen"
 brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Run macOS VMs on Apple Silicon
+brew "cirruslabs/cli/tart"
 # Bash scripts that integrate bat with various command-line tools
 brew "eth-p/software/bat-extras"
 # Simple hotkey-daemon for macOS.
@@ -171,6 +172,8 @@ cask "trex"
 cask "vimmotion"
 # Open-source code editor
 cask "visual-studio-code"
+# Rust-based terminal
+cask "warp"
 mas "Amphetamine", id: 937984704
 mas "Anybuffer", id: 1330815414
 mas "Color Picker", id: 1545870783

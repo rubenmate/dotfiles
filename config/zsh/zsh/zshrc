@@ -14,6 +14,7 @@ plug "hlissner/zsh-autopair"
 plug "zap-zsh/supercharge"
 plug "zap-zsh/fzf"
 plug "zap-zsh/vim"
+plug "zap-zsh/exa"
 plug "zsh-users/zsh-syntax-highlighting"
 
 autoload edit-command-line; zle -N edit-command-line

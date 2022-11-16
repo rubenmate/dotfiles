@@ -82,7 +82,7 @@ keymap("n", "<leader>sv", ":source $MYVIMRC<CR>", opts)
 
 -- Insert
 -- Press jk fast to exit
-keymap("i", "jk", "<ESC>", opts)
+-- keymap("i", "jk", "<ESC>", opts)
 
 -- Visual
 -- Stay in indent mode

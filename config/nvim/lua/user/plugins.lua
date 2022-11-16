@@ -48,19 +48,12 @@ packer.init {
 }
 -- Install your plugins here
 return packer.startup(function(use)
+    use "wbthomason/packer.nvim" -- Have packer manage itself
+    use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
     -- Color schemes
-    use {
-        "catppuccin/nvim",
-        as = "catppuccin",
-    }
     use "olimorris/onedarkpro.nvim"
+    use "Mofiqul/dracula.nvim"
 
-    -- My plugins here
-    -- TODO: Organize this mess
-    use {
-        "phaazon/mind.nvim",
-        requires = { "s1n7ax/nvim-window-picker" },
-    }
     use {
         "s1n7ax/nvim-window-picker",
         tag = "v1.*",
@@ -78,23 +71,13 @@ return packer.startup(function(use)
             }
         end,
     }
-    use "rktjmp/lush.nvim"
-    use "wbthomason/packer.nvim" -- Have packer manage itself
     use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-    use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
     use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
     use "windwp/nvim-ts-autotag" -- Auto html tags, integrates with treesitter
     use "norcalli/nvim-colorizer.lua" -- Color highlighter
-    -- use "lewis6991/impatient.nvim" -- Speed up Lua modules to improve startup time
     use "lukas-reineke/indent-blankline.nvim" -- Show indent lines
     use "alexghergh/nvim-tmux-navigation"
     use "ggandor/lightspeed.nvim" -- Motion plugin for on-screen movements
-    -- use {
-    --     "ggandor/leap.nvim",
-    --     config = function()
-    --         require("leap").set_default_keymaps()
-    --     end,
-    -- }
     use {
         "nacro90/numb.nvim",
         config = function()
@@ -111,12 +94,6 @@ return packer.startup(function(use)
     }
     use { "stevearc/dressing.nvim" }
     use {
-        "ziontee113/icon-picker.nvim",
-        config = function()
-            require "icon-picker"
-        end,
-    }
-    use {
         "TimUntersberger/neogit",
         requires = {
             "nvim-lua/plenary.nvim",
@@ -127,32 +104,20 @@ return packer.startup(function(use)
     use "mbbill/undotree" -- undotree
     use "jghauser/mkdir.nvim" -- automatically creates parent folders if necessary
     use "kylechui/nvim-surround" -- vim surround but in lua
-    use "ellisonleao/glow.nvim"
     use { "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" } -- Folding
-    use {
-        "bennypowers/nvim-regexplainer",
-        config = function()
-            require("regexplainer").setup()
-        end,
-        requires = {
-            "nvim-treesitter/nvim-treesitter",
-            "MunifTanjim/nui.nvim",
-        },
-    }
 
     -- XCode
-    use {
-        "tami5/xbase",
-        run = "make install",
-        requires = {
-            "nvim-lua/plenary.nvim",
-            "nvim-telescope/telescope.nvim",
-        },
-    }
+    -- use {
+    --     "tami5/xbase",
+    --     run = "make install",
+    --     requires = {
+    --         "nvim-lua/plenary.nvim",
+    --         "nvim-telescope/telescope.nvim",
+    --     },
+    -- }
     -- My plugins
     -- use "/Users/rubenmate/Developerino/nvim-plugins/tailwind-colorizer.nvim"
 
-    -- Migrated
     use "ThePrimeagen/harpoon" -- ThePrime Harpoon
 
     -- Completion
@@ -161,13 +126,14 @@ return packer.startup(function(use)
     use "hrsh7th/cmp-path" -- path completions
     use "hrsh7th/cmp-cmdline" -- cmdline completions
     use "saadparwaiz1/cmp_luasnip" -- snippet completions
+    -- Snippets
+    use "L3MON4D3/LuaSnip" --snippet engine
+
+    -- LSP
     use "hrsh7th/cmp-nvim-lsp"
     use "hrsh7th/cmp-nvim-lua" -- neovim Lua API
     use "David-Kunz/cmp-npm" -- npm packages completion
     use { "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" }
-
-    -- Snippets
-    use "L3MON4D3/LuaSnip" --snippet engine
 
     -- LSP
     use "neovim/nvim-lspconfig" -- enable LSP
@@ -224,13 +190,13 @@ return packer.startup(function(use)
     -- use "JoosepAlviste/nvim-ts-context-commentstring" -- Comments with context, requires treesitter
 
     -- Refactoring
-    use {
-        "ThePrimeagen/refactoring.nvim",
-        requires = {
-            { "nvim-lua/plenary.nvim" },
-            { "nvim-treesitter/nvim-treesitter" },
-        },
-    }
+    -- use {
+    --     "ThePrimeagen/refactoring.nvim",
+    --     requires = {
+    --         { "nvim-lua/plenary.nvim" },
+    --         { "nvim-treesitter/nvim-treesitter" },
+    --     },
+    -- }
 
     -- Rust
     use {

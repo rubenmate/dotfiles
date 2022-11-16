@@ -78,7 +78,7 @@ custom_onedark.normal.b.fg = colors.fg
 
 lualine.setup {
     options = {
-        theme = custom_onedark,
+        theme = "dracula-nvim",
         globalstatus = true,
         icons_enabled = true,
         component_separators = { left = "", right = "" },

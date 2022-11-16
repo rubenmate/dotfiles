@@ -9,7 +9,7 @@
 local options = {
     backup = false, -- creates a backup file
     clipboard = "unnamedplus", -- allows neovim to access the system clipboard
-    cmdheight = 0, -- more space in the neovim command line for displaying messages
+    -- cmdheight = 0, -- more space in the neovim command line for displaying messages
     completeopt = { "menuone", "noselect" }, -- just for cmp
     conceallevel = 0, -- so `` is visible in markdown files
     fileencoding = "utf-8", -- utf-8 encoding

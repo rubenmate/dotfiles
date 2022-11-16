@@ -46,7 +46,7 @@ M.setup = function()
 end
 
 -- Lspsaga actions
-local action = require "lspsaga.action"
+--local action = require "lspsaga.action"
 
 local function lsp_keymaps(bufnr)
     local opts = { noremap = true, silent = true, buffer = bufnr }
@@ -58,13 +58,13 @@ local function lsp_keymaps(bufnr)
         end
     end, opts)
     -- scroll down hover doc or scroll in definition preview
-    vim.keymap.set("n", "<C-f>", function()
-        action.smart_scroll_with_saga(1)
-    end, opts)
+    --vim.keymap.set("n", "<C-f>", function()
+    --   action.smart_scroll_with_saga(1)
+    --end, opts)
     -- scroll up hover doc
-    vim.keymap.set("n", "<C-b>", function()
-        action.smart_scroll_with_saga(-1)
-    end, opts)
+    --vim.keymap.set("n", "<C-b>", function()
+    --action.smart_scroll_with_saga(-1)
+    --end, opts)
     vim.keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts)
     vim.keymap.set("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", opts)
     vim.keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts)
@@ -108,6 +108,6 @@ if not status_ok then
     return
 end
 
-M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
+M.capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
 return M

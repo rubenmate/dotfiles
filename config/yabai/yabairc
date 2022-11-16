@@ -21,7 +21,7 @@ yabai -m config active_window_border_color  0xff775759
 yabai -m config normal_window_border_color  0xff555555
 
 # float system preferences. Most of these just diable Yabai form resizing them.
-yabai -m rule --add app="System Preferences" sticky=on layer=above manage=off
+yabai -m rule --add app="System Settings" sticky=on layer=above manage=off
 yabai -m rule --add app="^Karabiner-Elements$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Karabiner-EventViewer$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Browserosaurus$" manage=off

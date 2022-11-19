@@ -77,7 +77,6 @@ return packer.startup(function(use)
     use "norcalli/nvim-colorizer.lua" -- Color highlighter
     use "lukas-reineke/indent-blankline.nvim" -- Show indent lines
     use "alexghergh/nvim-tmux-navigation"
-    use "ggandor/lightspeed.nvim" -- Motion plugin for on-screen movements
     use {
         "nacro90/numb.nvim",
         config = function()
@@ -151,7 +150,7 @@ return packer.startup(function(use)
 
     -- Telescope
     use "nvim-telescope/telescope.nvim"
-    use "nvim-telescope/telescope-file-browser.nvim"
+    -- use "nvim-telescope/telescope-file-browser.nvim"
 
     -- Lualine
     use "hoob3rt/lualine.nvim"

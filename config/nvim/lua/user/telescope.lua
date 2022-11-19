@@ -3,12 +3,12 @@ if not status_ok then
     return
 end
 
-local function telescope_buffer_dir()
-    return vim.fn.expand "%:p:h"
-end
+-- local function telescope_buffer_dir()
+--     return vim.fn.expand "%:p:h"
+-- end
 
 local actions = require "telescope.actions"
-local fb_actions = require("telescope").extensions.file_browser.actions
+-- local fb_actions = require("telescope").extensions.file_browser.actions
 
 -- Custom pickers
 function Edit_neovim()
@@ -59,16 +59,16 @@ vim.keymap.set("n", "<leader>fp", "<cmd>Telescope registers<CR>", opts)
 -- TODO: Check TJ way of doing this: https://github.com/tjdevries/config_manager/search?q=edit_neovim
 vim.keymap.set("n", "<leader>fn", "<cmd>lua Edit_neovim()<CR>", opts)
 vim.keymap.set("n", "<leader>fd", "<cmd>lua Edit_dotfiles()<CR>", opts)
-vim.keymap.set("n", "<C-n>", function()
-    require("telescope").extensions.file_browser.file_browser {
-        path = "%:p:h",
-        cwd = telescope_buffer_dir(),
-        respect_git_ignore = false,
-        hidden = true,
-        grouped = true,
-        -- layout_config = { height = 40 },
-    }
-end, opts)
+-- vim.keymap.set("n", "<C-n>", function()
+--     require("telescope").extensions.file_browser.file_browser {
+--         path = "%:p:h",
+--         cwd = telescope_buffer_dir(),
+--         respect_git_ignore = false,
+--         hidden = true,
+--         grouped = true,
+--         -- layout_config = { height = 40 },
+--     }
+-- end, opts)
 
 -- Configuration
 telescope.setup {
@@ -153,27 +153,27 @@ telescope.setup {
         -- builtin picker
     },
     extensions = {
-        file_browser = {
-            theme = "ivy",
-            -- Disables netrw and use telescope-actions in its place
-            hijack_netrw = true,
-            initial_mode = "normal",
-            mappings = {
-                -- Your custom  insert mode mappings
-                ["i"] = {
-                    ["<C-w>"] = function()
-                        vim.cmd "normal vbd"
-                    end,
-                },
-                ["n"] = {
-                    ["N"] = fb_actions.create,
-                    ["h"] = fb_actions.goto_parent_dir,
-                    ["/"] = function()
-                        vim.cmd "startinsert"
-                    end,
-                },
-            },
-        },
+        -- file_browser = {
+        --     theme = "ivy",
+        --     -- Disables netrw and use telescope-actions in its place
+        --     hijack_netrw = true,
+        --     initial_mode = "normal",
+        --     mappings = {
+        --         -- Your custom  insert mode mappings
+        --         ["i"] = {
+        --             ["<C-w>"] = function()
+        --                 vim.cmd "normal vbd"
+        --             end,
+        --         },
+        --         ["n"] = {
+        --             ["N"] = fb_actions.create,
+        --             ["h"] = fb_actions.goto_parent_dir,
+        --             ["/"] = function()
+        --                 vim.cmd "startinsert"
+        --             end,
+        --         },
+        --     },
+        -- },
         -- media_files = {
         --     -- filetypes whitelist
         --     -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
@@ -189,4 +189,4 @@ telescope.setup {
 
 -- telescope.load_extension('media_files')
 telescope.load_extension "harpoon"
-telescope.load_extension "file_browser"
+-- telescope.load_extension "file_browser"

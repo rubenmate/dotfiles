@@ -9,6 +9,14 @@
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
+# The new WindowManager process in Ventura is a bit of a performance monster. It uses so much CPU 
+# and all applications report changes in their window layout to it via an XPC connection regardless 
+# of wether StageManager is activated or not. I have found that it is OK to unload the process when 
+# using yabai, which makes a lot of things faster, battery last longer and stops the apple window 
+# manager interfering with yabai:
+# https://github.com/koekeishiya/yabai/issues/1297#issuecomment-1318403190
+launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist
+
 # .. more yabai startup stuff
 # ====== Variables =============================
 

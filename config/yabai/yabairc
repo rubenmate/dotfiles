@@ -39,7 +39,6 @@ yabai -m rule --add app="Pocket Casts" manage=off
 yabai -m rule --add app="^Private Internet Access$" manage=off
 yabai -m rule --add app="Enpass" manage=off
 yabai -m rule --add app="Spark" manage=off
-yabai -m rule --add app="Finder" manage=off
 
 # general space settings
 yabai -m config layout                       bsp

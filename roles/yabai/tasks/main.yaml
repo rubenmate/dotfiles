@@ -1,0 +1,75 @@
+---
+- name: Install yabai and skhd packages
+  community.general.homebrew:
+    name:
+      - koekeishiya/formulae/yabai
+      - koekeishiya/formulae/skhd
+    state: present
+
+- name: Symlink yabai folder
+  ansible.builtin.file:
+    dest: "{{ ansible_user_dir }}/.config/yabai"
+    src: "{{ ansible_user_dir }}/.dotfiles/roles/yabai/files/yabai"
+    state: link
+    force: yes
+  when: ansible_os_family == "Darwin"
+
+- name: Symlink skhd folder
+  ansible.builtin.file:
+    dest: "{{ ansible_user_dir }}/.config/skhd"
+    src: "{{ ansible_user_dir }}/.dotfiles/roles/yabai/files/skhd"
+    state: link
+    force: yes
+  when: ansible_os_family == "Darwin"
+
+- name: Check if sudoers file exists
+  stat:
+    path: /private/etc/sudoers.d/yabai
+  register: sudoers_check
+  when: ansible_os_family == "Darwin"
+
+
+- name: Get yabai path
+  command: which yabai
+  register: yabai_path
+  when: sudoers_check.stat.exists == False and ansible_os_family == "Darwin"
+
+- name: Get sha256 hash of yabai binary
+  command: shasum -a 256 {{ yabai_path.stdout }}
+  register: sha256_hash
+  when: sudoers_check.stat.exists == False and ansible_os_family == "Darwin"
+
+- name: Create the sudoers yabai file
+  file:
+    path: /private/etc/sudoers.d/yabai
+    state: touch
+  become: yes
+  when: sudoers_check.stat.exists == False and ansible_os_family == "Darwin"
+
+- name: Add line to sudoers yabai file
+  lineinfile:
+    dest: /private/etc/sudoers.d/yabai
+    line: "{{ lookup('env', 'USER') }} ALL=(root) NOPASSWD: sha256:{{ sha256_hash.stdout.split()[0] }} {{ yabai_path.stdout }} --load-sa"
+    state: present
+  become: yes
+  when: sudoers_check.stat.exists == False and ansible_os_family == "Darwin"
+
+- name: Check if yabai is running
+  shell: ps aux | grep yabai | grep -v grep | awk '{print $2}'
+  register: yabai_process
+  ignore_errors: true
+  when: ansible_os_family == "Darwin"
+
+- name: Check if skhd is running
+  shell: ps aux | grep skhd | grep -v grep | awk '{print $2}'
+  register: skhd_process
+  ignore_errors: true
+  when: ansible_os_family == "Darwin"
+
+- name: Start yabai
+  command: brew services start yabai
+  when: ansible_os_family == "Darwin" and (yabai_process.rc != 0 or yabai_process.stdout == '')
+
+- name: Start skhd 
+  command: brew services start skhd
+  when: ansible_os_family == "Darwin" and (skhd_process.rc != 0 or skhd_process.stdout == '')

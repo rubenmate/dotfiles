@@ -1,0 +1,10 @@
+default_roles:
+  - system
+  - git
+  - zsh
+  - starship
+  - bin
+  - kitty
+  - tmux
+  - yabai
+  - neovim

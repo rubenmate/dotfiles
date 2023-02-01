@@ -1,0 +1,90 @@
+---
+- name: Config folder
+  ansible.builtin.file:
+    mode: "0755"
+    path: "{{ ansible_user_dir }}/.config"
+    state: directory
+
+- name: Install common packages
+  community.general.homebrew:
+    name:
+      - m-cli 
+      - bat
+      - dust 
+      - exa
+      - fd
+      - fnm
+      - fzf
+      - gh
+      - httpie
+      - hyperfine
+      - jq
+      - lazydocker
+      - llama
+      - mas
+      - navi
+      - ncdu
+      - neofetch
+      - ripgrep
+      - spotify-tui
+      - smartmontools
+      - stylua
+      - tealdeer
+      - tmux
+      - tokei
+      - trash-cli
+      - tut
+      - ugit
+      - zoxide
+      - eth-p/software/bat-extras
+    state: present
+
+- name: Install Macos packages
+  community.general.homebrew_cask:
+    name: "{{ item }}"
+  ignore_errors: yes
+  with_items:
+      - homebrew/cask-fonts/font-jetbrains-mono-nerd-font
+      - aldente
+      - betterdisplay
+      - alt-tab
+      - devtoys
+      - discord
+      - dropbox
+      - figma
+      - firefox
+      - hidock
+      - karabiner-elements
+      - obsidian
+      - raycast
+      - spotify
+      - tailscale
+      - telegram
+      - trex
+  when: ansible_os_family == "Darwin"
+
+- name: Install Macos apps
+  community.general.mas:
+    id: 
+      - 937984704 # Amphetamine
+      - 1330815414 # Anybuffer
+      - 1352778147 # Bitwarden
+      - 732710998 # Enpass
+      - 1452453066 # Hidden Bar
+      - 1568924476 # Mela
+      - 1295203466 # Microsoft Remote Desktop
+      - 1515445551 # Pi-hole Remote
+      - 1529448980 # Reeder 
+      - 1176895641 # Spark
+      - 904280696 # Things
+      - 1147396723 # Whatsapp
+    state: present
+  when: ansible_os_family == "Darwin"
+
+- name: Symlink Karabiner folder
+  ansible.builtin.file:
+    dest: "{{ ansible_user_dir }}/.config/karabiner"
+    src: "{{ ansible_user_dir }}/.dotfiles/roles/system/files/karabiner"
+    state: link
+    force: yes
+  when: ansible_os_family == "Darwin"

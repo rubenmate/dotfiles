@@ -1,0 +1,17 @@
+---
+- name: Install Kitty
+  community.general.homebrew_cask:
+    name: "{{ item }}"
+  ignore_errors: yes
+  with_items:
+      - kitty
+  when: ansible_os_family == "Darwin"
+
+- name: Symlink folder
+  ansible.builtin.file:
+    dest: "{{ ansible_user_dir }}/.config/kitty"
+    src: "{{ ansible_user_dir }}/.dotfiles/roles/kitty/files/kitty"
+    state: link
+    force: yes
+  when: ansible_os_family == "Darwin"
+

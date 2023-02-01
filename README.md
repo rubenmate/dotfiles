@@ -1,54 +1,39 @@
-# dotfiles
+This whole readme is a work in progress
+## Instructions to install
 
-NOTE: This requires the neovim nightly with [global status line](https://github.com/neovim/neovim/commit/3c7e937a892308498ba23ce5c0959e51fbf28911)
+1 - Install Xcode cli tools `xcode-select --install`
+2 - Clone the repository `git clone https://github.com/rubenmate/dorkfiles.git .dotfiles`
+3 - Run the dotfiles script `cd .dotfiles` && `./bin/dotfiles` You may need to try to run as sudo once and after failing run as normal again
+4 - Let the script finish (you may want to add the ssh key to github -it will be showed-)
+5 - After the first run you can just run `dotfiles` since the binary will be symlinked properly
 
-Various dotfiles including my Neovim and Tmux configuration
+* Note: Login to appstore before running this or mas installation apps will fail
+* Note 2: I strongly suggest to check this before running and tune it to your liking. This is something that works for me but may not work for you.
 
-## Instructions
 
-1. `xcode-select --install` (Command Line Tools are required for Git and Homebrew)
-2. `sudo softwareupdate --install-rosetta` Necessary for some apps that are not apple silicon supported
-3. `git clone https://github.com/rubenmate/dotfiles.git ~/.dotfiles`
-4. `cd ~/.dotfiles`
-5. If necessary, `git checkout <another_branch>`.
-6. Do one last Software Audit by editing [Brewfile](./config/Brewfile)
-7. [`./install`](install)
-8. Restart computer.
+## Things that will be installed/generated
+[Work in progress]
+- Homebrew (on Linux too)
+- SSH key
+- Ansible (and this playbook requirements)
+- Packages and tools that I find useful
+- MacOS apps that I find useful
+- Install and link the dotfiles for the following tools:
+    - git 
+    - zsh
+    - starship
+    - kitty
+    - tmux
+    - yabai + skhd
+    - neovim (building from source)
 
-## TODO
-
--   Dock Preferences
--   Mission Control Preference (don't rearrange spaces)
--   Finder Show Path Bar
--   Trackpad (Three Finger Drag and Tap to Click)
--   Disable C-space on keyboard settings
--   Git (config and [SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh))
--   Optional: Add GPG key
--   Change dotfiles git repo with the ssh connection after configuring SSH
--   Condfigure enpass, dropbox and alfred
--   Install [JetBrains Mono Font](https://www.jetbrains.com/lp/mono/)
--   Install some NF also, like Cascadia Code
--   `brew install --cask font-jetbrains-mono` && `brew install --cask font-jetbrains-mono-nerd-font`
--   Install XCode, install yabai and start yabai and skhd as services
--   Install pip and neovim support
--   Change Kitty icon
--   Flash keyboard layout using QMK Toolbox
--   Install digital certificate
--   Include language server installs on corresponding scripts
--   Configure tmuxinator, tmux resurrect
--   Fix icons, cloning them makes them a mess
--   I can probably remove the submodules and install them with an script
--   Apps outside brew and the mac app store:
-    -   Itsycal
-    -   AppCleaner
-    -   Downie
-    -   Permute
-    -   Tweetbot
-    -   iStat Menus
-
-## MISSING DOTFILES
-
--   Add neovim installing from source
--   Add correct installation of Rust (with Rustup)
--   Possible problem with zshenv cargo folder not existing on initial setup
--   IMPORTANT: Manage zsh plugins better
+## Manual process
+[Work in progress]
+There are certain things that I didn't find a way to automate (mostly macos GUI apps and macos settings)
+- Set raycast instead of spotlight
+- Start the installed apps
+- Modify dock
+- Modify toolbar
+- Create spaces for yabai
+- Change kitty icon
+- Change finder settings and ajust iCloud

@@ -1,0 +1,47 @@
+---
+- name: Install
+  community.general.homebrew:
+    name:
+      - zsh
+    state: present
+
+- name: Set default Linux
+  user:
+    name: "{{ ansible_env['USER'] }}"
+    shell: /usr/bin/zsh
+  become: yes
+  when: ansible_os_family == "Debian"
+
+- name: Set default MacOS
+  user:
+    name: "{{ ansible_env['USER'] }}"
+    shell: /opt/homebrew/bin/zsh
+  become: yes
+  when: ansible_os_family == "Darwin"
+
+- name: Check if zap is installed
+  stat:
+    path: "{{ ansible_user_dir }}/.local/share/zap"
+  register: zap_check
+
+- name: Install zap
+  shell: zsh -c "curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh | zsh"
+  when: zap_check.stat.exists == False
+
+- name: Symlink zshenv
+  ansible.builtin.file:
+    dest: "{{ ansible_user_dir }}/.zshenv"
+    src: "{{ ansible_user_dir }}/.dotfiles/roles/zsh/files/zshenv"
+    state: link
+
+- name: Symlink zsh folder
+  ansible.builtin.file:
+    dest: "{{ ansible_user_dir }}/.config/zsh"
+    src: "{{ ansible_user_dir }}/.dotfiles/roles/zsh/files/zsh"
+    state: link
+
+- name: Symlink zshrc
+  ansible.builtin.file:
+    dest: "{{ ansible_user_dir }}/.config/zsh/.zshrc"
+    src: "{{ ansible_user_dir }}/.dotfiles/roles/zsh/files/zshrc"
+    state: link

@@ -1,0 +1,72 @@
+---
+- name: Dependencies Linux
+  ansible.builtin.package:
+    name:
+      - ninja-build
+      - gettext
+      - libtool
+      - libtool-bin
+      - autoconf
+      - automake
+      - cmake
+      - g++
+      - pkg-config
+      - unzip
+      - curl
+      - doxygen
+    state: latest
+  become: yes
+  when: ansible_os_family == "Debian"
+
+- name: Dependencies MacOS
+  community.general.homebrew:
+    name:
+      - ninja 
+      - libtool 
+      - automake 
+      - cmake 
+      - pkg-config 
+      - gettext 
+      - curl
+    state: present
+  when: ansible_os_family == "Darwin"
+  # when: ansible_distribution == "MacOSX"
+
+- name: Clone
+  ansible.builtin.git:
+    clone: yes
+    depth: 1
+    dest: "{{ ansible_user_dir }}/developerino/sources/github.com/neovim"
+    force: yes
+    repo: https://github.com/neovim/neovim.git
+    update: no 
+    # update: yes
+    # version: "{{ neovim_version | default('master') }}"
+  register: clone
+
+- name: Build
+  make:
+    chdir: "{{ ansible_user_dir }}/developerino/sources/github.com/neovim"
+    params:
+      CMAKE_BUILD_TYPE: Release
+  when: clone.changed
+
+- name: Install
+  make:
+    chdir: "{{ ansible_user_dir }}/developerino/sources/github.com/neovim"
+    target: install
+  become: yes
+  when: clone.changed
+
+- name: Remove build folder
+  ansible.builtin.file:
+    path: "{{ ansible_user_dir }}/developerino/repository/github.com/neovim/neovim/build"
+    state: absent
+  become: yes
+
+- name: Symlink folder
+  ansible.builtin.file:
+    dest: "{{ ansible_user_dir }}/.config/nvim"
+    src: "{{ ansible_user_dir }}/.dotfiles/roles/neovim/files/nvim"
+    state: link
+    force: yes

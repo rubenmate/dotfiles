@@ -1,7 +1,6 @@
 [user]
 	name = Ruben Mate
 	email = 79601967+rubenmate@users.noreply.github.com
-	signingkey = 5DEC399B
 [core]
 	editor = nvim
 	excludesfile = ~/.gitignore_global

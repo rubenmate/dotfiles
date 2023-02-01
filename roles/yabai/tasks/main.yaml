@@ -28,7 +28,6 @@
   register: sudoers_check
   when: ansible_os_family == "Darwin"
 
-
 - name: Get yabai path
   command: which yabai
   register: yabai_path

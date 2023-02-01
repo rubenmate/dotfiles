@@ -5,6 +5,9 @@ alias gss='git status -s'
 
 # Alias for brew bundle dump
 alias bbd='brew bundle dump --force --describe'
+# Aliases for update and upgrade with brew
+alias upd='brew update && brew outdated'
+alias upg='brew upgrade'
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'

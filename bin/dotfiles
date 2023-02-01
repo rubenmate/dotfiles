@@ -16,8 +16,8 @@ if ! [ -x "$(command -v brew)" ]; then
     ;;
   esac
   NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/rubenmate/.zprofile
-  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/rubenmate/.zprofile
+  echo '# Set PATH, MANPATH, etc., for Homebrew.' >> $HOME/.zprofile
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
@@ -56,7 +56,7 @@ fi
 
 # Clone repository
 if ! [[ -d "$DOTFILES_DIR" ]]; then
-  git clone "https://github.com/rubenmate/dorkfiles.git" "$DOTFILES_DIR"
+  git clone "https://github.com/rubenmate/dotfiles.git" "$DOTFILES_DIR"
 else
   git -C "$DOTFILES_DIR" pull
 fi

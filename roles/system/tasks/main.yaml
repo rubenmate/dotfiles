@@ -51,12 +51,18 @@
       - devtoys
       - discord
       - dropbox
+      - fantastical
       - figma
       - firefox
       - hidock
+      - istat-menus
+      - itsycal
       - karabiner-elements
       - obsidian
+      - pocket-casts
       - raycast
+      - readdle-spark
+      - replacicon
       - spotify
       - tailscale
       - telegram
@@ -75,8 +81,8 @@
       - 1295203466 # Microsoft Remote Desktop
       - 1515445551 # Pi-hole Remote
       - 1529448980 # Reeder 
-      - 1176895641 # Spark
       - 904280696 # Things
+      - 1291898086 # Toggl Track
       - 1147396723 # Whatsapp
     state: present
   when: ansible_os_family == "Darwin"

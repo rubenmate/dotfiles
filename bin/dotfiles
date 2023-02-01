@@ -52,6 +52,25 @@ if ! [[ -f "$SSH_DIR/id_rsa" ]]; then
   echo "Add to Github"
   cat "$SSH_DIR/id_rsa.pub"
   chmod 600 "$SSH_DIR/authorized_keys"
+
+  # MacOS specific ssh stuff
+  case "$(uname -s)" in
+  Darwin)
+    config_file="$SSH_DIR/config"
+
+    if [ ! -f $config_file ]; then
+      touch $config_file
+    fi
+
+    if ! grep -qF "Host *.github.com" "$config_file"; then
+      echo "Host *.github.com" >> $config_file
+      echo "  AddKeysToAgent yes" >> $config_file
+      echo "  IdentityFile ~/.ssh/id_rsa" >> $config_file
+    fi
+
+    ssh-add "$SSH_DIR/id_rsa"
+    ;;
+  esac
 fi
 
 # Clone repository

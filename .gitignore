@@ -6,4 +6,4 @@ vault-password.txt
 .zshrc
 .DS_Store
 roles/bin/files/bin/dotfiles
-
+roles/system/files/karabiner/automatic_backups/

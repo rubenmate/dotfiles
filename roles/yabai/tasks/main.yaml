@@ -5,6 +5,7 @@
       - koekeishiya/formulae/yabai
       - koekeishiya/formulae/skhd
     state: present
+  when: ansible_os_family == "Darwin"
 
 - name: Symlink yabai folder
   ansible.builtin.file:
@@ -31,19 +32,19 @@
 - name: Get yabai path
   command: which yabai
   register: yabai_path
-  when: sudoers_check.stat.exists == False and ansible_os_family == "Darwin"
+  when: ansible_os_family == "Darwin" and sudoers_check.stat.exists == False
 
 - name: Get sha256 hash of yabai binary
   command: shasum -a 256 {{ yabai_path.stdout }}
   register: sha256_hash
-  when: sudoers_check.stat.exists == False and ansible_os_family == "Darwin"
+  when: ansible_os_family == "Darwin" and sudoers_check.stat.exists == False
 
 - name: Create the sudoers yabai file
   file:
     path: /private/etc/sudoers.d/yabai
     state: touch
   become: yes
-  when: sudoers_check.stat.exists == False and ansible_os_family == "Darwin"
+  when: ansible_os_family == "Darwin" and sudoers_check.stat.exists == False
 
 - name: Add line to sudoers yabai file
   lineinfile:
@@ -51,7 +52,7 @@
     line: "{{ lookup('env', 'USER') }} ALL=(root) NOPASSWD: sha256:{{ sha256_hash.stdout.split()[0] }} {{ yabai_path.stdout }} --load-sa"
     state: present
   become: yes
-  when: sudoers_check.stat.exists == False and ansible_os_family == "Darwin"
+  when: ansible_os_family == "Darwin" and sudoers_check.stat.exists == False
 
 - name: Check if yabai is running
   shell: ps aux | grep yabai | grep -v grep | awk '{print $2}'

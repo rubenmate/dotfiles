@@ -8,7 +8,7 @@
 - name: Install common packages
   community.general.homebrew:
     name:
-      - m-cli 
+      # - m-cli 
       - bat
       - dust 
       - exa
@@ -21,7 +21,7 @@
       - jq
       - lazydocker
       - llama
-      - mas
+      # - mas
       - navi
       - ncdu
       - neofetch
@@ -40,6 +40,14 @@
     state: present
 
 - name: Install Macos packages
+  community.general.homebrew:
+    name:
+      - m-cli 
+      - mas
+    state: present
+  when: ansible_os_family == "Darwin"
+
+- name: Install Macos programs
   community.general.homebrew_cask:
     name: "{{ item }}"
   ignore_errors: yes

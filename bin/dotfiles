@@ -16,9 +16,15 @@ if ! [ -x "$(command -v brew)" ]; then
     ;;
   esac
   NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  echo '# Set PATH, MANPATH, etc., for Homebrew.' >> $HOME/.zprofile
-  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
-  eval "$(/opt/homebrew/bin/brew shellenv)"
+  case "$(uname -s)" in
+  Linux)
+    ;;
+  Darwin)
+    # echo '# Set PATH, MANPATH, etc., for Homebrew.' >> $HOME/.zprofile
+    # echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    ;;
+  esac
 fi
 
 # Install ansible if not installed

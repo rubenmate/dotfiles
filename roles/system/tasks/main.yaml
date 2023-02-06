@@ -67,6 +67,7 @@
       - tailscale
       - telegram
       - trex
+      - vlc
   when: ansible_os_family == "Darwin"
 
 - name: Install Macos apps
@@ -81,6 +82,7 @@
       - 1295203466 # Microsoft Remote Desktop
       - 1515445551 # Pi-hole Remote
       - 1529448980 # Reeder 
+      - 899247664 # Testflight
       - 904280696 # Things
       - 1291898086 # Toggl Track
       - 1147396723 # Whatsapp

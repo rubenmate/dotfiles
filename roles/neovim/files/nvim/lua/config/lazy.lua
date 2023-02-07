@@ -13,10 +13,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup('plugins')
 
--- Enable Comment.nvim
-require('Comment').setup()
-
-
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)

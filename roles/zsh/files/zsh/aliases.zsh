@@ -3,6 +3,10 @@
 # Git aliases
 alias gss='git status -s'
 
+# Neovim aliases
+alias vi='nvim'
+alias vim='nvim'
+
 # Alias for brew bundle dump
 alias bbd='brew bundle dump --force --describe'
 # Aliases for update and upgrade with brew

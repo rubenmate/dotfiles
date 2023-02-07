@@ -35,6 +35,10 @@ return {
         },
       },
     },
+    keys = {
+      { "H", "<cmd>BufferLineCyclePrev<cr>", desc = "Explorer NeoTree (root dir)",},
+      { "L", "<cmd>BufferLineCycleNext<cr>", desc = "Explorer NeoTree (root dir)",},
+    },
   },
   -- Dressing better ui
   {

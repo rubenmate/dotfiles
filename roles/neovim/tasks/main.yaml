@@ -36,7 +36,7 @@
   ansible.builtin.git:
     clone: yes
     depth: 1
-    dest: "{{ ansible_user_dir }}/developerino/sources/github.com/neovim"
+    dest: "{{ ansible_user_dir }}/Developer/sources/github.com/neovim"
     force: yes
     repo: https://github.com/neovim/neovim.git
     update: no 
@@ -46,21 +46,21 @@
 
 - name: Build
   make:
-    chdir: "{{ ansible_user_dir }}/developerino/sources/github.com/neovim"
+    chdir: "{{ ansible_user_dir }}/Developer/sources/github.com/neovim"
     params:
       CMAKE_BUILD_TYPE: Release
   when: clone.changed
 
 - name: Install
   make:
-    chdir: "{{ ansible_user_dir }}/developerino/sources/github.com/neovim"
+    chdir: "{{ ansible_user_dir }}/Developer/sources/github.com/neovim"
     target: install
   become: yes
   when: clone.changed
 
 - name: Remove build folder
   ansible.builtin.file:
-    path: "{{ ansible_user_dir }}/developerino/repository/github.com/neovim/neovim/build"
+    path: "{{ ansible_user_dir }}/Developer/repository/github.com/neovim/neovim/build"
     state: absent
   become: yes
 

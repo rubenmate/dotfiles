@@ -92,6 +92,7 @@
       - 904280696 # Things
       - 1291898086 # Toggl Track
       - 1147396723 # Whatsapp
+      - 1451685025 # Wireguard
     state: present
   when: ansible_os_family == "Darwin"
 

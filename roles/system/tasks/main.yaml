@@ -73,6 +73,7 @@
       - tailscale
       - telegram
       - trex
+      - utm
       - vlc
   when: ansible_os_family == "Darwin"
 

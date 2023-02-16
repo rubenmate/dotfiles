@@ -5,6 +5,12 @@
     path: "{{ ansible_user_dir }}/.config"
     state: directory
 
+- name: Symlink dotfiles folder
+  ansible.builtin.file:
+    dest: "{{ ansible_user_dir }}/Developer/dotfiles"
+    src: "{{ ansible_user_dir }}/.dotfiles"
+    state: link
+
 - name: Install common packages
   community.general.homebrew:
     name:

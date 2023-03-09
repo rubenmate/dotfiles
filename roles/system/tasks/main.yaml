@@ -15,6 +15,7 @@
   community.general.homebrew:
     name:
       - bat
+      - bpytop
       - dust 
       - exa
       - fd
@@ -63,7 +64,7 @@
       - devtoys
       - discord
       - dropbox
-      - fantastical
+      - downie
       - figma
       - firefox
       - hidock
@@ -71,6 +72,7 @@
       - itsycal
       - karabiner-elements
       - obsidian
+      - permute
       - pocket-casts
       - raycast
       - readdle-spark

@@ -19,8 +19,8 @@ vim.o.mouse = 'a'
 vim.o.colorcolumn = "101"
 
 -- Show hidden chracters, config below
-vim.o.list = true
-vim.o.listchars = "trail:."
+-- vim.o.list = true
+-- vim.o.listchars = "trail:."
 
 -- Enable break indent
 vim.o.breakindent = true

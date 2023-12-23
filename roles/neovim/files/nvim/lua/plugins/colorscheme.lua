@@ -1,10 +1,11 @@
--- [[ Colorscheme ]]
 return {
-  'navarasu/onedark.nvim', -- Theme inspired by Atom
-  config = function()
-    require('onedark').setup {
-      style = 'dark',
-    }
-    require('onedark').load()
-  end,
+    "mcchrish/zenbones.nvim", -- Colorscheme
+    dependencies = {
+        "rktjmp/lush.nvim",
+    },
+    config = function()
+        vim.cmd("set termguicolors")
+        vim.cmd("set background=dark")
+        vim.cmd("colorscheme zenbones")
+    end,
 }

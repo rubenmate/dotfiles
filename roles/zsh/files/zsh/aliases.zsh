@@ -1,11 +1,19 @@
 #!/bin/sh
 
 # Git aliases
+alias g='git'
 alias gss='git status -s'
 
 # Neovim aliases
 alias vi='nvim'
 alias vim='nvim'
+alias nvim-lz="NVIM_APPNAME=LazyVim nvim"
+alias nvim-ks="NVIM_APPNAME=kickstart nvim"
+alias nv="nvims"
+
+# Eza aliases
+alias ls="exa -l --icons"
+alias la="exa -la --icons"
 
 # Alias for brew bundle dump
 alias bbd='brew bundle dump --force --describe'
@@ -27,9 +35,9 @@ alias rm='rm -i'
 alias df='df -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
 
-if [[ $TERM == "xterm-kitty" ]]; then
-  alias ssh="kitty +kitten ssh"
-fi
+# if [[ $TERM == "xterm-kitty" ]]; then
+  # alias ssh="kitty +kitten ssh"
+# fi
 
 case "$(uname -s)" in
 

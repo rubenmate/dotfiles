@@ -25,7 +25,7 @@ config.color_scheme = "zenbones"
 
 -- Font
 config.font = wezterm.font_with_fallback({ { family = "JetBrains Mono", weight = "Regular" }, { family = "Symbols Nerd Font Mono", scale = 0.75 } })
-config.font_size = 18
+config.font_size = 15
 
 config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = "RESIZE"

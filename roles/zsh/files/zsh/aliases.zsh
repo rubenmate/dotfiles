@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Zsh aliases
+alias szsh="source ${ZDOTDIR:-$HOME}/.zshrc"
+
 # Git aliases
 alias g='git'
 alias gss='git status -s'

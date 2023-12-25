@@ -1,4 +1,5 @@
 -- Here is the code for the custom status line.
+-- NOTE: Based in https://nuxsh.is-a.dev/blog/custom-nvim-statusline.html#orgd4999c7
 -- TODO: Use this in the future instead of lualine
 local modes = {
     ["n"] = "NORMAL",

@@ -1,6 +1,5 @@
 with import <nixpkgs> {}; [
   ripgrep
-  ffmpeg_5-full
   go
   neovim
   zsh
@@ -12,8 +11,7 @@ with import <nixpkgs> {}; [
   fzf
   zellij
   bun
+  btop
   yabai
   skhd
-  alacritty
-  btop
 ]

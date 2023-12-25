@@ -11,6 +11,21 @@ return {
         end,
     },
     {
+        "nvim-telescope/telescope-ui-select.nvim",
+        config = function()
+            -- This is your opts table
+            require("telescope").setup {
+                extensions = {
+                    ["ui-select"] = {
+                        require("telescope.themes").get_dropdown {
+                        }
+                    }
+                }
+            }
+            require("telescope").load_extension("ui-select")
+        end
+    },
+    {
         "stevearc/oil.nvim", -- File explorer
         opts = {},
         -- Optional dependencies

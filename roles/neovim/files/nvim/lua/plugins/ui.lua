@@ -8,5 +8,16 @@ return {
                 cursorline = "focused_win"
             },
         },
+    },
+    {
+        "folke/noice.nvim", -- Ui for cmdline, messages and popupmenu
+        event = "VeryLazy",
+        opts = {
+            -- add any options here
+        },
+        dependencies = {
+            "MunifTanjim/nui.nvim",
+            "rcarriga/nvim-notify",
+        }
     }
 }

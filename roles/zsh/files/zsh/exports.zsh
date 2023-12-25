@@ -48,6 +48,11 @@ if command -v brew &> /dev/null; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+# Atuin
+if command -v atuin &> /dev/null; then
+    eval "$(atuin init zsh)"
+fi
+
 # Required for cargo
 if command -v cargo &> /dev/null; then
   . "$HOME/.cargo/env"

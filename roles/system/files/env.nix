@@ -5,6 +5,7 @@ with import <nixpkgs> {}; [
   neovim
   zsh
   fd
+  atuin
   starship
   eza
   zoxide

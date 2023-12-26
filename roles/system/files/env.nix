@@ -1,17 +1,30 @@
 with import <nixpkgs> {}; [
-  ripgrep
-  go
-  neovim
-  zsh
-  fd
   atuin
-  starship
-  eza
-  zoxide
-  fzf
-  zellij
-  bun
+  bat
   btop
-  yabai
-  skhd
+  bun
+  du-dust
+  eza
+  fd
+  fnm
+  fzf
+  gh
+  git
+  go
+  httpie
+  hyperfine
+  jq
+  lazydocker
+  lf
+  ripgrep
+  ncdu
+  neofetch
+  neovim
+  ripgrep
+  starship
+  tokei
+  tut
+  zoxide
+  zellij
+  zsh
 ]

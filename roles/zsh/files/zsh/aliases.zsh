@@ -15,7 +15,7 @@ alias nvim-ks="NVIM_APPNAME=kickstart nvim"
 alias nv="nvims"
 
 # Eza aliases
-alias ls="exa -l --icons"
+alias ls="exa -la --icons"
 alias la="exa -la --icons"
 
 # Alias for brew bundle dump
@@ -37,27 +37,3 @@ alias rm='rm -i'
 # easier to read disk
 alias df='df -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
-
-# if [[ $TERM == "xterm-kitty" ]]; then
-  # alias ssh="kitty +kitten ssh"
-# fi
-
-case "$(uname -s)" in
-
-Darwin)
-	# echo 'Mac OS X'
-	alias ls='ls -G'
-	;;
-
-Linux)
-	alias ls='ls --color=auto'
-	;;
-
-CYGWIN* | MINGW32* | MSYS* | MINGW*)
-	# echo 'MS Windows'
-	;;
-*)
-	# echo 'Other OS'
-	;;
-esac
-

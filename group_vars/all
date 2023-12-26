@@ -4,9 +4,6 @@ default_roles:
   - zsh
   - starship
   - bin
-  - kitty
   - wezterm
   - zellij
-  - tmux
-  - yabai
   - neovim

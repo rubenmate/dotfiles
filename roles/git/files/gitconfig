@@ -1,8 +1,16 @@
-[user]
-	name = Ruben Mate
-	email = 79601967+rubenmate@users.noreply.github.com
 [core]
-	editor = nvim
-	excludesfile = ~/.gitignore_global
+editor = nvim
+excludesfile = ~/.gitignore_global
+
 [init]
-	defaultBranch = main
+defaultBranch = main
+
+[credential]
+helper = store
+
+[user]
+name = Ruben Mate
+email = 79601967+rubenmate@users.noreply.github.com
+
+[includeIf "gitdir:~/Developer/work/"]
+path = ~/.gitconfig-work

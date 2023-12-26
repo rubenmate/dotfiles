@@ -1,15 +1,23 @@
 ---
-- name: Install
-  community.general.homebrew:
-    name:
-      - git
-    state: present
-
 - name: Symlink gitconfig
   ansible.builtin.file:
     dest: "{{ ansible_user_dir }}/.gitconfig"
     src: "{{ ansible_user_dir }}/.dotfiles/roles/git/files/gitconfig"
     state: link
+
+- name: Check if gitconfig-work exists
+  ansible.builtin.stat:
+    path: "{{ ansible_user_dir }}/.gitconfig-work"
+  register: gitconfig_work_check
+
+- name: Create gitconfig-work if it doesn't exist
+  ansible.builtin.copy:
+    content: ""
+    dest: "{{ ansible_user_dir }}/.gitconfig-work"
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_id }}"
+    mode: "0644"
+  when: not gitconfig_work_check.stat.exists
 
 - name: Symlink gitignore_global
   ansible.builtin.file:

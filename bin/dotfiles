@@ -3,50 +3,25 @@ set -e
 
 DOTFILES_DIR="$HOME/.dotfiles"
 SSH_DIR="$HOME/.ssh"
-LINUXBREW_DIR="/home/linuxbrew"
 
 # Check if brew is installed and install if not
 if ! [ -x "$(command -v brew)" ]; then
   case "$(uname -s)" in
-  Linux)
-    if ! [[ -d "$LINUXBREW_DIR" ]]; then
-      mkdir -p "$LINUXBREW_DIR"
-      chmod 755 "$LINUXBREW_DIR"
-    fi
-    ;;
-  esac
-  NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  case "$(uname -s)" in
-  Linux)
-    ;;
   Darwin)
-    # echo '# Set PATH, MANPATH, etc., for Homebrew.' >> $HOME/.zprofile
-    # echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
+    NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     eval "$(/opt/homebrew/bin/brew shellenv)"
     ;;
   esac
 fi
 
 # Install ansible if not installed
+if ! [ -x "$(command -v nix)" ]; then
+  curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --no-confirm
+fi
+
+# Install ansible if not installed
 if ! [ -x "$(command -v ansible)" ]; then
-  case "$(uname -s)" in
-
-  Darwin)
-    # echo 'Mac OS X'
-    brew install ansible
-    ;;
-
-  Linux)
-    # echo 'Linux'
-    # sudo apt install ansible
-    brew install ansible
-    ;;
-
-  *)
-    # echo 'Other OS'
-    ;;
-
-  esac
+  nix-env -iA nixpkgs.ansible_2_14
 fi
 
 # Generate ssh key if not available

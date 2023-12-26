@@ -1,23 +1,9 @@
 ---
-- name: Install
-  community.general.homebrew:
-    name:
-      - zsh
-    state: present
-
 - name: Set default Linux
   user:
     name: "{{ ansible_env['USER'] }}"
-    shell: /usr/bin/zsh
+    shell: "{{ ansible_user_dir }}/.nix-profile/bin/zsh"
   become: yes
-  when: ansible_os_family == "Debian"
-
-- name: Set default MacOS
-  user:
-    name: "{{ ansible_env['USER'] }}"
-    shell: /opt/homebrew/bin/zsh
-  become: yes
-  when: ansible_os_family == "Darwin"
 
 - name: Check if zap is installed
   stat:

@@ -1,10 +1,4 @@
 ---
-- name: Install
-  community.general.homebrew:
-    name:
-      - starship
-    state: present
-
 - name: Symlink config
   ansible.builtin.file:
     dest: "{{ ansible_user_dir }}/.config/starship.toml"

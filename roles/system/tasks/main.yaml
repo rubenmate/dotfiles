@@ -11,39 +11,8 @@
     src: "{{ ansible_user_dir }}/.dotfiles"
     state: link
 
-- name: Install common packages
-  community.general.homebrew:
-    name:
-      - bat
-      - btop
-      - dust 
-      - exa
-      - fd
-      - fnm
-      - fzf
-      - gh
-      - httpie
-      - hyperfine
-      - jq
-      - lazydocker
-      - llama
-      - navi
-      - ncdu
-      - neofetch
-      - ripgrep
-      - spotify-tui
-      - smartmontools
-      - stylua
-      - tealdeer
-      - tmux
-      - tokei
-      - trash-cli
-      - tut
-      - ugit
-      - zellij
-      - zoxide
-      - eth-p/software/bat-extras
-    state: present
+- name: Install common packages using nix-env
+  ansible.builtin.command: "nix-env -i -P -f {{ ansible_user_dir }}/.dotfiles/roles/system/files/env.nix"
 
 - name: Install Macos packages
   community.general.homebrew:

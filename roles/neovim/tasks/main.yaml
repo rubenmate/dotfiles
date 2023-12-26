@@ -84,13 +84,3 @@
     src: "{{ ansible_user_dir }}/.dotfiles/roles/neovim/files/kickstart"
     state: link
     force: yes
-
-- name: Clone alternate neovim LazyVim config
-  ansible.builtin.git:
-    clone: yes
-    depth: 1
-    dest: "{{ ansible_user_dir }}/.config/LazyVim"
-    force: yes
-    repo: https://github.com/LazyVim/starter
-    update: no 
-  register: clone

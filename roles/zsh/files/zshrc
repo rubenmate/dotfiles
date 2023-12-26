@@ -1,16 +1,16 @@
 [ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
 
-# source
-plug "$HOME/.config/zsh/aliases.zsh"
-plug "$HOME/.config/zsh/exports.zsh"
-plug "$HOME/.config/zsh/functions.zsh"
-
 # plugins
 plug "zsh-users/zsh-autosuggestions"
 plug "hlissner/zsh-autopair"
 plug "zap-zsh/supercharge"
 plug "zap-zsh/vim"
 plug "zsh-users/zsh-syntax-highlighting"
+
+# source
+plug "$HOME/.config/zsh/aliases.zsh"
+plug "$HOME/.config/zsh/exports.zsh"
+plug "$HOME/.config/zsh/functions.zsh"
 
 autoload edit-command-line; zle -N edit-command-line
 # keybinds

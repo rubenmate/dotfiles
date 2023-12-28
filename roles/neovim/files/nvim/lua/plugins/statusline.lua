@@ -49,7 +49,7 @@ local function update_mode_colors()
 end
 
 local function filepath()
-    local fpath = vim.fn.fnamemodify(vim.fn.expand "%", ":~:.:h")
+    local fpath = vim.fn.fnamemodify(vim.fn.expand("%"), ":~:.:h")
     if fpath == "" or fpath == "." then
         return " "
     end
@@ -58,7 +58,7 @@ local function filepath()
 end
 
 local function filename()
-    local fname = vim.fn.expand "%:t"
+    local fname = vim.fn.expand("%:t")
     if fname == "" then
         return ""
     end
@@ -127,7 +127,7 @@ local vcs = function()
     if git_info.removed == 0 then
         removed = ""
     end
-    return table.concat {
+    return table.concat({
         " ",
         added,
         changed,
@@ -136,13 +136,13 @@ local vcs = function()
         "%#GitSignsAdd# ",
         git_info.head,
         " %#Normal#",
-    }
+    })
 end
 
 Statusline = {}
 
 Statusline.active = function()
-    return table.concat {
+    return table.concat({
         "%#Statusline#",
         update_mode_colors(),
         mode(),
@@ -155,7 +155,7 @@ Statusline.active = function()
         lsp(),
         filetype(),
         lineinfo(),
-    }
+    })
 end
 
 function Statusline.inactive()
@@ -186,4 +186,3 @@ return {
         require("sttusline").setup()
     end,
 }
-

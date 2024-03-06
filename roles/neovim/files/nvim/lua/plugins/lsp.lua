@@ -1,3 +1,13 @@
+vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
+vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, {})
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
+vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
+
 return {
 	{
 		"williamboman/mason.nvim",
@@ -10,7 +20,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "tsserver", "gopls" },
+				ensure_installed = { "lua_ls", "tsserver", "gopls", "jdtls" },
 			})
 		end,
 	},
@@ -22,17 +32,8 @@ return {
 			lspconfig.tsserver.setup({})
 			lspconfig.lua_ls.setup({})
 			lspconfig.gopls.setup({})
+			-- NOTE: Java lsp is not required since it is configured via mfussenegger/nvim-jdtls
 			-- Add more LSPs here
-
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-			vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
-			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
-			vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, {})
-			vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
-			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
-			vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
-			vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
 		end,
 	},
 	{
@@ -50,5 +51,16 @@ return {
 
 			-- vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 		end,
+	},
+	{
+		"mfussenegger/nvim-jdtls", -- Java development plugin, it also requires jdtls lsp
+		-- 	ft = "java",
+		-- 	config = function()
+		-- 		local config = {
+		-- 			cmd = { "/home/rubenmate/.local/share/nvim/mason/bin/jdtls" },
+		-- 			root_dir = vim.fs.dirname(vim.fs.find({ "gradlew", ".git", "mvnw" }, { upward = true })[1]),
+		-- 		}
+		-- 		require("jdtls").start_or_attach(config)
+		-- 	end,
 	},
 }

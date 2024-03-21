@@ -18,6 +18,7 @@ opt.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift t
 opt.spelllang = { "en" }
 opt.termguicolors = true -- True color support
 opt.guicursor = "n:blinkon1" -- Always block mode cursor, blink
+opt.splitright = true -- Open vertical splits on the right
 opt.wrap = false -- Disable line wrap
 opt.virtualedit = "block" -- Allow cursor to move where there is no text in visual block mode
 opt.wildmode = "longest:full,full" -- Command-line completion mode

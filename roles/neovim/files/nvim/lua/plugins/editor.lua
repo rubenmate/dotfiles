@@ -6,9 +6,11 @@ return {
 		config = function()
 			-- Telescope keymaps
 			local builtin = require("telescope.builtin")
-			vim.keymap.set("n", "<leader>sf", builtin.find_files, {})
-			vim.keymap.set("n", "<leader>sg", builtin.live_grep, {})
-			vim.keymap.set("n", "<leader>sb", builtin.buffers, {})
+			vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
+			vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch [G]rep" })
+			vim.keymap.set("n", "<leader>sb", builtin.buffers, { desc = "[S]earch [B]uffers" })
+			vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
+			vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
 		end,
 	},
 	{
@@ -55,5 +57,15 @@ return {
 				end,
 			},
 		},
+	},
+	{
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {},
+	},
+	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {},
 	},
 }

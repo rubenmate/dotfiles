@@ -63,4 +63,18 @@ return {
 			vim.g.db_ui_use_nerd_fonts = 1
 		end,
 	},
+	{
+		"lervag/vimtex",
+		init = function()
+			-- Use init for configuration, don't use the more common "config".
+			-- vimtex
+			vim.g.vimtex_view_method = "zathura"
+			vim.g.maplocalleader = ","
+
+			vim.o.foldmethod = "expr"
+			vim.o.foldexpr = "vimtex#fold#level(v:lnum)"
+			vim.o.foldtext = "vimtex#fold#text()"
+			vim.o.foldlevel = 2
+		end,
+	},
 }

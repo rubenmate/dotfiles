@@ -50,6 +50,7 @@ return {
 			lspconfig.tsserver.setup({})
 			lspconfig.lua_ls.setup({})
 			lspconfig.gopls.setup({})
+			lspconfig.ltex.setup({})
 			-- NOTE: Java lsp is not required since it is configured via mfussenegger/nvim-jdtls
 			-- Add more LSPs here
 		end,

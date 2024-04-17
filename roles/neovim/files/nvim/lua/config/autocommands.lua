@@ -9,3 +9,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank()
 	end,
 })
+
+-- TODO: Transform this into lua using the vim apis
+vim.cmd([[autocmd BufRead,BufNewFile *.hurl setfiletype hurl]])

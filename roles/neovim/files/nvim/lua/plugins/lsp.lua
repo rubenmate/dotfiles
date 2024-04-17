@@ -9,6 +9,24 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist)
 
 return {
+	-- Neovim config helper
+	-- NOTE: It should be setup BEFORE lspconfig
+	{
+		"folke/neodev.nvim",
+		config = function()
+			require("neodev").setup({
+				override = function(root_dir, library)
+					if root_dir:find("/etc/nixos", 1, true) == 1 then
+						print("Test")
+						library.enabled = true
+						library.runtime = true
+						library.types = true
+						library.plugins = true
+					end
+				end,
+			})
+		end,
+	},
 	{
 		"williamboman/mason.nvim",
 		lazy = false,

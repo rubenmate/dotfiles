@@ -12,5 +12,8 @@ helper = store
 name = Ruben Mate
 email = 79601967+rubenmate@users.noreply.github.com
 
+[alias]
+clone-for-worktrees = "!sh $HOME/.bin/git-clone-bare-for-worktrees.sh"
+
 [includeIf "gitdir:~/Developer/work/"]
 path = ~/.gitconfig-work

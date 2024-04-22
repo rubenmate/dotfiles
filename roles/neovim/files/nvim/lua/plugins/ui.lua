@@ -15,6 +15,15 @@ return {
 		opts = {
 			-- add any options here
 		},
+		keys = {
+			{
+				"<leader><Esc>",
+				function()
+					require("notify").dismiss({ silent = true })
+				end,
+				desc = "Dismiss notifications",
+			},
+		},
 		dependencies = {
 			"MunifTanjim/nui.nvim",
 			"rcarriga/nvim-notify",

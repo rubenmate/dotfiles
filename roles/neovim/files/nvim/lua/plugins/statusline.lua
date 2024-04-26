@@ -179,5 +179,7 @@ end
 return {
 	"echasnovski/mini.statusline",
 	version = false,
-	config = {},
+	config = {
+		set_vim_settings = false, -- This goes along with vim.o.laststatus = 3 for the global status line
+	},
 }

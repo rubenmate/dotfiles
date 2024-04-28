@@ -80,4 +80,7 @@ return {
 			vim.o.foldlevel = 2
 		end,
 	},
+	{
+		"mbbill/undotree",
+	},
 }

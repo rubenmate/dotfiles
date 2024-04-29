@@ -82,5 +82,8 @@ return {
 	},
 	{
 		"mbbill/undotree",
+		keys = {
+			{ "<leader>tu", ":UndotreeToggle<CR>", desc = "Toggle Undo Tree", mode = "n" },
+		},
 	},
 }

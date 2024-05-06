@@ -85,5 +85,6 @@ return {
 		keys = {
 			{ "<leader>tu", ":UndotreeToggle<CR>", desc = "Toggle Undo Tree", mode = "n" },
 		},
+		cmd = "UndotreeToggle",
 	},
 }

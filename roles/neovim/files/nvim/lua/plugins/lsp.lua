@@ -51,6 +51,8 @@ return {
 			lspconfig.lua_ls.setup({})
 			lspconfig.gopls.setup({})
 			lspconfig.ltex.setup({})
+			lspconfig.tailwindcss.setup({})
+			lspconfig.biome.setup({})
 			-- NOTE: Java lsp is not required since it is configured via mfussenegger/nvim-jdtls
 			-- Add more LSPs here
 		end,

@@ -61,14 +61,20 @@ return {
 		"nvimtools/none-ls.nvim",
 		config = function()
 			local null_ls = require("null-ls")
-			null_ls.setup({
-				sources = {
-					-- NOTE: Formatting will be instead in formatting.lua using conform.nvim
-					-- null_ls.builtins.formatting.stylua,
-					-- null_ls.builtins.formatting.prettierd,
-					null_ls.builtins.diagnostics.biome,
-				},
-			})
+			local sources = {
+				-- NOTE: Formatting will be instead in formatting.lua using conform.nvim
+				-- null_ls.builtins.formatting.stylua,
+				-- null_ls.builtins.formatting.prettierd,
+				-- NOTE: Example on how to use a not available in path binary
+				-- null_ls.builtins.diagnostics.biome.with({
+				-- 	-- command = os.getenv("HOME") .. "/.local/share/nvim/mason/bin/biome",
+				-- 	command = "/home/rubenmate/.local/share/nvim/mason/bin/biome",
+				-- }),
+				-- NOTE: Since biome supports LSP is better to configure there, the builtins only
+				-- support formatting
+				-- null_ls.builtins.formatting.biome,
+			}
+			null_ls.setup({ sources = sources })
 
 			-- vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 		end,

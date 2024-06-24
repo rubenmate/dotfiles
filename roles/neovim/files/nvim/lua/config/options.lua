@@ -35,7 +35,9 @@ opt.undofile = true -- TODO: Document this
 opt.undolevels = 10000 -- TODO: Document this
 opt.swapfile = false -- TODO: Document this
 
-opt.smartcase = true -- Don't ignore case with capitals
+opt.ignorecase = true -- Ignore case in search patterns.
+-- Also used when searching in the tags file. Can be overruled by using "\c" or "\C" in the pattern.
+opt.smartcase = true -- Override the 'ignorecase' if the serach pattern contains upper case characters.
 
 -- TODO: Check what do these options exactly
 -- opt.autowrite = true -- Enable auto write
